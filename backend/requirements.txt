@@ -1,0 +1,10 @@
+fastapi
+pydantic
+pandas
+owslib
+requests
+uvicorn
+mistralai
+numpy
+faiss-cpu
+PyMuPDF
