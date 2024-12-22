@@ -18,15 +18,19 @@ This project provides an API to interact with a Web Map Service (WMS) and answer
    cd yourrepository/backend
 
 2. Create a virtual environment and activate it:
-   ```python -m venv venv
+   ```sh
+   python -m venv venv
    source venv/bin/activate  # On Windows use `venv\Scripts\activate`
 
 3. Install the required dependencies:
-   ```pip install -r requirements.txt
+   ```sh
+   pip install -r requirements.txt
 
 ### Running and testing the API
 1. Run main.py
-   ```uvicorn main:app --reload
+   ```sh
+   uvicorn main:app --reload
    
 2. Check Swagger and test the endooints:
-   ```http://127.0.0.1:8000/docs
+   ```sh
+   http://127.0.0.1:8000/docs
