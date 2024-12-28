@@ -1,25 +1,25 @@
 from mistralai import Mistral
-from .retriever import Retriever
-from .vectorizer import TextVectorizer
+from retriever import Retriever
+from vectorizer import TextVectorizer
 
 
 class Generator:
     def __init__(
         self,
         api_key,
-        index_path="embeddings.index",
-        chunks_path="chunks.txt",
         model="mistral-large-latest",
     ):
         self.api_key = api_key
         self.client = Mistral(api_key=api_key)
-        self.vectorizer = TextVectorizer(api_key=api_key)
-        self.retriever = Retriever(index_path=index_path, vectorizer=self.vectorizer)
-        self.chunks = open(chunks_path).read().splitlines()
         self.model = model
 
-    def retrieve_chunks(self, question, chunks, k=1):
-        return self.retriever.retrieve(question, chunks, k)
+        self.system_prompt = """
+        You are an expert document analyst with a focus on legal documents from public municipalities.
+        I will provide you with a context and a question.
+        The context will be a series of relevant articles from the Plano Director Municipal which characterizes the location that the question pertains to.
+        You answer only to pertinent questions
+        You answer only in European Portuguese (PT-PT).
+        """
 
     def generate_prompt(self, retrieved_chunks, question):
         return f"""
@@ -36,9 +36,11 @@ class Generator:
         messages = [
             {
                 "role": "system",
-                "content": "You are an expert document analyst with a focus on legal documents from public municipalities. You answer only to pertinent questions - in European Portuguese (PT-PT)",
+                "content": self.system_prompt,
             },
             {"role": "user", "content": prompt},
         ]
-        chat_response = self.client.chat.complete(model=self.model, messages=messages)
+        chat_response = self.client.chat.complete(
+            model=self.model, messages=messages, temperature=0
+        )
         return chat_response.choices[0].message.content
