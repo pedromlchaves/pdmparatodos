@@ -3,6 +3,7 @@ import requests
 import numpy as np
 import faiss
 import os
+import time
 
 
 class TextVectorizer:
@@ -14,6 +15,7 @@ class TextVectorizer:
         embeddings_batch_response = self.client.embeddings.create(
             model="mistral-embed", inputs=input
         )
+
         return embeddings_batch_response.data[0].embedding
 
     def get_embeddings(self, chunks):
