@@ -1,4 +1,5 @@
 import fitz
+import re
 
 
 class PDFChunker:
@@ -6,23 +7,29 @@ class PDFChunker:
         self.pdf_path = pdf_path
         self.pdf_document = fitz.open(pdf_path)
 
-    def split_pdf_by_sections(self, pattern):
-        sections = []
-        current_section = []
-        for page_num in range(len(self.pdf_document)):
-            page = self.pdf_document.load_page(page_num)
-            text = page.get_text("text")
-            lines = text.split("\n")
-            for line in lines:
-                if line.startswith(pattern):
-                    if current_section:
-                        sections.append("\n".join(current_section))
-                    current_section = [line]
-                else:
-                    current_section.append(line)
-        if current_section:
-            sections.append("\n".join(current_section))
-        return sections
+    def split_pdf_by_articles(self):
+        text = ""
+        for page in self.pdf_document:
+            text += page.get_text("text")  # Options: "text", "html", "xml"
+
+        text = text.split(
+            "Republicação do Regulamento do Plano Diretor Municipal do Porto"
+        )[1]
+        # Split the text by the pattern "Artigo" followed by some numbering
+        pattern = r"Artigo[\s\S]*?(?=TÍTULO|CAPÍTULO|SECÇÃO|SUBSECÇÃO|Artigo|ANEXOS)"
+        matches = re.findall(pattern, text)
+
+        clean_matches = []
+
+        for match in matches:
+            # The regex pattern to match the target text
+            pattern = r"N\.º 20\s+27 de janeiro de 2023\s+Pág\. .*?\s+Diário da República, 2\.\ª série\s+PARTE .*"
+
+            # Remove the matched pattern
+            clean_match = re.sub(pattern, "", match)
+            clean_matches.append(clean_match)
+
+        return clean_matches
 
     def save_chunks_to_file(self, chunks, output_path):
         with open(output_path, "w") as f:
