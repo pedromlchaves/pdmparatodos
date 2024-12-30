@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Leaflet Map with Custom Icon</title>
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+     integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY="
+     crossorigin=""/>
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"
+     integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo="
+     crossorigin=""></script>
+<style>
+    #map { height: 400px; }
+</style>
+</head>
+<body>
+
+<div id="map"></div>
+
+<script>
+    var map = L.map('map').setView([51.505, -0.09], 13);
+
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        maxZoom: 19,
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+    }).addTo(map);
+
+    // Custom marker icon
+    var customIcon = L.icon({
+        iconUrl: 'marker-icon.png', // Replace with the actual path to your icon image
+        iconSize:     [38, 95], // size of the icon
+        iconAnchor:   [22, 94], // point of the icon which will correspond to marker's location
+        popupAnchor:  [-3, -76] // point from which the popup should open relative to the iconAnchor
+    });
+
+    var marker = L.marker([51.5, -0.09], {icon: customIcon}).addTo(map);
+    marker.bindPopup("<b>Hello world!</b><br>I am a popup.").openPopup();
+</script>
+
+</body>
+</html>
+

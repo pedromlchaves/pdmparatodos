@@ -1,6 +1,4 @@
 from mistralai import Mistral
-from retriever import Retriever
-from vectorizer import TextVectorizer
 
 
 class Generator:
