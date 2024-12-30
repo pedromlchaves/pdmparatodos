@@ -16,31 +16,19 @@ export async function getLocationInfo(lat: number, lon: number, layer_name?: str
   };
 
   try {
-    // For now, we'll use a placeholder hardcoded response
-    // In a real scenario, you would make an actual API call here
-    // const response = await fetch('http://localhost:8000/get_properties/', {
-    //   method: 'POST',
-    //   headers: {
-    //     'Content-Type': 'application/json',
-    //   },
-    //   body: JSON.stringify({ coords, layer_name }),
-    // });
-    // const data = await response.json();
-
-    // Placeholder hardcoded response
-    const data = {
-      properties: {
-        name: "Sample Location",
-        type: "Point of Interest",
-        description: "This is a placeholder response for the selected coordinates.",
-        coordinates: {
-          latitude: lat,
-          longitude: lon
-        }
+    const response = await fetch('http://backend:8000/get_properties/', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
       },
-      layer_info: layer_name ? { name: layer_name } : null
-    };
+      body: JSON.stringify(coords),
+    });
 
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
     return data;
   } catch (error) {
     console.error('Error fetching location info:', error);
