@@ -31,6 +31,9 @@ interface LocationProperties {
 
 const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
+// We only define this inside docker, outside we go for default
+const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000'
+
 export async function getLocationInfo(lat: number, lon: number, layer_name?: string) {
   const coords: Coordinates = {
     lat,
@@ -39,7 +42,7 @@ export async function getLocationInfo(lat: number, lon: number, layer_name?: str
   };
 
   try {
-    const response = await fetch('http://backend:8000/get_properties/', {
+    const response = await fetch(`${BACKEND_URL}/get_properties/`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
@@ -68,7 +71,7 @@ export async function askQuestion(question: string, properties: LocationProperti
   };
 
   try {
-    const response = await fetch('http://backend:8000/ask_question/', {
+    const response = await fetch(`${BACKEND_URL}/ask_question/`, {
       method: 'POST',
       headers: {
       'Content-Type': 'application/json',

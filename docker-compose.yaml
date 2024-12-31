@@ -1,6 +1,17 @@
 version: '3.8'
 
 services:
+  db:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_DB: mydatabase
+    ports:
+      - "5432:5432"
+    volumes:
+      - db_data:/var/lib/postgresql/data
+
   backend:
     build:
       context: ./backend
@@ -20,5 +31,12 @@ services:
       - "3000:3000"
     volumes:
       - ./frontend:/app
+    environment:
+      - BACKEND_URL=http://backend:8000
     env_file:
-      - ./frontend/.env.local
+      - ./frontend/.env.docker
+    
+
+
+volumes:
+  db_data:
