@@ -8,3 +8,4 @@ mistralai
 numpy
 faiss-cpu
 PyMuPDF
+python-dotenv

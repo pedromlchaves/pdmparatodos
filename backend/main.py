@@ -7,6 +7,12 @@ from typing import List
 import requests
 import os
 from helpers.generator import Generator
+from helpers.retriever import Retriever
+from helpers.vectorizer import TextVectorizer
+import time
+from dotenv import load_dotenv
+
+load_dotenv()
 
 app = FastAPI()
 
@@ -27,14 +33,48 @@ class Coordinates(BaseModel):
 
 api_key = os.getenv("MISTRAL_API_KEY")
 
-# WIP
-# generator = Generator(api_key=api_key, model="mistral-large-latest")
-# chunks = open("data/chunks.txt").read().splitlines()
+vectorizer = TextVectorizer(api_key=api_key)
+
+retriever = Retriever("data/artigos_embeddings.faiss", vectorizer)
+
+enriched_articles = open("data/enriched_articles.txt").read().split("\n\n")
+
+generator = Generator(api_key=api_key, model="mistral-large-latest")
 
 
 class QuestionRequest(BaseModel):
     question: str
-    coords: Coordinates
+    properties: dict
+
+
+def parse_properties_for_model(properties):
+    property_values = [x[0] for x in list(properties.values()) if x != []]
+
+    pdm_properties = [
+        property for property in property_values if property["abstract"] == "PDM 2021"
+    ]
+
+    concatenated_properties_list = [
+        " - ".join(
+            str(value)
+            for key, value in d.items()
+            if key not in ["abstract", "nome", "uuid", "id_objeto"]
+        )
+        for d in pdm_properties
+    ]
+
+    return concatenated_properties_list
+
+
+def get_all_relevant_chunks(layers_formatted):
+    all_relevant_chunks = []
+
+    for layer in layers_formatted:
+        relevant_chunks = retriever.retrieve(layer, enriched_articles, k=5)
+        all_relevant_chunks.extend(relevant_chunks)
+        time.sleep(2)
+
+    return all_relevant_chunks
 
 
 @app.post("/ask_question/")
@@ -48,19 +88,23 @@ async def ask_question(request: QuestionRequest):
     Returns:
         dict: The generated response.
     """
+    parsed_properties = parse_properties_for_model(request.properties)
 
-    coordinates_properties = get_properties(request.coords)
+    layers_formatted = "\n".join(parsed_properties)
 
-    # Retrieve chunks based on the THE RELEVANT LAYER INFORMATION
-    retrieved_chunks = generator.retrieve_chunks(coordinates_properties, chunks, k=1)
+    relevant_chunks = get_all_relevant_chunks(parsed_properties)
 
-    # Generate a prompt using the retrieved chunks and the question
-    prompt = generator.generate_prompt(retrieved_chunks, request.question)
+    prompt = generator.generate_prompt(
+        layers_formatted, relevant_chunks, request.question
+    )
 
-    # Generate a response using the prompt
+    print(prompt)
+
+    articles = [x.splitlines()[2] for x in relevant_chunks]
+
     response = generator.generate(prompt)
 
-    return {"response": response}
+    return {"articles": articles, "answer": response}
 
 
 @app.get("/layers/", response_model=List[str])
@@ -169,6 +213,8 @@ async def get_properties(coords: Coordinates, layer_name: str = None):
 
             # Iterate through features and collect properties
             for feature in response_data.get("features", []):
+                feature["properties"]["nome"] = wms.contents[layer_name].title
+                feature["properties"]["abstract"] = wms.contents[layer_name].abstract
                 all_properties[layer_name].append(feature["properties"])
 
         except:
@@ -185,4 +231,4 @@ async def get_properties(coords: Coordinates, layer_name: str = None):
 if __name__ == "__main__":
     import uvicorn
 
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)

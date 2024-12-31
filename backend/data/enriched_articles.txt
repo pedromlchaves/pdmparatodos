@@ -1,3 +1,4 @@
+TITULO I - DISPOSIÇÕES GERAIS
 Artigo 1.º
 Âmbito e Objetivos
 1 — O presente Regulamento, a Planta de Ordenamento e a Planta de Condicionantes são 
@@ -22,6 +23,7 @@ crescimento do emprego;
 g) Desenvolver a capacidade de afirmação do Porto às escalas regional, nacional e internacional.
 
 
+TITULO I - DISPOSIÇÕES GERAIS
 Artigo 2.º
 Composição do Plano
 1 — O PDMP é constituído pelos seguintes elementos:
@@ -60,6 +62,7 @@ k) Ficha de dados estatísticos;
 l) Anexos: Estudos urbanísticos municipais.
 
 
+TITULO I - DISPOSIÇÕES GERAIS
 Artigo 3.º
 Definições
 Para além dos conceitos definidos na legislação e regulamentos aplicáveis, para efeitos do 
@@ -131,6 +134,7 @@ da zona estão sinalizadas, sendo o ordenamento do espaço público compatível 
 velocidade máxima estabelecida.
 
 
+TITULO I - DISPOSIÇÕES GERAIS
 Artigo 4.º
 Instrumentos de gestão territorial
 No território abrangido pelo PDMP vigoram os seguintes instrumentos de gestão territorial:
@@ -152,6 +156,7 @@ k) Plano de Pormenor das Antas;
 l) Plano de Pormenor do Dallas.
 
 
+TITULO I - DISPOSIÇÕES GERAIS
 Artigo 5.º
 Preexistências
 1 — Para efeitos do presente Plano, consideram -se preexistências as atividades, explorações, ins-
@@ -190,6 +195,7 @@ se refere o n.º 2 se considera verificada se a ausência do exercício do direi
 se deve a causa imputável ao Município.
 
 
+TITULO I - DISPOSIÇÕES GERAIS
 Artigo 6.º
 Legalização
 1 — Devem ser objeto do regime especial de legalização, nos termos estabelecidos no pre-
@@ -231,6 +237,7 @@ que essas alterações se conformem com o Plano em vigor à data da sua realiza�
 ao requerente fazer a prova de tal data.
 
 
+TITULO II - SERVIDÕES ADMINISTRATIVAS E RESTRIÇÕES DE UTILIDADE PÚBLICA
 Artigo 7.º
 Identificação
 1 — No território abrangido pelo PDMP são observadas as disposições referentes a servidões 
@@ -264,6 +271,7 @@ restante património inventariado, da listagem do Anexo I do presente Regulament
 Regulamento.
 
 
+TITULO II - SERVIDÕES ADMINISTRATIVAS E RESTRIÇÕES DE UTILIDADE PÚBLICA
 Artigo 8.º
 Regime
 Nas áreas abrangidas por servidões administrativas e restrições de utilidade pública, a dis-
@@ -273,12 +281,14 @@ de Ordenamento do PDMP, sem prejuízo das disposições vinculativas das servid�
 de utilidade pública.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO I - CLASSIFICAÇÃO E QUALIFICAÇÃO DO SOLO
 Artigo 9.º
 Âmbito
 1 — A totalidade da área do Município é classificada como solo urbano.
 2 — O solo urbano inclui os solos afetos à estrutura ecológica municipal.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO I - CLASSIFICAÇÃO E QUALIFICAÇÃO DO SOLO
 Artigo 10.º
 Interpretação da Planta de Ordenamento
 Na aplicação e interpretação do Plano, devem ser sempre consideradas, cumulativamente, 
@@ -286,6 +296,7 @@ as diferentes cartas em que a Planta de Ordenamento se desagrega e os respetivos
 valecendo o regime mais restritivo para efeito de definição de condicionamentos à edificabilidade.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO I - CLASSIFICAÇÃO E QUALIFICAÇÃO DO SOLO
 Artigo 11.º
 Qualificação Operativa e Funcional
 1 — Do ponto de vista operativo, o território do Município integra duas categorias de espaço 
@@ -306,6 +317,7 @@ ser associados usos complementares destes e ainda, eventualmente, outros usos qu
 patíveis com os primeiros.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO II - QUALIFICAÇÃO OPERATIVA
 Artigo 12.º
 Âmbito, Objetivos e Execução dos espaços consolidados
 1 — Os espaços consolidados integram os tecidos urbanos infraestruturados e predominan-
@@ -315,6 +327,7 @@ morfologias e tipologias urbanas.
 título V — Perequação, Financiamento e Execução.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO II - QUALIFICAÇÃO OPERATIVA
 Artigo 13.º
 Âmbito, Objetivos e Execução dos espaços em consolidação
 1 — Os espaços em consolidação integram áreas que requerem uma reestruturação profunda, 
@@ -324,6 +337,7 @@ obsoletas, grandes equipamentos ou quarteirões desativados.
 título V — Perequação, Financiamento e Execução.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO I - DISPOSIÇÕES GERAIS
 Artigo 14.º
 Compatibilidade de usos e atividades
 1 — São admitidos em cada categoria ou subcategoria de espaço usos compatíveis, desde 
@@ -347,6 +361,7 @@ usos em causa ficar garantida através do cumprimento de condições específica
 mentarmente estabelecidas para o efeito.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO I - DISPOSIÇÕES GERAIS
 Artigo 15.º
 Gestão de faixas de combustível
 1 — Para observância do n.º 2, do artigo 15.º, do Decreto -Lei n.º 124/2006, de 28 de junho, 
@@ -361,6 +376,7 @@ exterior do edifício, quando a faixa abranja exclusivamente terrenos com outras
 do Solo do PMDFCI do Porto (Caderno I).
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO I - DISPOSIÇÕES GERAIS
 Artigo 16.º
 Inserção urbanística e paisagística
 1 — Os projetos relativos a operações urbanísticas a realizar em áreas não disciplinadas por 
@@ -398,6 +414,7 @@ mento colida com o cumprimento dos parâmetros de impermeabilização do solo, p
 quantidade estritamente necessária.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS
 Artigo 17.º
 Âmbito, Objetivos e Usos
 1 — Nestes espaços privilegia -se a conservação e reabilitação do edificado existente, a col-
@@ -407,6 +424,7 @@ vários usos urbanos, designadamente, habitação, comércio, equipamentos, serv
 turísticas, indústria e logística, desde que compatíveis entre si.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS
 Artigo 18.º
 Tecidos Urbanos
 Os espaços centrais possuem diferentes características morfológicas e tipológicas decorrentes 
@@ -419,6 +437,7 @@ d) Área de edifícios de tipo moradia;
 e) Área de blocos isolados de implantação livre.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO I - ÁREA HISTÓRICA
 Artigo 19.º
 Âmbito e Objetivos
 1 — As áreas históricas correspondem aos tecidos consolidados mais antigos da cidade e 
@@ -434,6 +453,7 @@ Azevedo; Vila Nova.
 como dos espaços livres públicos e privados.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO I - ÁREA HISTÓRICA
 Artigo 20.º
 Edificabilidade
 1 — Nos edifícios existentes, qualquer intervenção deverá ter como regra a sua conservação, 
@@ -450,6 +470,7 @@ que contribuam para a valorização do espaço público e da imagem urbana da zo
 integram.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO I - ÁREA HISTÓRICA
 Artigo 21.º
 Demolições
 Só se admitem demolições, totais ou parciais, de edifícios existentes quando a recuperação 
@@ -459,6 +480,7 @@ b) Quando o edifício existente constitua uma intrusão arquitetónica ou urban�
 lidade e que seja desqualificadora da imagem do conjunto urbano onde se insere.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO I - ÁREA HISTÓRICA
 Artigo 22.º
 Logradouros
 1 — Os logradouros devem ser livres de edificação e destinam -se a ser ocupados por coberto 
@@ -470,6 +492,7 @@ paisagístico, privilegiando a redução de área impermeável legalmente consti
 operação.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO II - ÁREA DE FRENTE URBANA CONTÍNUA DE TIPO I
 Artigo 23.º
 Âmbito e Objetivos
 1 — As áreas de frente urbana contínua do tipo I correspondem às áreas organizadas em 
@@ -484,6 +507,7 @@ dos edifícios existentes, tendo também como objetivo a sua ocupação por usos
 dinamizadores da vivência urbana.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO II - ÁREA DE FRENTE URBANA CONTÍNUA DE TIPO I
 Artigo 24.º
 Edificabilidade
 1 — As obras de edificação regem -se pelas seguintes disposições:
@@ -523,6 +547,7 @@ do edifício situado na frente urbana, se ocorrer a demolição de área de edif
 logradouro.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO II - ÁREA DE FRENTE URBANA CONTÍNUA DE TIPO I
 Artigo 25.º
 Logradouros e Interior dos quarteirões
 Os logradouros e interior dos quarteirões devem ser permeáveis, sendo ocupados por coberto 
@@ -531,6 +556,7 @@ máximo de 10 m2, desde que não comprometam a existência de um índice de perm
 de 0,3 relativo à parcela.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO III - ÁREA DE FRENTE URBANA CONTÍNUA DE TIPO II
 Artigo 26.º
 Âmbito e Objetivos
 As áreas de frente urbana contínua do tipo II correspondem às áreas estruturadas em quarteirão 
@@ -541,6 +567,7 @@ do tipo de relação do edificado com o espaço público existente, designadamen
 da frente urbana.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO III - ÁREA DE FRENTE URBANA CONTÍNUA DE TIPO II
 Artigo 27.º
 Edificabilidade
 1 — As obras de edificação regem -se pelas seguintes disposições:
@@ -583,6 +610,7 @@ dos números anteriores deste artigo, quando estiver em causa a salvaguarda de v
 ou a integração urbanística no conjunto edificado onde a parcela se localiza.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO III - ÁREA DE FRENTE URBANA CONTÍNUA DE TIPO II
 Artigo 28.º
 Logradouro e Interior dos quarteirões
 1 — Os logradouros e interior dos quarteirões devem ser permeáveis, sendo ocupados por 
@@ -604,6 +632,7 @@ b) A cércea dos edifícios a implantar à face do novo arruamento deve garantir
 articulação com as cérceas das frentes urbanas em que se apoia o novo arruamento.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO IV - ÁREA DE EDIFÍCIOS DE TIPO MORADIA
 Artigo 29.º
 Âmbito e Objetivos
 As áreas reguladas na presente subsecção correspondem às zonas em que o tipo de edifício 
@@ -611,6 +640,7 @@ predominante possui até três pisos e logradouro com coberto vegetal permeável
 mantido como tal, ou às áreas para as quais o PDMP impõe essa mesma tipologia.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO IV - ÁREA DE EDIFÍCIOS DE TIPO MORADIA
 Artigo 30.º
 Edificabilidade
 1 — As novas construções ou as intervenções nos edifícios existentes a levar a efeito subordinar-
@@ -636,6 +666,7 @@ a parcela.
 no âmbito da concretização de uma UOPG.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO V - ÁREA DE BLOCOS ISOLADOS DE IMPLANTAÇÃO LIVRE
 Artigo 31.º
 Âmbito e Objetivos
 As áreas de blocos de edificação isolada de implantação livre correspondem aos espaços 
@@ -645,6 +676,7 @@ definem malhas regulares nem se constituem em frente urbana contínua, sendo fre
 resultantes da aplicação de critérios quantitativos.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO V - ÁREA DE BLOCOS ISOLADOS DE IMPLANTAÇÃO LIVRE
 Artigo 32.º
 Edificabilidade
 1 — Deve dar -se cumprimento a todos os alinhamentos dominantes, caso existam, exceto 
@@ -663,12 +695,14 @@ existentes.
 envolventes.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO II - ESPAÇOS CENTRAIS - SUBSECÇÃO V - ÁREA DE BLOCOS ISOLADOS DE IMPLANTAÇÃO LIVRE
 Artigo 33.º
 Logradouros
 Os logradouros destinam -se a ser ocupados por coberto vegetal permeável, não se admitindo 
 a sua impermeabilização, com exceção da área de implantação da cave e dos acessos ao edifício.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO III - ESPAÇOS DE ATIVIDADES ECONÓMICAS
 Artigo 34.º
 Atividades
 Os espaços de atividades económicas dividem -se em duas subcategorias:
@@ -676,6 +710,7 @@ a) Área de atividades económicas tipo I;
 b) Área de atividades económicas tipo II.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO III - ESPAÇOS DE ATIVIDADES ECONÓMICAS - SUBSECÇÃO I - ÁREAS DE ATIVIDADES ECONÓMICAS DE TIPO I
 Artigo 35.º
 Âmbito e Objetivos
 1 — Destinam -se à instalação de empresas representativas das diferentes áreas de negócio, 
@@ -686,6 +721,7 @@ e segurança, desde que sua área não ultrapasse 5 % do total da área de edifi
 urbanística.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO III - ESPAÇOS DE ATIVIDADES ECONÓMICAS - SUBSECÇÃO I - ÁREAS DE ATIVIDADES ECONÓMICAS DE TIPO I
 Artigo 36.º
 Edificabilidade
 1 — O índice de edificação máximo admitido é de 1,8 o qual poderá assumir outros valores 
@@ -693,6 +729,7 @@ desde que justificados no âmbito de uma UOPG.
 2 — A área impermeabilizada não poderá ser superior a 70 % da área da parcela.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO III - ESPAÇOS DE ATIVIDADES ECONÓMICAS - SUBSECÇÃO II - ÁREAS DE ATIVIDADES ECONÓMICAS DE TIPO II
 Artigo 37.º
 Âmbito e Objetivos
 1 — Destinam -se à instalação de empresas representativas das diferentes áreas de negócio, 
@@ -702,6 +739,7 @@ tigação, serviços, comércio e equipamentos.
 uso seja inferior à área atribuída à instalação de atividades económicas.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO III - ESPAÇOS DE ATIVIDADES ECONÓMICAS - SUBSECÇÃO II - ÁREAS DE ATIVIDADES ECONÓMICAS DE TIPO II
 Artigo 38.º
 Edificabilidade
 1 — O índice de edificação máximo admitido é de 1,4 o qual poderá assumir outros valores 
@@ -709,6 +747,7 @@ desde que justificados no âmbito de uma UOPG.
 2 — A área impermeabilizada não poderá ser superior a 70 % da área da parcela.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO IV - ESPAÇOS VERDES DE FRENTE ATLÂNTICA E RIBEIRINHA
 Artigo 39.º
 Subcategorias
 Os espaços verdes e frente atlântica e ribeirinha integram as seguintes subcategorias:
@@ -719,6 +758,7 @@ d) Área verde de proteção e enquadramento;
 e) Área de frente atlântica e ribeirinha.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO IV - ESPAÇOS VERDES DE FRENTE ATLÂNTICA E RIBEIRINHA
 Artigo 40.º
 Área verde de fruição coletiva
 1 — Correspondem a parques e jardins de acesso público, praças arborizadas e ajardinadas, 
@@ -737,6 +777,7 @@ elementos decorativos públicos de pequena dimensão, nomeadamente, coretos, lag
 estátuas e esculturas.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO IV - ESPAÇOS VERDES DE FRENTE ATLÂNTICA E RIBEIRINHA
 Artigo 41.º
 Área verde lúdico -produtiva
 1 — Correspondem a manchas agricultadas ou florestadas que podem conter infraestruturas 
@@ -754,6 +795,7 @@ c) De colmatação de núcleos residenciais existentes, mantendo as característ
 dos edifícios envolventes.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO IV - ESPAÇOS VERDES DE FRENTE ATLÂNTICA E RIBEIRINHA
 Artigo 42.º
 Área verde associada a equipamento
 1 — As áreas verdes associadas a equipamento integram parcelas afetas à instalação de 
@@ -765,6 +807,7 @@ assegurada a manutenção das características do coberto vegetal existente e de
 implantação total das construções não ultrapasse 20 % da área total da parcela.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO IV - ESPAÇOS VERDES DE FRENTE ATLÂNTICA E RIBEIRINHA
 Artigo 43.º
 Área verde de proteção e enquadramento
 1 — Destinam -se a servir de proteção física, visual e sonora aos diferentes usos urbanos e 
@@ -774,6 +817,7 @@ de preservação de espaços com sensibilidade ecológica.
 instalação de estruturas de proteção sonora, de proteção física e mobiliário urbano.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO IV - ESPAÇOS VERDES DE FRENTE ATLÂNTICA E RIBEIRINHA
 Artigo 44.º
 Área de frente atlântica e ribeirinha
 1 — Integra as praias, a zona de transição marítimo -terrestre e a zona de transição flúvio-
@@ -785,6 +829,7 @@ turas, das obras destinadas à proteção costeira e da instalação de equipame
 ao uso lúdico e desportivo.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO V - ESPAÇOS URBANOS DE BAIXA DENSIDADE
 Artigo 45.º
 Âmbito e Objetivos
 Integram territórios de génese rural, infraestruturados, constituídos por parcelas que permitem, 
@@ -793,12 +838,14 @@ unifamiliar com um ou dois pisos facejando, frequentemente, o espaço público e
 relações de vizinhança características de um espaço urbano.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO V - ESPAÇOS URBANOS DE BAIXA DENSIDADE
 Artigo 46.º
 Usos
 O uso dominante é habitacional admitindo -se a sua coexistência com áreas de cultivo, ativi-
 dades comerciais, serviços e equipamentos, desde que compatíveis com a habitação.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO V - ESPAÇOS URBANOS DE BAIXA DENSIDADE
 Artigo 47.º
 Edificabilidade
 1 — A ampliação ou construção de novos edifícios deve respeitar as tipologias construtivas 
@@ -815,18 +862,21 @@ da concretização de uma UOPG.
 5 — Não é permitida a aberturas de novas vias, com exceção das previstas no presente Plano.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO V - ESPAÇOS URBANOS DE BAIXA DENSIDADE
 Artigo 48.º
 Logradouros
 Os logradouros destinam -se a ser ocupados por coberto vegetal permeável, não se admitindo 
 a sua impermeabilização, com exceção da área de implantação da cave e dos acessos ao edifício.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO VI - ESPAÇOS DE USO ESPECIAL - SUBSECÇÃO I - ESPAÇOS DE USO ESPECIAL: EQUIPAMENTOS
 Artigo 49.º
 Âmbito e Objetivos
 As áreas de equipamento correspondem às parcelas afetas ou a afetar à instalação de equi-
 pamentos, com caráter estruturante no ordenamento e funcionalidade da cidade.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO VI - ESPAÇOS DE USO ESPECIAL - SUBSECÇÃO I - ESPAÇOS DE USO ESPECIAL: EQUIPAMENTOS
 Artigo 50.º
 Usos
 1 — O uso dominante é de equipamento de utilização coletiva, admitindo -se a coexistência, 
@@ -835,6 +885,7 @@ na mesma parcela, de outras atividades com função complementar do equipamento 
 lidade genérica da sua utilização como equipamento de utilização coletiva.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO VI - ESPAÇOS DE USO ESPECIAL - SUBSECÇÃO I - ESPAÇOS DE USO ESPECIAL: EQUIPAMENTOS
 Artigo 51.º
 Edificabilidade
 1 — Nas parcelas localizadas em área de equipamento, admitem -se obras de edificação 
@@ -852,6 +903,7 @@ existente e, no caso de se instalarem em edifício autónomo, a sua área de imp
 exceder 25 % da área da parcela.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO VI - ESPAÇOS DE USO ESPECIAL - SUBSECÇÃO II - ESPAÇOS DE USO ESPECIAL: INFRAESTRUTURAS
 Artigo 52.º
 Âmbito e Objetivos
 1 — Correspondem a áreas para infraestruturas existentes ou propostas, designadamente, de 
@@ -861,12 +913,14 @@ costeira.
 2 — Estas áreas destinam -se a assegurar a instalação e a funcionalidade destas infraestruturas.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO VI - ESPAÇOS DE USO ESPECIAL - SUBSECÇÃO II - ESPAÇOS DE USO ESPECIAL: INFRAESTRUTURAS
 Artigo 53.º
 Usos
 Devem ser mantidos os usos existentes, admitindo -se a instalação de outros usos comple-
 mentares.
 
 
+TITULO III - USO DO SOLO - CAPÍTULO III - QUALIFICAÇÃO FUNCIONAL - SECÇÃO VI - ESPAÇOS DE USO ESPECIAL - SUBSECÇÃO II - ESPAÇOS DE USO ESPECIAL: INFRAESTRUTURAS
 Artigo 54.º
 Edificabilidade
 1 — A edificabilidade permitida é a necessária para a infraestrutura em causa, devendo ser 
@@ -875,12 +929,14 @@ garantida a sua adequada inserção paisagística e urbana.
 da área da parcela, sem prejuízo da sua adequada inserção paisagística e urbana.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO I - DISPOSIÇÕES GERAIS
 Artigo 55.º
 Caracterização
 Os sistemas urbanos estruturam a organização e o funcionamento do território do município e 
 carecem de uma sistematização e regulamentação específica, complementar à qualificação do solo.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO I - DISPOSIÇÕES GERAIS
 Artigo 56.º
 Âmbito
 Os sistemas urbanos considerados no PDMP são os seguintes:
@@ -890,6 +946,7 @@ c) Sistema de circulação e transportes;
 d) Sistema de infraestruturas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL
 Artigo 57.º
 Âmbito
 1 — O sistema ambiental compreende as componentes fundamentais referentes à proteção 
@@ -913,6 +970,7 @@ i) Zonas sensíveis;
 ii) Zonas mistas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL
 Artigo 58.º
 Princípios Orientadores
 O sistema ambiental rege -se pelos seguintes princípios orientadores:
@@ -926,6 +984,7 @@ d) Promover o recurso a soluções de base natural, de eficiência energética e
 todas as intervenções, designadamente, as previstas no regulamento do índice ambiental do Porto.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL
 Artigo 59.º
 Objetivos
 1 — A Estrutura Ecológica Municipal visa promover a continuidade dos sistemas naturais e 
@@ -941,6 +1000,7 @@ d) A delimitação, salvaguarda e promoção do potencial do sistema húmido, co
 -chave de sustentabilidade e coesão da paisagem.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO I - ÁREAS DE GÉNESE NATURAL
 Artigo 60.º
 Âmbito e objetivos
 1 — A área de génese natural inclui a área de frente atlântica e ribeirinha, as linhas de água e bacias 
@@ -952,6 +1012,7 @@ ribeirinho, a promoção da galeria ripícola e a implementação de sistemas de
 equilíbrio da paisagem.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO I - ÁREAS DE GÉNESE NATURAL
 Artigo 61.º
 Área de frente atlântica e ribeirinha
 1 — A área de frente atlântica e ribeirinha integra os ecossistemas relacionados com o  oceano 
@@ -963,6 +1024,7 @@ descargas de efluentes e de resíduos.
 infraestruturas e a instalação de equipamentos amovíveis de apoio à fruição das praias.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO I - ÁREAS DE GÉNESE NATURAL
 Artigo 62.º
 Linhas de água e bacias de retenção
 1 — As linhas de água e bacias de retenção que relevam como área de génese natural inte-
@@ -984,6 +1046,7 @@ existe ou tem uma localização diferente da cartografada, o disposto nos númer
 -se em conformidade.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO I - ÁREAS DE GÉNESE NATURAL
 Artigo 63.º
 Área de aluvião
 1 — As áreas de aluvião correspondem a depósitos fluviais que ocupam os vales de pequenos 
@@ -996,6 +1059,7 @@ renaturalização das linhas de água, quer através da promoção de espaços v
 combustível existentes nestas áreas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO I - ÁREAS DE GÉNESE NATURAL
 Artigo 64.º
 Área declivosa
 1 — Compreendem os espaços de declive muito acentuado (superior a 45°), com presença 
@@ -1013,6 +1077,7 @@ g) Recuperação de sistemas e habitats prioritários que se pretende conservar.
 3 — Não são admitidas atividades suscetíveis de danificar os valores naturais.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO II - ESPAÇOS VERDES FUNDAMENTAIS
 Artigo 65.º
 Âmbito e objetivos
 1 — O espaço verde fundamental é constituído por:
@@ -1024,6 +1089,7 @@ da requalificação de espaços existentes, com vista à valorização dos recur
 dos serviços de ecossistema e à valorização da qualidade do ambiente urbano.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO II - ESPAÇOS VERDES FUNDAMENTAIS
 Artigo 66.º
 Área verde de acesso público
 1 — Estas áreas incluem os parques e jardins de acesso público, as praças arborizadas e 
@@ -1037,6 +1103,7 @@ tais com valor ecológico, a adoção de soluções otimizadas de eficiência da
 recorrendo, sempre que possível a soluções de base natural.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO II - ESPAÇOS VERDES FUNDAMENTAIS
 Artigo 67.º
 Área verde de elevado valor ecológico
 1 — Correspondem a espaços verdes com elevado valor ecológico e acrescida relevância 
@@ -1053,6 +1120,7 @@ para a categoria de uso solo é minorado em 0,1.
 as indicações do plano de arborização municipal.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO II - ESPAÇOS VERDES FUNDAMENTAIS
 Artigo 68.º
 Área verde associada a zonas sensíveis
 1 — Correspondem às áreas que não se encontram incluídas nas restantes áreas verdes 
@@ -1070,6 +1138,7 @@ em consideração as características e condicionantes de cada local;
 e) Recuperação de sistemas e habitats prioritários para a conservação.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO III - CORREDORES VERDES
 Artigo 69.º
 Âmbito e objetivos
 1 — Os corredores verdes constituem uma rede estruturante de sistemas naturais relevantes, 
@@ -1082,6 +1151,7 @@ a salvaguarda da circulação da água, do ar e dos nutrientes, a implementaçã
 como suporte à sustentabilidade e resiliência da cidade face às alterações climáticas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO III - CORREDORES VERDES
 Artigo 70.º
 Corredores verdes principais
 1 — Os corredores principais apresentam características biofísicas e culturais que demonstram 
@@ -1104,6 +1174,7 @@ abrangida pelo corredor verde principal.
 Verde de Acesso Público e Área Verde de Elevado Valor Ecológico.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO III - CORREDORES VERDES
 Artigo 71.º
 Corredores verdes complementares
 1 — Estes corredores conferem um estatuto complementar aos principais, e nos quais, através 
@@ -1129,6 +1200,7 @@ para a utilização de coberturas verdes, de pavimentos permeáveis e do aprovei
 pluviais para rega e limpeza dos espaços exteriores.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO III - CORREDORES VERDES
 Artigo 72.º
 Rede de conexão
 1 — A rede de conexão é traduzida, em regra, por eixos de arborização que ligam de forma 
@@ -1143,6 +1215,7 @@ e o aumento da superfície permeável, tendo em conta as orientações do plano 
 municipal.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO IV - CORREDOR ECOLÓGICO E SUB-REGIÕES HOMOGÉNEAS DO PROF-EDM
 Artigo 73.º
 Âmbito e objetivos
 1 — O corredor ecológico, representado na Planta de Ordenamento — Carta de Estrutura 
@@ -1160,6 +1233,7 @@ binada de três funções principais.
 3 — Nestas áreas deverão ser prosseguidos os objetivos estabelecidos no PROF -EDM.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO I - ESTRUTURA ECOLÓGICA MUNICIPAL - SUBSECÇÃO IV - CORREDOR ECOLÓGICO E SUB-REGIÕES HOMOGÉNEAS DO PROF-EDM
 Artigo 74.º
 Regime
 Nos espaços abrangidos pelo corredor ecológico e integrados nas sub -regiões homogéneas 
@@ -1168,6 +1242,7 @@ normas e modelos gerais de silvicultura e gestão adequadas a solo urbano, previ
 estratégico e no regulamento e respetivos anexos do PROF -EDM.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO II - ÁREAS SUJEITAS A RISCOS NATURAIS
 Artigo 75.º
 Âmbito e Objetivos
 1 — As áreas sujeitas a riscos naturais, identificadas na Planta de Ordenamento — Carta de 
@@ -1181,6 +1256,7 @@ humana, devem ser objeto de proteção, privilegiando uma gestão adaptativa e i
 de aumentar a resiliência urbana face às alterações climáticas e valorizar os recursos naturais.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO II - ÁREAS SUJEITAS A RISCOS NATURAIS - SUBSECÇÃO I - PROGRAMA DA ORLA COSTEIRA CAMINHA-ESPINHO (POC-CE)
 Artigo 76.º
 Proteção e Salvaguarda da Orla Costeira
 As áreas sujeitas a proteção e salvaguarda da orla costeira, que compreendem as áreas de 
@@ -1205,6 +1281,7 @@ f) As áreas críticas, que correspondem às áreas prioritárias de intervenç�
 cesso de gestão adaptativa.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO II - ÁREAS SUJEITAS A RISCOS NATURAIS - SUBSECÇÃO I - PROGRAMA DA ORLA COSTEIRA CAMINHA-ESPINHO (POC-CE)
 Artigo 76.º -A
 Zona Marítima de Proteção
 1 — Na ZMP, é, permitida, mediante autorização das entidades legalmente competentes a 
@@ -1232,6 +1309,7 @@ ficação da costa, exceto quando se revele imprescindível para a proteção de
 nas situações previstas no n.º 3.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO II - ÁREAS SUJEITAS A RISCOS NATURAIS - SUBSECÇÃO I - PROGRAMA DA ORLA COSTEIRA CAMINHA-ESPINHO (POC-CE)
 Artigo 76.º -B
 Zona Terrestre de Proteção
 1 — Na faixa de proteção costeira e na faixa de proteção complementar da ZTP, são permitidas, 
@@ -1464,6 +1542,7 @@ A regeneração dos usos do edificado, substituindo progressivamente o uso habit
 outros usos de caráter não permanente.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO II - ÁREAS SUJEITAS A RISCOS NATURAIS - SUBSECÇÃO II - OUTROS RISCOS NATURAIS
 Artigo 77.º
 Áreas Inundáveis
 1 — As áreas inundáveis correspondem às áreas contíguas à margem dos rios Douro, Tinto 
@@ -1485,6 +1564,7 @@ cheia conhecida.
 de reconstrução e alteração, desde que não diminua a cota de piso.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO II - ÁREAS SUJEITAS A RISCOS NATURAIS - SUBSECÇÃO II - OUTROS RISCOS NATURAIS
 Artigo 78.º
 Áreas de instabilidade de vertentes
 1 — As áreas de instabilidade de vertentes correspondem a zonas instáveis ou potencialmente 
@@ -1497,6 +1577,7 @@ e lazer;
 d) Ações de valorização paisagística.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO III - ZONAMENTO ACÚSTICO
 Artigo 79.º
 Objetivos
 A identificação das zonas sensíveis e das zonas mistas que consta da Planta de Ordena-
@@ -1505,6 +1586,7 @@ quação das funções urbanas às características das zonas em que se inserem,
 regulamento geral do ruído (RGR).
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO III - ZONAMENTO ACÚSTICO
 Artigo 80.º
 Zonas sensíveis
 1 — Constituem zonas sensíveis os espaços verdes de acesso público da Planta de Ordenamen-
@@ -1515,6 +1597,7 @@ que não se encontrem na área envolvente de infraestruturas viárias com nívei
 estabelecidos no RGR em vigor.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO III - ZONAMENTO ACÚSTICO
 Artigo 81.º
 Zonas mistas
 1 — As zonas mistas correspondem à área do território municipal não classificada como zona 
@@ -1524,6 +1607,7 @@ metros estabelecidos no RGR em vigor e mitigados os níveis de sobre -exposiçã
 plano municipal de redução de ruído (PMRR).
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO II - SISTEMA AMBIENTAL - SECÇÃO III - ZONAMENTO ACÚSTICO
 Artigo 82.º
 Zonas de conflito ou sobre -exposição
 1 — As zonas de conflito são as áreas em que o ruído exterior ultrapassa os limites previstos 
@@ -1531,6 +1615,7 @@ no RGR.
 2 — A disciplina destas zonas fica condicionada ao cumprimento do PMRR em vigor.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL
 Artigo 83.º
 Âmbito
 1 — O sistema patrimonial inclui os bens imóveis de interesse arquitetónico, urbanístico, 
@@ -1555,6 +1640,7 @@ ii) Geofísico — Complexo metamórfico da Foz do Douro;
 d) Estabelecimentos de interesse histórico e cultural ou social local.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL
 Artigo 84.º
 Princípios Orientadores
 1 — As intervenções que incidam sobre o património, quer seja privado ou público e no qual se 
@@ -1569,6 +1655,7 @@ ou do conjunto, o estudo estrutural do edificado, a compatibilização de materi
 uma linguagem arquitetónica que promova a harmonização com a envolvente.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO I - ÁREAS DE INTERESSE URBANÍSTICO E ARQUITETÓNICO
 Artigo 85.º
 Âmbito
 As áreas de interesse urbanístico ou arquitetónico, identificadas na Planta de Ordenamento — 
@@ -1580,6 +1667,7 @@ propriedade, bem como pela inclusão de troços de via pública, as regras aplic
 dos imóveis que constituem a frente urbana respetiva.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO I - ÁREAS DE INTERESSE URBANÍSTICO E ARQUITETÓNICO
 Artigo 86.º
 Regime
 1 — Para além do disposto em matéria de edificabilidade previsto para as respetivas categorias 
@@ -1601,6 +1689,7 @@ ticas intrínsecas e com valor cultural dos edifícios e conjuntos edificados e 
 volumétrica face às preexistências, minimizando o surgimento de construções dissonantes.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO II - NÚCLEOS E LUGARES
 Artigo 87.º
 Âmbito
 1 — Os Núcleos e lugares, identificados na Planta de Ordenamento — Carta de Património I, 
@@ -1618,6 +1707,7 @@ f) S. Pedro de Azevedo;
 g) Vila Nova.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO II - NÚCLEOS E LUGARES
 Artigo 88.º
 Regime
 1 — Para além do disposto em matéria de edificabilidade prevista para as Áreas históricas, 
@@ -1635,6 +1725,7 @@ ou de lavoura, conjuntos de instalações agrícolas (habitação, armazéns, la
 espigueiros, etc.), azenhas e levadas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO III - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL
 Artigo 89.º
 Âmbito
 1 — Correspondem a conjuntos de imóveis ou a imóveis, que pelo seu interesse histórico, 
@@ -1646,6 +1737,7 @@ encontram -se identificados na Planta de Ordenamento — Carta de Património I,
 Anexo I ao presente regulamento.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO III - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL
 Artigo 90.º
 Regime
 1 — Admitem -se nos conjuntos e imóveis de valor patrimonial obras de conservação que visem 
@@ -1661,6 +1753,7 @@ que ponham em causa a segurança de pessoas e bens, de salubridade e higiene e, 
 devidamente justificadas por prioridades de interesse público.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO III - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL
 Artigo 91.º
 Edificabilidade
 1 — As intervenções em imóveis com valor patrimonial devem respeitar a sua morfotipologia, 
@@ -1695,6 +1788,7 @@ que resultaria da aplicação da totalidade das regras aplicáveis para a catego
 em que se insere.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO III - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL
 Artigo 92.º
 Logradouros
 A edificação nos logradouros pode ser admitida desde que sejam preservados os valores 
@@ -1703,6 +1797,7 @@ conjunto, a parcela e a envolvente, nomeadamente, em termos de volumetria e de e
 paisagístico.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO IV - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL CLASSIFICADOS OU EM VIAS DE CLASSIFICAÇÃO
 Artigo 93.º
 Âmbito
 Os imóveis classificados ou em vias de classificação nos termos da Lei de Bases do Patri-
@@ -1711,18 +1806,21 @@ mento — Carta do Património I e integram o Anexo I ao presente regulamento, s
 acordo com o regime legal em vigor.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO IV - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL CLASSIFICADOS OU EM VIAS DE CLASSIFICAÇÃO
 Artigo 94.º
 Regime
 Aos imóveis classificados ou em vias de classificação aplica -se o disposto no artigo 90.º do 
 presente regulamento para os conjuntos e imóveis de valor patrimonial.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO I - PATRIMÓNIO URBANÍSTICO E ARQUITETÓNICO - SUBSECÇÃO IV - CONJUNTOS E IMÓVEIS DE VALOR PATRIMONIAL CLASSIFICADOS OU EM VIAS DE CLASSIFICAÇÃO
 Artigo 95.º
 Edificabilidade
 Aos imóveis classificados ou em vias de classificação aplica -se o disposto no artigo 91.º do 
 presente regulamento para os conjuntos e imóveis de valor patrimonial.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO II - PATRIMÓNIO ARQUEOLÓGICO
 Artigo 96.º
 Áreas de salvaguarda arqueológica
 São áreas de salvaguarda arqueológica, devidamente identificadas na Planta de Ordena-
@@ -1738,6 +1836,7 @@ de antigas vias de comunicação, correspondem a áreas de potencial interesse a
 natureza, extensão e estado de conservação carece de confirmação.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO II - PATRIMÓNIO ARQUEOLÓGICO
 Artigo 97.º
 Regime
 No caso das operações urbanísticas, localizadas nas áreas de valor arqueológico e de potencial 
@@ -1747,6 +1846,7 @@ avaliação prévia, acompanhamento de obras ou outros trabalhos arqueológicos 
 e execução das intervenções pretendidas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO III - PATRIMÓNIO NATURAL
 Artigo 98.º
 Biofísico
 1 — Fazem parte do património natural biofísico as espécies vegetais ameaçadas, com valor 
@@ -1761,6 +1861,7 @@ património.
 em vigor.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO III - PATRIMÓNIO NATURAL
 Artigo 99.º
 Geofísico
 1 — É considerado património natural geofísico o complexo rochoso denominado Complexo 
@@ -1771,6 +1872,7 @@ Planta de Condicionantes e na Planta de Ordenamento — Carta de Património I.
 2 — As intervenções neste património devem privilegiar a sua manutenção e valorização.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO IV - ESTABELECIMENTOS DE INTERESSE HISTÓRICO E CULTURAL OU SOCIAL LOCAL
 Artigo 100.º
 Princípios gerais
 1 — Os estabelecimentos de interesse histórico e cultural ou social local, são espaços de refe-
@@ -1782,6 +1884,7 @@ alteração dos mesmos, devem preservar a sua identidade arquitetónica e decora
 e cultural ou social local, que subvertam a sua identidade arquitetónica e decorativa.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO III - SISTEMA PATRIMONIAL - SECÇÃO IV - ESTABELECIMENTOS DE INTERESSE HISTÓRICO E CULTURAL OU SOCIAL LOCAL
 Artigo 101.º
 Regime
 Os estabelecimentos a que se refere a presente Secção encontram -se abrangidos pelo regime 
@@ -1791,6 +1894,7 @@ nhecimento e Proteção «Porto de Tradição» que estabelece os critérios e a
 salvaguarda aos referidos estabelecimentos.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO I - DISPOSIÇÕES GERAIS
 Artigo 102.º
 Âmbito
 1 — Os sistemas de circulação e transportes servem de canal a diferentes modos e meios de 
@@ -1818,6 +1922,7 @@ ii) Estacionamento na rua;
 iii) Estacionamento em loteamentos.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO I - DISPOSIÇÕES GERAIS
 Artigo 103.º
 Princípios orientadores
 1 — Os sistemas de circulação e transportes têm como objetivo geral a organização de uma 
@@ -1841,6 +1946,7 @@ duas categorias de espaço, a qualificação do solo deverá ser ajustada ao nov
 -se o arruamento como fronteira entre as categorias de espaço propostas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO II - CANAIS FERROVIÁRIOS
 Artigo 104.º
 Ferrovia pesada
 1 — A rede ferroviária pesada corresponde à infraestrutura existente — com ou sem explora-
@@ -1852,6 +1958,7 @@ b) Linha do Norte, entre os km’s 334,600 a 335,000;
 c) Linha de Leixões, entre os km’s 0,000 e 3,730.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO II - CANAIS FERROVIÁRIOS
 Artigo 105.º
 Ferrovia ligeira e ultraligeira
 1 — A rede ferroviária ligeira corresponde à infraestrutura existente ou a construir, em canal 
@@ -1860,6 +1967,7 @@ próprio subterrâneo ou à superfície, e sobre a qual opera o meio de transpor
 a qual opera o meio de transporte por ‘elétrico’.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS
 Artigo 106.º
 Rede de serviço nacional
 1 — A rede de serviço nacional no município do Porto é assegurada pelas vias do Plano 
@@ -1884,6 +1992,7 @@ sificada pelo PRN e, por conseguinte, habilitada a integrar a rede viária munic
 integra a rede de serviço nacional.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS
 Artigo 107.º
 Canais de ligação interníveis
 1 — Devem desempenhar um papel de amortecedor de tráfego entre a rede viária municipal 
@@ -1895,6 +2004,7 @@ negativos decorrentes da sua função, principalmente nas situações em que ess
 ocupação urbana marginal.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS - SUBSECÇÃO I - REDE MUNICIPAL
 Artigo 108.º
 Âmbito e objetivos
 1 — A rede de serviço municipal é definida na Planta de Ordenamento — Carta da Estrutura 
@@ -1912,6 +2022,7 @@ das interseções por razões de visibilidade, segurança e operacionalidade, de
 reserva ser igual ou superior a 10 metros, conforme as circunstâncias.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS - SUBSECÇÃO I - REDE MUNICIPAL
 Artigo 109.º
 Eixos urbanos estruturantes
 1 — Têm como função principal estabelecer a ligação entre os principais sectores da cidade e 
@@ -1928,6 +2039,7 @@ equivalentes que, a existirem, devem ser segregados das vias ‘automóvel’, s
 pedonal e da arborização.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS - SUBSECÇÃO I - REDE MUNICIPAL
 Artigo 110.º
 Eixos urbanos complementares
 1 — Têm uma função de nível secundário de ligação entre si de eixos estruturantes, destinando-
@@ -1945,6 +2057,7 @@ ciência.
 ferencialmente, por eliminação de estacionamento e sem prejuízo do sistema pedonal e da arborização.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS - SUBSECÇÃO I - REDE MUNICIPAL
 Artigo 111.º
 Ruas de provimento local
 1 — Têm como função principal garantir o acesso às atividades nelas localizadas, em detrimento 
@@ -1966,6 +2079,7 @@ d) A faixa de rodagem deve prever apenas uma via de circulação por sentido, ad
 possibilidade da criação de vias de viragem junto das interseções.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS - SUBSECÇÃO I - REDE MUNICIPAL
 Artigo 112.º
 Corredores de circulação pedonal e ciclável
 1 — Nos corredores pedonais deve promover -se a bioclimatização, designadamente através 
@@ -1989,6 +2103,7 @@ espaço público.
 tamento das necessidades de estacionamento.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO III - CANAIS RODOVIÁRIOS - SUBSECÇÃO I - REDE MUNICIPAL
 Artigo 113.º
 Parâmetros de dimensionamento
 1 — As regras definidas no presente artigo aplicam -se à renovação dos arruamentos existentes 
@@ -2024,6 +2139,7 @@ para sentido único e 2,20 metros para dois sentidos.
 coletivo cuja largura deverá ser de 3,10 metros.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO IV - INTERFACES DE PASSAGEIROS E MERCADORIAS
 Artigo 114.º
 Interfaces de passageiros
 1 — Consideram -se diferentes categorias de interfaces de passageiros, designadamente de 
@@ -2037,6 +2153,7 @@ entre diferentes sistemas de transporte, favorecendo a circulação a pé, apoia
 mecânicos.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO IV - INTERFACES DE PASSAGEIROS E MERCADORIAS
 Artigo 115.º
 Interfaces de mercadorias
 1 — A construção de pequenas interfaces de mercadorias de apoio logístico à atividade de 
@@ -2056,6 +2173,7 @@ e) As áreas de manobras de veículos devem ser tão reduzidas quanto possível 
 tuantes com a circulação viária nos acessos ao arruamento.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 116.º
 Aparcamento
 1 — Os espaços destinados a aparcamento de veículos podem assumir diferente natureza e 
@@ -2077,6 +2195,7 @@ c) Sinalética própria, preferencialmente, centralizada em rede com todos os P+
 ficando a disponibilidade.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 117.º
 Estacionamento na rua
 1 — Na Zona Central, definida na Planta de Ordenamento — Carta da Estrutura Viária e 
@@ -2087,6 +2206,7 @@ Suaves, a eliminação do estacionamento de rua é um objetivo imperativo, com e
 cargas e descargas e desde que não comprometa outros objetivos de qualificação e bioclimatização.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 118.º
 Dotação de estacionamento
 1 — A criação de estacionamento interno à parcela associado às diferentes atividades urbanas 
@@ -2108,6 +2228,7 @@ podem ser constituídos em frações autónomas independentes das unidades de ut
 edifícios a que ficam imperativamente adstritas.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 119.º
 Dimensionamento do estacionamento
 1 — O número de lugares de estacionamento interno a prever, em função das atividades a 
@@ -2220,6 +2341,7 @@ dotação máxima permitida de estacionamento em número de lugares é igual a m
 na regra geral.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 120.º
 Condições especiais de dimensionamento, isenções e substituições
 1 — Sempre que a aplicação da dotação de estacionamento colida com o cumprimento dos 
@@ -2255,6 +2377,7 @@ raio de 300 metros, desde que não sejam encontrados outros inconvenientes de or
 ou inerentes ao funcionamento dos sistemas de circulação públicos.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 121.º
 Lugares de estacionamento em espaço público
 1 — As exigências de aparcamento no interior das parcelas não desobrigam a criação de outros 
@@ -2273,6 +2396,7 @@ desadequado ao perfil do arruamento e quando não seja possível criar bolsas de
 no interior da parcela objeto da operação urbanística.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO IV - SISTEMAS DE CIRCULAÇÃO E TRANSPORTES - SECÇÃO V - ESTACIONAMENTO
 Artigo 122.º
 Número de lugares a criar em espaço público
 O número de lugares de estacionamento público para veículos ligeiros a criar, de acordo com 
@@ -2282,6 +2406,7 @@ b) Serviços e comércio — 0,5 lugares por cada 400 m2 de área de edificaçã
 c) Indústria ou armazéns — 0,25 lugares por cada 400 m2 de área de edificação.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO V - SISTEMAS DE INFRAESTRUTURAS
 Artigo 123.º
 Disposições gerais
 1 — Os sistemas de infraestruturas, identificados nas Cartas de Infraestruturas I, II e III, 
@@ -2306,6 +2431,7 @@ entre os diferentes tipos de rede e da sua gestão, de controlo e salvaguarda am
 rização do espaço público e da imagem da cidade.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO V - SISTEMAS DE INFRAESTRUTURAS
 Artigo 124.º
 Sistema de abastecimento de água
 1 — O sistema de abastecimento de água possui as seguintes componentes:
@@ -2321,6 +2447,7 @@ ao eixo da conduta, onde é interdita qualquer construção.
 salvaguarda de 5 metros centrada ao eixo da conduta onde é interdita qualquer construção.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO V - SISTEMAS DE INFRAESTRUTURAS
 Artigo 125.º
 Sistema de drenagem de águas residuais
 1 — No sistema de drenagem de águas residuais existem as seguintes componentes:
@@ -2330,6 +2457,7 @@ b) Coletores da rede em alta.
 centrada ao eixo do coletor onde é interdita qualquer construção.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO V - SISTEMAS DE INFRAESTRUTURAS
 Artigo 126.º
 Sistema de transporte e distribuição de energia elétrica
 1 — A rede elétrica do serviço público (RESP) é composta pela rede nacional de transporte de 
@@ -2350,6 +2478,7 @@ os postos de seccionamento e de corte e os aparelhos e acessórios ligados à su
 ser gradualmente corrigidas as situações em que isso não aconteça.
 
 
+TITULO IV - DOS SISTEMAS URBANOS - CAPITULO V - SISTEMAS DE INFRAESTRUTURAS
 Artigo 127.º
 Outros sistemas de infraestruturas
 1 — Os outros sistemas de infraestruturas incluem:
@@ -2366,6 +2495,7 @@ cablagens de telecomunicações só deve ser autorizada no subsolo, devendo ser 
 corrigidas as situações em que isso não aconteça.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO I - DISPOSIÇÕES GERAIS
 Artigo 128.º
 Princípios executórios de ocupação do território
 1 — Todas as operações urbanísticas devem contribuir para a melhoria funcional, formal e 
@@ -2377,6 +2507,7 @@ os canais de circulação viária (rodoviária e pedonal) identificados na Plant
 de Qualificação do Solo, cuja execução é da responsabilidade do promotor da operação urbanística.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO I - DISPOSIÇÕES GERAIS
 Artigo 129.º
 Programação estratégica da execução do Plano
 1 — A Câmara Municipal procede à concretização da programação da execução do Plano atra-
@@ -2394,6 +2525,7 @@ nos, promovendo a qualidade de vida e a resiliência do território;
 d) As que permitam a disponibilização de solo para equipamentos de utilização coletiva.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO I - DISPOSIÇÕES GERAIS
 Artigo 130.º
 Monitorização e avaliação
 1 — O Plano é objeto de monitorização permanente tendo em vista a avaliação do seu grau de 
@@ -2407,6 +2539,7 @@ aplicável, de indicadores financeiros.
 o Estado do Ordenamento do Território.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO I - EDIFICABILIDADE
 Artigo 131.º
 Disposições base relativas à edificabilidade
 1 — Toda a edificabilidade, admitida de forma abstrata no presente Plano e permitida de forma 
@@ -2419,6 +2552,7 @@ tabilidade Ambiental e Urbanística (FMSAU), a criar pelo Município;
 c) Assegurando uma distribuição perequativa da edificabilidade entre os proprietários.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO I - EDIFICABILIDADE
 Artigo 132.º
 Conceitos associados à edificabilidade
 Adotam -se para efeitos perequativos e do processo de gestão urbanística os seguintes conceitos:
@@ -2433,6 +2567,7 @@ d) Edificabilidade concreta: a edificabilidade legal já existente numa dada par
 vier a ser estabelecida em processo de gestão urbanística.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO I - EDIFICABILIDADE
 Artigo 133.º
 UT para efeitos de perequação da edificabilidade
 1 — Identificam -se, na área abrangida pelo Plano, as seguintes UT a considerar para efeitos 
@@ -2446,6 +2581,7 @@ b) As áreas destinadas a atividades económicas, cuja concretização se preten
 mente incentivar.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO I - EDIFICABILIDADE
 Artigo 134.º
 Edificabilidade média e edificabilidade abstrata
 1 — Das disposições deste Plano decorrem, para as UT referidas no artigo anterior, as  seguintes 
@@ -2481,6 +2617,7 @@ rida em “Área de Atividades Económicas Tipo II”.
 mente, à edificabilidade a atribuir ao FMSAU.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO I - EDIFICABILIDADE
 Artigo 135.º
 Edificabilidade concreta e compensações
 1 — A edificabilidade de cada prédio ou conjunto de prédios respeita as disposições (quanti-
@@ -2508,6 +2645,7 @@ equipamentos de utilização coletiva de relevante interesse municipal, como tal
 Câmara Municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO II - ENCARGOS URBANÍSTICOS
 Artigo 136.º
 Disposições base relativas a encargos urbanísticos
 1 — Os particulares (proprietários e/ou promotores) têm o dever de participar no financiamento 
@@ -2516,6 +2654,7 @@ das infraestruturas urbanísticas.
 rações urbanísticas, sistemáticas e não sistemáticas.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO II - ENCARGOS URBANÍSTICOS
 Artigo 137.º
 Identificação dos encargos urbanísticos
 1 — Os encargos urbanísticos correspondem à construção, reforço e manutenção de infraes-
@@ -2531,6 +2670,7 @@ a) Infraestrutura local a que serve diretamente cada conjunto edificado;
 b) Infraestrutura geral a que serve o território municipal na sua globalidade.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO II - ENCARGOS URBANÍSTICOS
 Artigo 138.º
 Encargos urbanísticos padrão
 1 — São identificados, para efeitos perequativos, os seguintes encargos urbanísticos padrão:
@@ -2542,6 +2682,7 @@ a) Os custos médios referidos nas alíneas a) e c) do n.º 1;
 b) O valor do m2 de terreno destinado a infraestrutura geral referido na alínea b) do n.º 1.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO II - ENCARGOS URBANÍSTICOS
 Artigo 139.º
 Encargos urbanísticos a suportar pelos promotores
 1 — São devidos pelo promotor de todas as operações urbanísticas, sistemáticas ou não 
@@ -2565,6 +2706,7 @@ artigo 135.º, a respetiva área é contabilizada como área para infraestrutura
 isentas dos encargos a que se refere o presente artigo.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO II - ENCARGOS URBANÍSTICOS
 Artigo 140.º
 Dimensionamento da infraestrutura local
 1 — Cada operação urbanística deve assegurar a necessária infraestrutura local, considerando 
@@ -2578,6 +2720,7 @@ b) Com potencialidade vivencial, sendo que os demais espaços sobrantes entre ed
 ser privados e, mesmo não o sendo, não são contabilizados para efeitos da alínea a).
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO III - ZONAMENTO INCLUSIVO E INCENTIVOS
 Artigo 141.º
 Objetivos e instrumentos
 1 — A Câmara Municipal, conforme artigos seguintes e através de regulamentação específica, 
@@ -2598,6 +2741,7 @@ b) A redução de encargos urbanísticos.
 não relativamente à majoração da edificabilidade
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO III - ZONAMENTO INCLUSIVO E INCENTIVOS
 Artigo 142.º
 Fomento da diversidade social no Centro da Cidade (Zonamento Inclusivo)
 1 — O Zonamento Inclusivo pretende assegurar a disponibilização de habitação acessível 
@@ -2616,6 +2760,7 @@ referida na alínea a) ou b), conforme a situação, ou pagamento de valor monet
 o FMSAU de acordo com as condições previstas em regulamento municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO III - ZONAMENTO INCLUSIVO E INCENTIVOS
 Artigo 143.º
 Fomento de habitação acessível
 As operações urbanísticas que destinem pelo menos 25 % da sua edificabilidade a habitação 
@@ -2626,6 +2771,7 @@ e de 1,6;
 b) Redução de encargos urbanísticos, a fixar em regulamento municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO III - ZONAMENTO INCLUSIVO E INCENTIVOS
 Artigo 144.º
 Fomento de regeneração de áreas de habitação social
 As operações urbanísticas que tenham como finalidade a regeneração de áreas de habitação 
@@ -2636,6 +2782,7 @@ livre até ao máximo de 1,2;
 b) Redução de encargos urbanísticos, a fixar em regulamento municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO III - ZONAMENTO INCLUSIVO E INCENTIVOS
 Artigo 145.º
 Fomento de qualificação ambiental
 1 — A Câmara Municipal irá estabelecer uma normativa que permita qualificar as operações 
@@ -2648,6 +2795,7 @@ b) De majoração do índice de edificabilidade de 0,2 nas áreas de blocos isol
 livre e áreas de atividades económicas de tipo II, respetivamente, até ao máximo de 1,2 e de 1,6.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO III - ZONAMENTO INCLUSIVO E INCENTIVOS
 Artigo 146.º
 Fomento da vitalização urbana
 1 — A Câmara Municipal poderá utilizar a redução de encargos urbanísticos como instrumento 
@@ -2660,6 +2808,7 @@ c) Promovam a demolição de edifícios existentes nos logradouros, legalmente c
 sem valia arquitetónica, urbanística ou cultural.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO IV - OUTROS INSTRUMENTOS DO REGIME ECONÓMICO E FINANCEIRO
 Artigo 147.º
 Identificação
 Para além dos instrumentos equitativos relativos à edificabilidade e aos encargos urbanísticos 
@@ -2673,6 +2822,7 @@ d) A aquisição de solo pelo Município;
 e) A constituição e gestão de um Fundo Municipal de Sustentabilidade Ambiental e Urbanística.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO IV - OUTROS INSTRUMENTOS DO REGIME ECONÓMICO E FINANCEIRO
 Artigo 148.º
 Avaliação do solo
 Para efeitos de execução do Plano e para efeitos de expropriação por utilidade pública, a 
@@ -2685,6 +2835,7 @@ servação;
 d) Outros parâmetros definidos em regulamento municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO IV - OUTROS INSTRUMENTOS DO REGIME ECONÓMICO E FINANCEIRO
 Artigo 149.º
 Aquisição do solo pelo Município
 1 — A execução programada pressupõe a disponibilização de solo ou outros imóveis para tal 
@@ -2698,6 +2849,7 @@ o solo destinado a infraestrutura, mas também o destinado a outros fins, nomead
 com edificabilidade que a marginam.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO II - REGIME ECONÓMICO-FINANCEIRO - SECÇÃO IV - OUTROS INSTRUMENTOS DO REGIME ECONÓMICO E FINANCEIRO
 Artigo 150.º
 Fundo municipal de sustentabilidade ambiental e urbanística
 1 — É criado pela Câmara Municipal um fundo municipal de sustentabilidade ambiental e 
@@ -2721,6 +2873,7 @@ para infraestrutura geral superior à média;
 b) Contribuir em operações referidas na alínea b) do n.º 1.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 151.º
 Enquadramento
 1 — A edificação em solo urbano deve, em todos os casos, ser precedida das correspondentes 
@@ -2733,6 +2886,7 @@ b) De forma sistemática, mediante programação municipal.
 n.º 1, considerando o local, a sua envolvente e a normativa do Plano.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 152.º
 Execução em espaço consolidado
 1 — Em espaço consolidado, a execução do Plano processa -se dominantemente através da 
@@ -2743,6 +2897,7 @@ urbanística pode ser condicionada a associação entre proprietários e, se nec
 pela Câmara Municipal de unidade de execução.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 153.º
 Execução em espaço em consolidação
 1 — Em espaço em consolidação a execução do Plano é, dominantemente, sistemática, com 
@@ -2765,6 +2920,7 @@ com o procedimento previsto na Lei, caso as infraestruturas não sejam executada
 previsto.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 154.º
 Execução sistemática
 1 — A execução sistemática decorre de programação municipal.
@@ -2780,6 +2936,7 @@ b) Uma última fase, posterior ao processo de contratualização, expressa em co
 urbanização.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 155.º
 Delimitação de unidades de execução
 A delimitação das unidades de execução deve cumprir as seguintes condições:
@@ -2794,6 +2951,7 @@ c) Garantir a correta articulação funcional e formal da intervenção urbanís
 urbano consolidado preexistente.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 156.º
 Execução e perequação em unidades de execução
 1 — A operação urbanística correspondente a uma unidade de execução é concretizada 
@@ -2823,6 +2981,7 @@ timento, são efetuadas compensações pecuniárias de acordo com as avaliaçõe
 mediante solicitação dos interessados, pode ser cogerido pela Câmara Municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO I - FORMAS DE EXECUÇÃO
 Artigo 157.º
 Encargos urbanísticos nos diversos sistemas de execução
 1 — O assumir de encargos com as ações e custos de urbanização referidos na alínea c) do 
@@ -2841,6 +3000,7 @@ Municipal, que pode concessioná -los a um promotor através de concurso públic
 responsabilidade.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO II - UNIDADES OPERATIVAS DE PLANEAMENTO E GESTÃO
 Artigo 158.º
 Enquadramento
 1 — As unidades operativas de planeamento e gestão (UOPG), assim identificadas na Planta 
@@ -2860,6 +3020,7 @@ nísticos, formas de execução e prazo de execução.
 cabal cumprimento das regras perequativas, relativas a edificabilidade e a encargos urbanísticos.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO II - UNIDADES OPERATIVAS DE PLANEAMENTO E GESTÃO
 Artigo 159.º
 Faseamento de execução das UOPG
 1 — A execução das UOPG encontra -se estruturada em duas fases de priorização:
@@ -2875,6 +3036,7 @@ oportunidade, conjuntura socioeconómica, etc., devendo para tal, ser referida a
 execução das UOPG no Plano de Atividades Municipal.
 
 
+TITULO V - PEREQUAÇÃO, FINANCIAMENTO E EXECUÇÃO - CAPÍTULO III - EXECUÇÃO - SECÇÃO II - UNIDADES OPERATIVAS DE PLANEAMENTO E GESTÃO
 Artigo 160.º
 UOPG
 UOPG 1 — Nun’Álvares
@@ -3205,6 +3367,7 @@ de Cooperação nos 3 anos seguintes, podendo este último ser antecipado design
 razões de ordem política, oportunidade ou conjuntura socioeconómica.
 
 
+TITULO VI - DISPOSIÇÕES GERAIS
 Artigo 161.º
 Entrada em vigor, avaliação e revisão
 1 — O PDMP entra em vigor no dia seguinte ao da sua publicação no Diário da República.
@@ -3212,6 +3375,7 @@ Entrada em vigor, avaliação e revisão
 -se à sua revisão sempre que tal se demonstre necessário.
 
 
+TITULO VI - DISPOSIÇÕES GERAIS
 Artigo 162.º
 Acertos e retificação de classes e categorias
 A transposição de qualquer parcela para uma classe ou categoria de espaço distinta daquela 
@@ -3223,6 +3387,7 @@ vados, ratificados e registados nos termos legais;
 c) Alterações sujeitas a regime procedimental simplificado.
 
 
+TITULO VI - DISPOSIÇÕES GERAIS
 Artigo 163.º
 Alterações à legislação
 Quando a legislação em vigor mencionada neste Regulamento for alterada, as remissões 
@@ -3230,6 +3395,7 @@ expressas que para ela se fazem consideram -se automaticamente transferidas para
 lação ou deixarão de ter efeito caso se trate de revogação.
 
 
+TITULO VI - DISPOSIÇÕES GERAIS
 Artigo 164.º
 Omissões
 A qualquer situação não prevista nas presentes disposições regulamentares aplicar -se -á o 
