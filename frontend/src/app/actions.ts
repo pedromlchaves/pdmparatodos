@@ -4,6 +4,7 @@ interface Coordinates {
   lat: number;
   lon: number;
   margin: number;
+  municipality: string;
 }
 
 interface QuestionResponse {
@@ -34,18 +35,19 @@ const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 // We only define this inside docker, outside we go for default
 const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000'
 
-export async function getLocationInfo(lat: number, lon: number, layer_name?: string) {
+export async function getLocationInfo(lat: number, lon: number, municipality: string, layer_name?: string) {
   const coords: Coordinates = {
     lat,
     lon,
-    margin: DEFAULT_MARGIN
+    margin: DEFAULT_MARGIN,
+    municipality
   };
 
   try {
     const response = await fetch(`${BACKEND_URL}/get_properties/`, {
       method: 'POST',
       headers: {
-        'Content-Type': 'application/json',
+      'Content-Type': 'application/json',
       },
       body: JSON.stringify(coords),
     });

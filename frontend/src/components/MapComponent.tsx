@@ -9,6 +9,7 @@ import { getLocationInfo } from '../app/actions'
 import { signOut } from "next-auth/react"
 import { Loader2 } from 'lucide-react'
 import { QuestionModal } from './QuestionModal'
+import { Label } from "@/components/ui/label"
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -28,7 +29,6 @@ export default function MapComponent() {
   const [clickedCoords, setClickedCoords] = useState<Coordinates | null>(null)
   const [locationInfo, setLocationInfo] = useState<any | null>(null)
   const [isLoading, setIsLoading] = useState(false)
-
   const handleMapClick = useCallback((lat: number, lng: number) => {
     setClickedCoords([lat, lng])
     setLocationInfo(null)
@@ -44,7 +44,8 @@ export default function MapComponent() {
     if (clickedCoords) {
       setIsLoading(true)
       try {
-        const properties = await getLocationInfo(clickedCoords[0], clickedCoords[1])
+        const properties = await getLocationInfo(clickedCoords[0], clickedCoords[1], selectedCity)
+        console.log(selectedCity)
         setLocationInfo(properties)
       } catch (error) {
         console.error("Error fetching location info:", error)
@@ -76,6 +77,9 @@ export default function MapComponent() {
         <h1 className="text-2xl font-bold">City Map</h1>
         <Button onClick={() => signOut({ callbackUrl: "/login" })}>Sign Out</Button>
       </div>
+      <Label htmlFor="city-select" className="text-sm font-medium">
+              Select a City
+        </Label>
       <div className="z-10 mb-4 flex gap-4">
         <Select onValueChange={handleCityChange} value={selectedCity}>
           <SelectTrigger className="w-[180px]">
@@ -116,7 +120,7 @@ export default function MapComponent() {
                 'Get Location Info'
               )}
             </Button>
-            {locationInfo && <QuestionModal properties={locationInfo} />}
+            {locationInfo && <QuestionModal properties={locationInfo} selectedCity={selectedCity} />}
           </div>
         </div>
       )}
@@ -132,8 +136,10 @@ export default function MapComponent() {
           <Accordion type="single" collapsible className="w-full">
             {Object.values(locationInfo).flat().map((item, index) => (
               <AccordionItem key={index} value={`item-${index}`}>
+                <AccordionTrigger>
                 {/* @ts-expect-error need better research on types */}
-                <AccordionTrigger>{item.nome || `Item ${index + 1}`}</AccordionTrigger>
+                {item.nome?.startsWith("PDM") ? <strong>{item.nome}</strong> : item.nome || `Item ${index + 1}`}
+                </AccordionTrigger> 
                 <AccordionContent>
                   <ul className="list-disc pl-5">
                     {renderItemContent(item)}

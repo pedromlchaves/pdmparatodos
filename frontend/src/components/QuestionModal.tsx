@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
@@ -9,6 +9,10 @@ import { ScrollArea } from "@/components/ui/scroll-area"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
+import PDFViewer from './PDFViewer'
+import fs from 'fs';
+
+const LOCAL_PDF_URL = '/pdm.pdf';
 
 interface QuestionResponse {
   articles: string[];
@@ -27,19 +31,38 @@ interface LocationProperties {
   [key: string]: LocationLayer;
 }
 
-export function QuestionModal({ properties }: LocationProperties) {
+interface QuestionModalProps {
+  properties: LocationProperties;
+  selectedCity: string;
+}
+
+export function QuestionModal({ properties, selectedCity }: QuestionModalProps) {
   const [question, setQuestion] = useState('')
   const [questionResponse, setQuestionResponse] = useState<QuestionResponse | null>(null)
   const [isQuestionLoading, setIsQuestionLoading] = useState(false)
   const [hasError, setHasError] = useState(false)
   const [isCopied, setIsCopied] = useState(false)
+  const [showPDF, setShowPDF] = useState(false)
+  const [pdfUrl, setPdfUrl] = useState('')
+  const [pdfPage, setPdfPage] = useState(1)
+  const [articlesPages, setArticlesPages] = useState<any>(null);
+
+  useEffect(() => {
+    const fetchArticlesPages = async () => {
+      const response = await fetch('/api/articles-pages');
+      const data = await response.json();
+      setArticlesPages(data);
+      console.log(data);
+    };
+
+    fetchArticlesPages();
+  }, []);
 
   const handleQuestionSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
     setIsQuestionLoading(true)
     setHasError(false)
     try {
-      {/* @ts-expect-error need better research on types */}
       const response = await askQuestion(question, properties)
       setQuestionResponse(response)
     } catch (error) {
@@ -66,6 +89,17 @@ export function QuestionModal({ properties }: LocationProperties) {
     }
   };
 
+
+  const addLinksToMarkdown = (text: string) => {
+    return text.replace(/(Artigo\s+\d+(?:\.\º)?)/g, (artigo) => {
+      console.log(articlesPages)
+      console.log(selectedCity)
+      const municipality_pages = articlesPages[selectedCity]
+      console.log(municipality_pages) 
+      const page = municipality_pages[artigo];
+      return `[${artigo}](#${page})`;
+    });
+  }
 
   return (
     <Dialog>
@@ -106,7 +140,6 @@ export function QuestionModal({ properties }: LocationProperties) {
             </div>
           </form>
           {questionResponse && (
-            <ScrollArea className="flex-grow pr-4 mr-4">
               <div className="space-y-4">
                 {hasError && (
                   <p className="text-red-500">An error occurred while processing your question.</p>
@@ -131,16 +164,34 @@ export function QuestionModal({ properties }: LocationProperties) {
                       </TooltipContent>
                     </Tooltip>
                   </TooltipProvider>
+                  <ScrollArea className="h-[400px] pr-4">
                   <div className="text-sm prose prose-sm max-w-none text-justify">
                   <ReactMarkdown 
-                      remarkPlugins={[remarkGfm]}
-                      components={{
-                        p: ({ children }) => <p className="mb-4">{children}</p>,
-                      }}
-                    >
-                      {questionResponse.answer}
-                    </ReactMarkdown>
+                        remarkPlugins={[remarkGfm]}
+                        components={{
+                          p: ({ children }) => <p className="mb-4">{children}</p>,
+                          a: ({ href, children }) => (
+                            <a
+                              href={href}
+                              onClick={(e) => {
+                                e.preventDefault();
+                                const page = parseInt(href.slice(1));
+                                if (!isNaN(page)) {
+                                  setPdfPage(page);
+                                  setShowPDF(true);
+                                }
+                              }}
+                              className="text-blue-500 cursor-pointer"
+                            >
+                              {children}
+                            </a>
+                          ),
+                        }}
+                      >
+                        {addLinksToMarkdown(questionResponse.answer)}
+                      </ReactMarkdown>
                   </div>
+                  </ScrollArea>
                 </div>
                 {/* {questionResponse.articles.length > 0 && (
                   <div>
@@ -153,13 +204,24 @@ export function QuestionModal({ properties }: LocationProperties) {
                   </div>
                 )} */}
               </div>
-            </ScrollArea>
           )}
         </div>
         <footer className="mt-4 text-xs text-gray-500">
           Disclaimer: This information is provided for general guidance only and should not be relied upon as legal or professional advice.
         </footer>
-      </DialogContent>
+        </DialogContent>
+        {showPDF && (
+        <Dialog open={showPDF} onOpenChange={setShowPDF}>
+          <DialogContent className="max-w-[90vw] w-[800px] max-h-[90vh] h-[600px] p-0 overflow-hidden">
+            <DialogHeader className="pb-0">
+              <DialogTitle>PDM Document</DialogTitle>
+            </DialogHeader>
+            <div className="flex-grow overflow-hidden p-4">
+              <PDFViewer pdfUrl={LOCAL_PDF_URL} initialPage={pdfPage} />
+            </div>
+          </DialogContent>
+        </Dialog>
+      )}
     </Dialog>
   )
 }
