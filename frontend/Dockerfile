@@ -17,7 +17,7 @@ COPY . .
 RUN npx prisma generate
 
 # Run the Prisma migration
-RUN npx prisma migrate deploy
+# RUN npx prisma migrate deploy
 
 ENV GOOGLE_CLIENT_ID=PLACEHOLDER_CLIENT_ID
 ENV GOOGLE_CLIENT_SECRET=PLACEHOLDER_CLIENT_SECRET
@@ -29,7 +29,7 @@ RUN npm run build
 # Expose the port the app runs on
 EXPOSE 3000
 
-RUN npx ts-node scripts/create-user.ts
+# RUN npx ts-node scripts/create-user.ts
 
 # Command to run the application
 CMD ["npm", "start"]
