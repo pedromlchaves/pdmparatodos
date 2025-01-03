@@ -6,10 +6,11 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import { getLocationInfo } from '../app/actions'
-import { signOut } from "next-auth/react"
 import { Loader2 } from 'lucide-react'
 import { QuestionModal } from './QuestionModal'
 import { Label } from "@/components/ui/label"
+import { Footer } from './Footer'
+import { Header } from './Header'
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -17,8 +18,7 @@ const Map = dynamic(() => import('./Map'), {
 })
 
 const cities = {
-  Porto: [41.1579, -8.6291],
-  Lisbon: [38.7223, -9.1393]
+  Porto: [41.1579, -8.6291]
 } as const
 
 type City = keyof typeof cities
@@ -29,9 +29,12 @@ export default function MapComponent() {
   const [clickedCoords, setClickedCoords] = useState<Coordinates | null>(null)
   const [locationInfo, setLocationInfo] = useState<any | null>(null)
   const [isLoading, setIsLoading] = useState(false)
+  const [isInfoLoaded, setIsInfoLoaded] = useState(false)
+
   const handleMapClick = useCallback((lat: number, lng: number) => {
     setClickedCoords([lat, lng])
     setLocationInfo(null)
+    setIsInfoLoaded(false)
   }, [])
 
   const handleCityChange = (value: City) => {
@@ -52,6 +55,7 @@ export default function MapComponent() {
         setLocationInfo(null)
       } finally {
         setIsLoading(false)
+        setIsInfoLoaded(true)
       }
     }
   }
@@ -72,84 +76,102 @@ export default function MapComponent() {
 }
 
   return (
-    <div className="container mx-auto p-4 flex flex-col items-center relative">
-      <div className="w-full flex justify-between mb-4">
-        <h1 className="text-2xl font-bold">City Map</h1>
-        <Button onClick={() => signOut({ callbackUrl: "/login" })}>Sign Out</Button>
-      </div>
-      <Label htmlFor="city-select" className="text-sm font-medium">
-              Select a City
-        </Label>
-      <div className="z-10 mb-4 flex gap-4">
-        <Select onValueChange={handleCityChange} value={selectedCity}>
-          <SelectTrigger className="w-[180px]">
-            <SelectValue placeholder="Select a city" />
-          </SelectTrigger>
-          <SelectContent>
-            {Object.keys(cities).map((city) => (
-              <SelectItem key={city} value={city}>
-                {city}
-              </SelectItem>
-            ))}
-          </SelectContent>
-        </Select>
-      </div>
-      <div className="w-full max-w-2xl h-[400px] mb-4 z-0 bg-gray-200">
-        <Map 
-          onMapClick={handleMapClick} 
-          clickedCoords={clickedCoords} 
-          center={cities[selectedCity] as Coordinates} 
-        />
-      </div>
-      {clickedCoords && (
-        <div className="bg-gray-100 p-4 rounded-md w-full max-w-2xl mb-4">
-          <h2 className="text-lg font-semibold mb-2">Clicked Coordinates:</h2>
-          <p>Latitude: {clickedCoords[0].toFixed(6)}</p>
-          <p>Longitude: {clickedCoords[1].toFixed(6)}</p>
-          <div className="flex flex-wrap gap-2 mt-2">
-            <Button 
-              onClick={handleSubmitCoordinates}
-              disabled={isLoading}
+    <div className="flex flex-col min-h-screen bg-gray-100">
+      <Header />
+      <main className="flex-grow p-4">
+      <div className="container mx-auto w-full max-w-[75%]">
+          <div className="mb-4">
+            <Label htmlFor="city-select" className="text-sm font-medium">
+              Seleccione um Município
+            </Label>
+            <Select onValueChange={handleCityChange} value={selectedCity}>
+              <SelectTrigger className="w-[180px] bg-white">
+                <SelectValue placeholder="Seleccione um Município" />
+              </SelectTrigger>
+              <SelectContent>
+                {Object.keys(cities).map((city) => (
+                  <SelectItem key={city} value={city}>
+                    {city}
+                  </SelectItem>
+                ))}
+              </SelectContent>
+            </Select>
+          </div>
+          <div className="flex flex-col md:flex-row gap-4 mb-4">
+            <div className="w-full md:w-3/4 z-0">
+              <div className="h-[400px] bg-white rounded-lg overflow-hidden shadow-md">
+                <Map 
+                  onMapClick={handleMapClick} 
+                  clickedCoords={clickedCoords} 
+                  center={cities[selectedCity] as Coordinates} 
+                />
+              </div>
+            </div>
+            <div className="w-full md:w-1/4">
+              <div className="bg-white p-4 rounded-lg shadow-md h-[400px] flex flex-col">
+                <div className="flex-grow">
+                  <h2 className="text-lg font-semibold mb-2">
+                    {clickedCoords ? "Coordenadas seleccionadas:" : "Seleccione coordenadas"}
+                  </h2>
+                  {clickedCoords ? (
+                    <>
+                      <p>Latitude: {clickedCoords[0].toFixed(6)}</p>
+                      <p>Longitude: {clickedCoords[1].toFixed(6)}</p>
+                    </>
+                  ) : (
+                    <p className="text-gray-500">Clique no mapa para seleccionar coordenadas</p>
+                  )}
+                </div>
+                <div className="flex flex-col gap-2">
+                  <Button 
+                    onClick={handleSubmitCoordinates}
+                    disabled={isLoading || !clickedCoords}
+                    className="w-full h-10"
+                  >
+                    <span className="mr-2">Obter Informação</span>
+                    {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
+                  </Button>
+                  <QuestionModal 
+                    properties={locationInfo} 
+                    selectedCity={selectedCity}
+                    disabled={!isInfoLoaded}
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            {isLoading && (
+              <div className="flex items-center justify-center w-full h-[200px] bg-white rounded-lg shadow-md">
+                <Loader2 className="animate-spin" />
+              </div>
+            )}
+            {!isLoading && locationInfo && (
+              <div
+              className="bg-white p-6 rounded-lg shadow-md max-h-[400px] overflow-auto"
             >
-              {isLoading ? (
-                <>
-                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                  Loading...
-                </>
-              ) : (
-                'Get Location Info'
-              )}
-            </Button>
-            {locationInfo && <QuestionModal properties={locationInfo} selectedCity={selectedCity} />}
+                <h2 className="text-lg font-semibold mb-2">Informação da Localização:</h2>
+                <Accordion type="single" collapsible className="w-full">
+                  {Object.values(locationInfo).flat().map((item, index) => (
+                    <AccordionItem key={index} value={`item-${index}`}>
+                      <AccordionTrigger>
+                      {/* @ts-expect-error need better research on types */}
+                      {item.nome?.startsWith("PDM") ? <strong>{item.nome}</strong> : item.nome || `Item ${index + 1}`}
+                      </AccordionTrigger> 
+                      <AccordionContent>
+                        <ul className="list-disc pl-5">
+                          {renderItemContent(item)}
+                        </ul>
+                      </AccordionContent>
+                    </AccordionItem>
+                  ))}
+                </Accordion>
+              </div>
+            )}
           </div>
         </div>
-      )}
-      {isLoading && (
-        <div className="flex items-center justify-center w-full py-4">
-          <Loader2 className="h-8 w-8 animate-spin" />
-        </div>
-      )}
-      {!isLoading && locationInfo && (
-        <div className="bg-gray-100 p-4 rounded-md w-full max-w-2xl overflow-auto">
-          <h2 className="text-lg font-semibold mb-2">Location Information:</h2>
-          
-          <Accordion type="single" collapsible className="w-full">
-            {Object.values(locationInfo).flat().map((item, index) => (
-              <AccordionItem key={index} value={`item-${index}`}>
-                <AccordionTrigger>
-                {/* @ts-expect-error need better research on types */}
-                {item.nome?.startsWith("PDM") ? <strong>{item.nome}</strong> : item.nome || `Item ${index + 1}`}
-                </AccordionTrigger> 
-                <AccordionContent>
-                  <ul className="list-disc pl-5">
-                    {renderItemContent(item)}
-                  </ul>
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
-        </div>
-      )}
+      </main>
+      <Footer />
     </div>
   )
 }

@@ -30,9 +30,9 @@ export default function LoginForm() {
 
     if (result?.error) {
         if (result.error === "CredentialsSignin") {
-          setError("Invalid email or password. Please try again.")
+          setError("E-mail ou password inválido. Por favor tente de novo.")
         } else {
-          setError("An error occurred during sign in. Please try again.")
+          setError("Ocorreu um erro durante o login. Por favor tente de novo.")
         }
         setIsLoading(false)
       } else {
@@ -79,10 +79,10 @@ export default function LoginForm() {
           {isLoading ? (
             <>
               <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-              Signing in...
+              A iniciar sessão...
             </>
           ) : (
-            "Sign in"
+            "Iniciar sessão"
           )}
         </Button>
       </form>
@@ -92,7 +92,7 @@ export default function LoginForm() {
         </div>
         <div className="relative flex justify-center text-xs uppercase">
           <span className="bg-white px-2 text-muted-foreground">
-            Or continue with
+            Ou continue com
           </span>
         </div>
       </div>

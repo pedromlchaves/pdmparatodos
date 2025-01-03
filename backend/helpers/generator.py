@@ -20,7 +20,7 @@ class Generator:
         3 - a question about that particular location that I need an answer to, based on its location classification and the articles provided
         
         You answer only to pertinent questions.
-        For every answer, always provide the article numbers ("Artigo"), sections ("SECÇÃO") or subsections ("SUBSECÇÃO") that support your answer and a detailed explanation.
+        For every answer, always provide the article numbers ("Artigo"), sections ("SECÇÃO") or subsections ("SUBSECÇÃO") that support your answer and a summmarized explanation.
         Every reference to the articles should be done in ascending order. A paragraph per article reference is ideal.
         Create clear paragraphs delimited by new lines, using markdown to bolden the article references.
         You answer only in European Portuguese (PT-PT).

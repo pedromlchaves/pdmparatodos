@@ -3,14 +3,13 @@ import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, Di
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
-import { Loader2, Copy } from 'lucide-react'
+import { Loader2, Copy, Check, Wand2 } from 'lucide-react'
 import { askQuestion } from '@/app/actions'
 import { ScrollArea } from "@/components/ui/scroll-area"
 import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import PDFViewer from './PDFViewer'
-import fs from 'fs';
 
 const LOCAL_PDF_URL = '/pdm.pdf';
 
@@ -34,9 +33,10 @@ interface LocationProperties {
 interface QuestionModalProps {
   properties: LocationProperties;
   selectedCity: string;
+  disabled: boolean;
 }
 
-export function QuestionModal({ properties, selectedCity }: QuestionModalProps) {
+export function QuestionModal({ properties, selectedCity, disabled }: QuestionModalProps) {
   const [question, setQuestion] = useState('')
   const [questionResponse, setQuestionResponse] = useState<QuestionResponse | null>(null)
   const [isQuestionLoading, setIsQuestionLoading] = useState(false)
@@ -104,20 +104,22 @@ export function QuestionModal({ properties, selectedCity }: QuestionModalProps) 
   return (
     <Dialog>
       <DialogTrigger asChild>
-        <Button variant="outline">Ask a Question</Button>
+        <Button variant="outline" disabled={disabled}>
+        <Wand2 className="w-4 h-4 mr-2" />
+        Faça uma Pergunta</Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[700px] h-[80vh] flex flex-col">
         <DialogHeader>
-          <DialogTitle>Ask a question about this location</DialogTitle>
+          <DialogTitle>Faça uma pergunta sobre esta localização</DialogTitle>
           <DialogDescription>
-            Enter your question about the selected location.
+            Introduza a sua pergunta acerca desta localização.
           </DialogDescription>
         </DialogHeader>
         <div className="flex flex-col flex-grow overflow-hidden">
           <form onSubmit={handleQuestionSubmit} className="space-y-4 mb-4">
             <div className="grid grid-cols-4 items-center gap-4">
               <Label htmlFor="question" className="text-right">
-                Question
+                Pergunta
               </Label>
               <Input
                 id="question"
@@ -131,10 +133,10 @@ export function QuestionModal({ properties, selectedCity }: QuestionModalProps) 
                 {isQuestionLoading ? (
                   <>
                     <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    Submitting...
+                    A gerar resposta...
                   </>
                 ) : (
-                  'Submit Question'
+                  'Fazer pergunta'
                 )}
               </Button>
             </div>
@@ -142,10 +144,10 @@ export function QuestionModal({ properties, selectedCity }: QuestionModalProps) 
           {questionResponse && (
               <div className="space-y-4">
                 {hasError && (
-                  <p className="text-red-500">An error occurred while processing your question.</p>
+                  <p className="text-red-500">Ocorre um erro durante o processamento da sua pergunta.</p>
                 )}
                 <div className="relative pr-8">
-                  <h3 className="font-semibold mb-2">Response:</h3>
+                  <h3 className="font-semibold mb-2">Resposta:</h3>
                   <TooltipProvider>
                     <Tooltip open={isCopied}>
                       <TooltipTrigger asChild>
@@ -206,15 +208,15 @@ export function QuestionModal({ properties, selectedCity }: QuestionModalProps) 
               </div>
           )}
         </div>
-        <footer className="mt-4 text-xs text-gray-500">
-          Disclaimer: This information is provided for general guidance only and should not be relied upon as legal or professional advice.
+        <footer className="mt-4 text-xs text-gray-500 text-center">
+        Aviso: Esta informação é fornecida apenas para orientação geral e não deve ser considerada como aconselhamento jurídico ou profissional.
         </footer>
         </DialogContent>
         {showPDF && (
         <Dialog open={showPDF} onOpenChange={setShowPDF}>
           <DialogContent className="max-w-[90vw] w-[800px] max-h-[90vh] h-[600px] p-0 overflow-hidden">
             <DialogHeader className="pb-0">
-              <DialogTitle>PDM Document</DialogTitle>
+              <DialogTitle></DialogTitle>
             </DialogHeader>
             <div className="flex-grow overflow-hidden p-4">
               <PDFViewer pdfUrl={LOCAL_PDF_URL} initialPage={pdfPage} />
