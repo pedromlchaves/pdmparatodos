@@ -19,6 +19,10 @@ RUN npx prisma generate
 # Run the Prisma migration
 # RUN npx prisma migrate deploy
 
+ENV GOOGLE_CLIENT_ID=PLACEHOLDER_CLIENT_ID
+ENV GOOGLE_CLIENT_SECRET=PLACEHOLDER_CLIENT_SECRET
+ENV NEXTAUTH_SECRET=PLACEHOLDER_NEXTAUTH_SECRET
+
 # Build the Next.js application
 RUN npm run build
 
