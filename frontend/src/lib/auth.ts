@@ -36,6 +36,7 @@ const checkEnvironmentVariables = () => {
 checkEnvironmentVariables()
 
 export const authOptions: NextAuthOptions = {
+  debug: true,
   adapter: PrismaAdapter(prisma),
   providers: [
     GoogleProvider({
