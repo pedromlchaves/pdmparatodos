@@ -33,8 +33,7 @@ interface LocationProperties {
 const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
 // We only define this inside docker, outside we go for default
-const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000'
-
+const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000';
 export async function getLocationInfo(lat: number, lon: number, municipality: string, layer_name?: string) {
   const coords: Coordinates = {
     lat,
