@@ -60,6 +60,7 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
 
   const handleQuestionSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+    setQuestionResponse(null);
     setIsQuestionLoading(true)
     setHasError(false)
     try {
@@ -102,128 +103,108 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
   }
 
   return (
-    <Dialog>
-      <DialogTrigger asChild>
-        <Button variant="outline" disabled={disabled}>
-        <Wand2 className="w-4 h-4 mr-2" />
-        Faça uma Pergunta</Button>
-      </DialogTrigger>
-      <DialogContent className="sm:max-w-[700px] h-[80vh] flex flex-col">
-        <DialogHeader>
-          <DialogTitle>Faça uma pergunta sobre esta localização</DialogTitle>
-          <DialogDescription>
-            Introduza a sua pergunta acerca desta localização.
-          </DialogDescription>
-        </DialogHeader>
-        <div className="flex flex-col flex-grow overflow-hidden">
-          <form onSubmit={handleQuestionSubmit} className="space-y-4 mb-4">
-            <div className="grid grid-cols-4 items-center gap-4">
-              <Label htmlFor="question" className="text-right">
-                Pergunta
-              </Label>
-              <Input
-                id="question"
-                value={question}
-                onChange={(e) => setQuestion(e.target.value)}
-                className="col-span-3"
-              />
-            </div>
-            <div className="flex justify-end">
-              <Button type="submit" disabled={isQuestionLoading}>
-                {isQuestionLoading ? (
-                  <>
-                    <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                    A gerar resposta...
-                  </>
-                ) : (
-                  'Fazer pergunta'
-                )}
-              </Button>
-            </div>
-          </form>
-          {questionResponse && (
-              <div className="space-y-4">
-                {hasError && (
-                  <p className="text-red-500">Ocorre um erro durante o processamento da sua pergunta.</p>
-                )}
-                <div className="relative pr-8">
-                  <h3 className="font-semibold mb-2">Resposta:</h3>
-                  <TooltipProvider>
-                    <Tooltip open={isCopied}>
-                      <TooltipTrigger asChild>
-                        <Button
-                          variant="outline"
-                          size="icon"
-                          className="absolute top-0 right-0 h-8 w-8"
-                          onClick={handleCopyText}
-                        >
-                          <Copy className="h-4 w-4" />
-                          <span className="sr-only">Copy response</span>
-                        </Button>
-                      </TooltipTrigger>
-                      <TooltipContent side="left" sideOffset={5}>
-                        <p>Answer copied to clipboard!</p>
-                      </TooltipContent>
-                    </Tooltip>
-                  </TooltipProvider>
-                  <ScrollArea className="h-[400px] pr-4">
-                  <div className="text-sm prose prose-sm max-w-none text-justify">
-                  <ReactMarkdown 
-                        remarkPlugins={[remarkGfm]}
-                        components={{
-                          p: ({ children }) => <p className="mb-4">{children}</p>,
-                          a: ({ href, children }) => (
-                            <a
-                              href={href}
-                              onClick={(e) => {
-                                e.preventDefault();
-                                const page = parseInt(href.slice(1));
-                                if (!isNaN(page)) {
-                                  setPdfPage(page);
-                                  setShowPDF(true);
-                                }
-                              }}
-                              className="text-blue-500 cursor-pointer"
-                            >
-                              {children}
-                            </a>
-                          ),
-                        }}
-                      >
-                        {addLinksToMarkdown(questionResponse.answer)}
-                      </ReactMarkdown>
-                  </div>
-                  </ScrollArea>
-                </div>
-                {/* {questionResponse.articles.length > 0 && (
-                  <div>
-                    <h4 className="font-semibold mb-2">Related Articles:</h4>
-                    <ul className="list-disc pl-5 space-y-1">
-                      {questionResponse.articles.map((article, index) => (
-                        <li key={index} className="text-sm">{article}</li>
-                      ))}
-                    </ul>
-                  </div>
-                )} */}
-              </div>
-          )}
+    <Dialog
+  onOpenChange={(isOpen) => {
+    if (!isOpen) {
+      setQuestion('');
+      setQuestionResponse(null);
+      setIsQuestionLoading(false);
+      setHasError(false);
+    }
+  }}
+>
+  <DialogTrigger asChild>
+    <Button variant="outline" disabled={disabled}>
+      <Wand2 className="w-4 h-4 mr-2" />
+      Faça uma Pergunta
+    </Button>
+  </DialogTrigger>
+  <DialogContent className="sm:max-w-[700px] w-full max-h-[80vh] h-[80vh] flex flex-col">
+    <DialogHeader>
+      <DialogTitle>Faça uma pergunta sobre esta localização</DialogTitle>
+      <DialogDescription>
+        Introduza a sua pergunta acerca desta localização.
+      </DialogDescription>
+    </DialogHeader>
+    <div className="flex flex-col flex-grow overflow-hidden h-full">
+      <form onSubmit={handleQuestionSubmit} className="space-y-4 mb-4">
+        <div className="grid grid-cols-4 items-center gap-4">
+          <Label htmlFor="question" className="text-right">
+            Pergunta
+          </Label>
+          <Input
+            id="question"
+            value={question}
+            onChange={(e) => setQuestion(e.target.value)}
+            className="col-span-3"
+          />
         </div>
-        <footer className="mt-4 text-xs text-gray-500 text-center">
-        Aviso: Esta informação é fornecida apenas para orientação geral e não deve ser considerada como aconselhamento jurídico ou profissional.
-        </footer>
-        </DialogContent>
-        {showPDF && (
-        <Dialog open={showPDF} onOpenChange={setShowPDF}>
-          <DialogContent className="max-w-[90vw] w-[800px] max-h-[90vh] h-[600px] p-0 overflow-hidden">
-            <DialogHeader className="pb-0">
-              <DialogTitle></DialogTitle>
-            </DialogHeader>
-            <div className="flex-grow overflow-hidden p-4">
-              <PDFViewer pdfUrl={LOCAL_PDF_URL} initialPage={pdfPage} />
+        <div className="flex justify-end">
+          <Button type="submit" disabled={isQuestionLoading}>
+            {isQuestionLoading ? (
+              <>
+                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                A gerar resposta...
+              </>
+            ) : (
+              'Fazer pergunta'
+            )}
+          </Button>
+        </div>
+      </form>
+      {questionResponse && (
+        <div className="flex flex-col flex-grow overflow-hidden">
+          <h3 className="font-semibold mb-2">Resposta:</h3>
+          <div className="flex-grow overflow-auto">
+            <div className="flex-grow overflow-auto">
+              <ScrollArea className="h-[calc(100%-2rem)] pr-4">
+                <div
+                  className="text-sm prose prose-sm max-w-none text-justify break-words whitespace-normal overflow-hidden"
+                  style={{
+                    wordWrap: 'break-word',
+                    overflowWrap: 'break-word',
+                    wordBreak: 'break-word',
+                  }}
+                >
+                  <ReactMarkdown
+                    remarkPlugins={[remarkGfm]}
+                    components={{
+                      p: ({ children }) => <p className="mb-4">{children}</p>,
+                      a: ({ href, children }) => (
+                        <a
+                          href={href}
+                          onClick={(e) => {
+                            e.preventDefault();
+                            const page = parseInt(href.slice(1));
+                            if (!isNaN(page)) {
+                              setPdfPage(page);
+                              setShowPDF(true);
+                            }
+                          }}
+                          className="text-blue-500 cursor-pointer"
+                        >
+                          {children}
+                        </a>
+                      ),
+                    }}
+                  >
+                    {addLinksToMarkdown(questionResponse.answer)}
+                  </ReactMarkdown>
+                </div>
+              </ScrollArea>
             </div>
-          </DialogContent>
-        </Dialog>
+          </div>
+        </div>
       )}
-    </Dialog>
+    </div>
+    <footer className="mt-4 text-xs text-gray-500 text-center">
+      Aviso: Esta informação é fornecida apenas para orientação geral e não deve ser considerada como aconselhamento jurídico ou profissional.
+    </footer>
+  </DialogContent>
+</Dialog>
+
+
+
+
   )
 }

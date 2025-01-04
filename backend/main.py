@@ -88,6 +88,7 @@ async def ask_question(request: QuestionRequest):
     Returns:
         dict: The generated response.
     """
+
     parsed_properties = parse_properties_for_model(request.properties)
 
     layers_formatted = "\n".join(parsed_properties)
@@ -103,6 +104,8 @@ async def ask_question(request: QuestionRequest):
     articles = [x.splitlines()[2] for x in relevant_chunks]
 
     response = generator.generate(prompt)
+
+    print(response)
 
     return {"articles": articles, "answer": response}
 
