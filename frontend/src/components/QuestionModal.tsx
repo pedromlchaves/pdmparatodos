@@ -112,14 +112,14 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
 
   return (
     <Dialog
-  onOpenChange={(isOpen) => {
-    if (!isOpen) {
-      setQuestion('');
-      setQuestionResponse(null);
-      setIsQuestionLoading(false);
-      setHasError(false);
-    }
-  }}
+  // onOpenChange={(isOpen) => {
+  //   if (!isOpen) {
+  //     setQuestion('');
+  //     setQuestionResponse(null);
+  //     setIsQuestionLoading(false);
+  //     setHasError(false);
+  //   }
+  // }}
 >
   <DialogTrigger asChild>
     <Button variant="outline" disabled={disabled}>
