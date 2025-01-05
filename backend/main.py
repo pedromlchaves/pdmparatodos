@@ -1,10 +1,6 @@
-from fastapi import FastAPI, HTTPException
+from fastapi import FastAPI, HTTPException, Request
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-import pandas as pd
-from owslib.wms import WebMapService
-import pandas as pd
-from typing import List
-import requests
 import os
 from helpers.generator import Generator
 from helpers.retriever import Retriever
@@ -12,10 +8,41 @@ from helpers.vectorizer import TextVectorizer
 from helpers.wms import WMService
 import time
 from dotenv import load_dotenv
+from jose import jwt, JWTError
 
 load_dotenv()
 
+SECRET_KEY = os.getenv("NEXTAUTH_SECRET")
+ALGORITHM = "HS256"
+
+
+class JWTMiddleware:
+    def __init__(self, app: FastAPI):
+        self.app = app
+
+    async def __call__(self, scope, receive, send):
+        if scope["type"] == "http":
+            request = Request(scope, receive)
+            auth_header = request.headers.get("Authorization")
+
+            if auth_header:
+                try:
+                    # Extract the token from the "Bearer" scheme
+                    token = auth_header.split(" ")[1]
+                    payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+                    scope["user"] = payload  # Add decoded user info to the scope
+                except JWTError:
+                    return JSONResponse(
+                        status_code=401, content={"detail": "Invalid or missing token"}
+                    )
+            else:
+                scope["user"] = None  # No token provided
+
+        await self.app(scope, receive, send)
+
+
 app = FastAPI()
+app.add_middleware(JWTMiddleware)
 
 DEFAULT_MARGIN = 0.001
 
@@ -38,7 +65,7 @@ enriched_articles = open("data/enriched_articles.txt").read().split("\n\n")
 generator = Generator(api_key=api_key, model="mistral-large-latest")
 
 
-class QuestionRequest(BaseModel):
+class QuestionRequest(Request):
     question: str
     properties: dict
 
@@ -73,10 +100,6 @@ def get_all_relevant_chunks(layers_formatted):
     return all_relevant_chunks
 
 
-def get_article_page(article, pdf):
-    return
-
-
 @app.post("/ask_question/")
 async def ask_question(request: QuestionRequest):
     """
@@ -88,6 +111,11 @@ async def ask_question(request: QuestionRequest):
     Returns:
         dict: The generated response.
     """
+
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
 
     parsed_properties = parse_properties_for_model(request.properties)
 
@@ -111,20 +139,26 @@ async def ask_question(request: QuestionRequest):
 
 
 @app.get("/layers/{municipality}")
-async def get_layers():
+async def get_layers(request: Request):
     """
     Get the list of available layers from the WMS service.
 
     Returns:
         List[str]: A list of layer names available in the WMS service.
     """
+
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
     wms = WMService(municipality="Porto")
     contents = wms.get_contents()
     return list(contents.keys())
 
 
 @app.get("/layer_info/{layer_name}")
-async def get_layer_info(layer_name: str):
+async def get_layer_info(layer_name: str, request: Request):
     """
     Get the attributes of a specific layer from the WMS service.
 
@@ -137,6 +171,11 @@ async def get_layer_info(layer_name: str):
     Raises:
         HTTPException: If the layer is not found in the WMS service.
     """
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
     wms = WMService(municipality="Porto")
     contents = wms.get_contents()
 
@@ -155,10 +194,16 @@ async def get_layer_info(layer_name: str):
 
 
 @app.post("/get_properties/")
-async def get_properties(coords: Coordinates):
+async def get_properties(coords: Coordinates, request: Request):
     """
     Get properties for the given coordinates from the relevant WMS service.
     """
+
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
     wms_service = WMService(coords.municipality)
 
     all_properties = wms_service.get_properties(coords)

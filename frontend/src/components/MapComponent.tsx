@@ -11,6 +11,7 @@ import { QuestionModal } from './QuestionModal'
 import { Label } from "@/components/ui/label"
 import { Footer } from './Footer'
 import { Header } from './Header'
+import { getSession } from "next-auth/react";
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -47,7 +48,12 @@ export default function MapComponent() {
     if (clickedCoords) {
       setIsLoading(true)
       try {
-        const properties = await getLocationInfo(clickedCoords[0], clickedCoords[1], selectedCity)
+        const session = await getSession()
+        const token = session?.user?.access_token
+        if (!token) {
+          throw new Error("No access token found");
+        }
+        const properties = await getLocationInfo(clickedCoords[0], clickedCoords[1], selectedCity, token)
         console.log(selectedCity)
         setLocationInfo(properties)
       } catch (error) {

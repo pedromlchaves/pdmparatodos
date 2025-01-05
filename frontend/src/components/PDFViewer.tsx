@@ -49,12 +49,12 @@ interface PDFViewerProps {
           <PDFDocument
             file={pdfUrl}
             onLoadSuccess={onDocumentLoadSuccess}
-            loading={<div className="text-center">Loading PDF...</div>}
+            loading={<div className="text-center">A carregar PDF...</div>}
           >
             <PDFPage 
               pageNumber={pageNumber} 
               scale={scale}
-              loading={<div className="text-center">Loading page...</div>}
+              loading={<div className="text-center">A carregar página...</div>}
               className="max-w-full"
             />
           </PDFDocument>
@@ -65,7 +65,7 @@ interface PDFViewerProps {
               <ChevronLeft className="h-4 w-4" />
             </Button>
             <span className="text-sm">
-              Page {pageNumber} of {numPages}
+              Página {pageNumber} de {numPages}
             </span>
             <Button onClick={() => changePage(1)} disabled={pageNumber >= (numPages || 1)} variant="outline" size="sm">
               <ChevronRight className="h-4 w-4" />

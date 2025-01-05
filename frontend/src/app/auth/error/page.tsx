@@ -25,12 +25,12 @@ function AuthError() {
   return (
     <div className="flex min-h-screen items-center justify-center bg-gray-100">
       <div className="mx-auto max-w-md rounded-lg bg-white p-8 shadow-md">
-        <h1 className="mb-4 text-2xl font-bold text-red-600">Authentication Error</h1>
+        <h1 className="mb-4 text-2xl font-bold text-red-600">Erro de Autenticação</h1>
         <p className="mb-6 text-gray-600">
           {error ? getErrorMessage(error) : "An unknown error occurred."}
         </p>
         <Button asChild>
-          <Link href="/login">Return to Login</Link>
+          <Link href="/login">Voltar ao início</Link>
         </Button>
       </div>
     </div>
@@ -39,7 +39,7 @@ function AuthError() {
 
 export default function AuthErrorWrapper() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<div>A carregar...</div>}>
       <AuthError />
     </Suspense>
   );

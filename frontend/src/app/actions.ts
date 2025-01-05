@@ -34,7 +34,9 @@ const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
 // We only define this inside docker, outside we go for default
 const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000';
-export async function getLocationInfo(lat: number, lon: number, municipality: string, layer_name?: string) {
+
+export async function getLocationInfo(lat: number, lon: number, municipality: string, access_token: string, layer_name?: string) {
+  
   const coords: Coordinates = {
     lat,
     lon,
@@ -47,6 +49,7 @@ export async function getLocationInfo(lat: number, lon: number, municipality: st
       method: 'POST',
       headers: {
       'Content-Type': 'application/json',
+      'Authorization': `Bearer ${access_token}`
       },
       body: JSON.stringify(coords),
     });
@@ -65,7 +68,7 @@ export async function getLocationInfo(lat: number, lon: number, municipality: st
   }
 }
 
-export async function askQuestion(question: string, properties: LocationProperties): Promise<QuestionResponse> {
+export async function askQuestion(question: string, properties: LocationProperties, access_token: string): Promise<QuestionResponse> {
   const q: QuestionRequest = {
    question,
    properties
@@ -76,6 +79,7 @@ export async function askQuestion(question: string, properties: LocationProperti
       method: 'POST',
       headers: {
       'Content-Type': 'application/json',
+      'Authorization': `Bearer ${access_token}`
       },
       body: JSON.stringify(q),
     });

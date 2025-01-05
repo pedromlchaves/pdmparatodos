@@ -6,6 +6,8 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter"
 import { PrismaClient } from "@prisma/client"
 import { compare } from "bcryptjs"
 
+import { sign } from "jsonwebtoken"; // Use this to create a token for credentials login
+
 const prisma = new PrismaClient()
 
 declare module 'next-auth' {
@@ -15,6 +17,7 @@ declare module 'next-auth' {
       name?: string | null;
       email?: string | null;
       image?: string | null;
+      access_token?: string;
     };
   }
 }
@@ -34,6 +37,7 @@ const checkEnvironmentVariables = () => {
 }
 
 checkEnvironmentVariables()
+
 
 export const authOptions: NextAuthOptions = {
   debug: true,
@@ -78,7 +82,7 @@ export const authOptions: NextAuthOptions = {
       }
     })
   ],
-  secret: process.env.NEXTAUTH_SECRET,
+  secret: process.env.NEXTAUTH_SECRET,  
   pages: {
     signIn: "/login",
     error: "/auth/error",
@@ -87,18 +91,38 @@ export const authOptions: NextAuthOptions = {
     strategy: "jwt"
   },
   callbacks: {
-    async jwt({ token, user }) {
+    async jwt({ token, user, account }) {
       if (user) {
-        token.id = user.id
+        // Add user ID
+        token.user_id = user.id;
+  
+        // Handle credentials login (custom token)
+        const secret = process.env.NEXTAUTH_SECRET;
+        if (!secret) {
+          throw new Error('NEXTAUTH_SECRET is not defined');
+        }
+        const customToken = sign(
+          { id: user.id, email: user.email },
+          secret,
+          { expiresIn: "1h" }
+        );
+  
+        token.access_token = customToken
       }
-      return token
+  
+      return token;
     },
+  
     async session({ session, token }) {
-      if (session.user) {
-        session.user.id = token.id as string
+      // Add user ID to the session
+      if (session.user && token.user_id) {
+        session.user.id = token.user_id as string;
       }
-      return session
-    }
+  
+      // Add access token directly from JWT
+      session.user.access_token = token.access_token as string;
+      return session;
+    },
   },
 }
 

@@ -10,6 +10,7 @@ import ReactMarkdown from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import PDFViewer from './PDFViewer'
+import { getSession } from 'next-auth/react'
 
 const LOCAL_PDF_URL = '/pdm.pdf';
 
@@ -64,7 +65,14 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
     setIsQuestionLoading(true)
     setHasError(false)
     try {
-      const response = await askQuestion(question, properties)
+      const session = await getSession()
+      if (!session || !session.user.access_token) {
+        setHasError(true);
+        setIsQuestionLoading(false);
+        return;
+      }
+      const token = session.user.access_token
+      const response = await askQuestion(question, properties, token)
       setQuestionResponse(response)
     } catch (error) {
       console.error("Error submitting question:", error)
@@ -154,7 +162,27 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
       </form>
       {questionResponse && (
         <div className="flex flex-col flex-grow overflow-hidden">
+          <div className="flex justify-between items-center mb-2">
           <h3 className="font-semibold mb-2">Resposta:</h3>
+          <TooltipProvider>
+            <Tooltip open={isCopied}>
+              <TooltipTrigger asChild>
+                <Button
+                  variant="outline"
+                  size="icon"
+                  className="h-8 w-8 ml-2"
+                  onClick={handleCopyText}
+                >
+                  <Copy className="h-4 w-4" />
+                  <span className="sr-only">Copiar resposta</span>
+                </Button>
+              </TooltipTrigger>
+              <TooltipContent side="left" sideOffset={5}>
+                <p>Resposta copiada para a área de transferência!</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+         </div> 
           <div className="flex-grow overflow-auto">
             <div className="flex-grow overflow-auto">
               <ScrollArea className="h-[calc(100%-2rem)] pr-4">
@@ -200,6 +228,16 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
     <footer className="mt-4 text-xs text-gray-500 text-center">
       Aviso: Esta informação é fornecida apenas para orientação geral e não deve ser considerada como aconselhamento jurídico ou profissional.
     </footer>
+    {showPDF && (
+      <Dialog open={showPDF} onOpenChange={setShowPDF}>
+        <DialogContent className="max-w-4xl w-full max-h-[90vh] overflow-auto">
+          <DialogHeader>
+            <DialogTitle>Plano Diretor Municipal - Regulamento</DialogTitle>
+          </DialogHeader>
+          <PDFViewer pdfUrl={LOCAL_PDF_URL} initialPage={pdfPage} />
+        </DialogContent>
+      </Dialog>
+    )}
   </DialogContent>
 </Dialog>
 
