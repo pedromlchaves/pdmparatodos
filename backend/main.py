@@ -2,6 +2,7 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import os
+import logging
 from helpers.generator import Generator
 from helpers.retriever import Retriever
 from helpers.vectorizer import TextVectorizer
@@ -14,6 +15,10 @@ load_dotenv()
 
 SECRET_KEY = os.getenv("NEXTAUTH_SECRET")
 ALGORITHM = "HS256"
+
+# Configure logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
 
 class JWTMiddleware:
@@ -65,7 +70,7 @@ enriched_articles = open("data/enriched_articles.txt").read().split("\n\n")
 generator = Generator(api_key=api_key, model="mistral-large-latest")
 
 
-class QuestionRequest(Request):
+class QuestionRequest(BaseModel):
     question: str
     properties: dict
 
@@ -101,12 +106,12 @@ def get_all_relevant_chunks(layers_formatted):
 
 
 @app.post("/ask_question/")
-async def ask_question(request: QuestionRequest):
+async def ask_question(request: Request, question_request: QuestionRequest):
     """
     Answer a question based on the given coordinates and context.
 
     Args:
-        request (QuestionRequest): The question and coordinates.
+        question_request (QuestionRequest): The question and coordinates.
 
     Returns:
         dict: The generated response.
@@ -117,23 +122,23 @@ async def ask_question(request: QuestionRequest):
     if not user:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
-    parsed_properties = parse_properties_for_model(request.properties)
+    parsed_properties = parse_properties_for_model(question_request.properties)
 
     layers_formatted = "\n".join(parsed_properties)
 
     relevant_chunks = get_all_relevant_chunks(parsed_properties)
 
     prompt = generator.generate_prompt(
-        layers_formatted, relevant_chunks, request.question
+        layers_formatted, relevant_chunks, question_request.question
     )
 
-    print(prompt)
+    logger.info(f"Generated prompt: {prompt}")
 
     articles = [x.splitlines()[2] for x in relevant_chunks]
 
     response = generator.generate(prompt)
 
-    print(response)
+    logger.info(f"Generated response: {response}")
 
     return {"articles": articles, "answer": response}
 

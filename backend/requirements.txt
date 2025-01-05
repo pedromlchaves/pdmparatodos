@@ -10,3 +10,5 @@ faiss-cpu
 PyMuPDF
 python-dotenv
 python-jose
+pytest
+httpx
