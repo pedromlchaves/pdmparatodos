@@ -9,3 +9,4 @@ numpy
 faiss-cpu
 PyMuPDF
 python-dotenv
+python-jose
