@@ -12,3 +12,5 @@ python-dotenv
 python-jose
 pytest
 httpx
+sqlalchemy
+psycopg2-binary

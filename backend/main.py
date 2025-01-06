@@ -1,4 +1,4 @@
-from fastapi import FastAPI, HTTPException, Request
+from fastapi import FastAPI, HTTPException, Request, Depends
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 import os
@@ -10,6 +10,8 @@ from helpers.wms import WMService
 import time
 from dotenv import load_dotenv
 from jose import jwt, JWTError
+from models import Response, SessionLocal, Base, engine
+from sqlalchemy.orm import Session
 
 load_dotenv()
 
@@ -19,6 +21,17 @@ ALGORITHM = "HS256"
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+# Create the database tables if they do not already exist
+Base.metadata.create_all(bind=engine)
+
+
+def get_db():
+    db = SessionLocal()
+    try:
+        yield db
+    finally:
+        db.close()
 
 
 class JWTMiddleware:
@@ -106,7 +119,9 @@ def get_all_relevant_chunks(layers_formatted):
 
 
 @app.post("/ask_question/")
-async def ask_question(request: Request, question_request: QuestionRequest):
+async def ask_question(
+    request: Request, question_request: QuestionRequest, db: Session = Depends(get_db)
+):
     """
     Answer a question based on the given coordinates and context.
 
@@ -139,6 +154,13 @@ async def ask_question(request: Request, question_request: QuestionRequest):
     response = generator.generate(prompt)
 
     logger.info(f"Generated response: {response}")
+
+    logger.info("Saving response to database...")
+    db_response = Response(user=user, articles="\n".join(articles), answer=response)
+
+    db.add(db_response)
+    db.commit()
+    db.refresh(db_response)
 
     return {"articles": articles, "answer": response}
 
