@@ -12,6 +12,7 @@ import { Label } from "@/components/ui/label"
 import { Footer } from './Footer'
 import { Header } from './Header'
 import { getSession } from "next-auth/react";
+import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -85,36 +86,42 @@ export default function MapComponent() {
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
       <main className="flex-grow p-4">
-      <div className="container mx-auto w-full max-w-[75%]">
-          <div className="mb-4">
-            <Label htmlFor="city-select" className="text-sm font-medium">
-              Seleccione um Município
-            </Label>
-            <Select onValueChange={handleCityChange} value={selectedCity}>
-              <SelectTrigger className="w-[180px] bg-white">
-                <SelectValue placeholder="Seleccione um Município" />
-              </SelectTrigger>
-              <SelectContent>
-                {Object.keys(cities).map((city) => (
-                  <SelectItem key={city} value={city}>
-                    {city}
-                  </SelectItem>
-                ))}
-              </SelectContent>
-            </Select>
-          </div>
+        <div className="container mx-auto w-full max-w-[75%]">
+          <Card className="mb-4">
+            <CardHeader>
+              <CardTitle>
+                <Label htmlFor="city-select" className="text-sm font-medium">
+                  Seleccione um Município
+                </Label>
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <Select onValueChange={handleCityChange} value={selectedCity}>
+                <SelectTrigger className="w-[180px] bg-white">
+                  <SelectValue placeholder="Seleccione um Município" />
+                </SelectTrigger>
+                <SelectContent>
+                  {Object.keys(cities).map((city) => (
+                    <SelectItem key={city} value={city}>
+                      {city}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+            </CardContent>
+          </Card>
           <div className="flex flex-col md:flex-row gap-4 mb-4">
-            <div className="w-full md:w-3/4 z-0">
-              <div className="h-[400px] bg-white rounded-lg overflow-hidden shadow-md">
-                <Map 
-                  onMapClick={handleMapClick} 
-                  clickedCoords={clickedCoords} 
-                  center={cities[selectedCity] as Coordinates} 
-                />
-              </div>
-            </div>
-            <div className="w-full md:w-1/4">
-              <div className="bg-white p-4 rounded-lg shadow-md h-[400px] flex flex-col">
+            <Card className="w-full md:w-3/4 z-0">
+              <CardContent className="p-0   flex-1 h-[400px] bg-white rounded-lg overflow-hidden shadow-md">
+                  <Map 
+                    onMapClick={handleMapClick} 
+                    clickedCoords={clickedCoords} 
+                    center={cities[selectedCity] as Coordinates} 
+                  />
+              </CardContent>
+            </Card>
+            <Card className="w-full md:w-1/4">
+              <CardContent className="bg-white p-4 rounded-lg shadow-md h-[400px] flex flex-col">
                 <div className="flex-grow">
                   <h2 className="text-lg font-semibold mb-2">
                     {clickedCoords ? "Coordenadas seleccionadas:" : "Seleccione coordenadas"}
@@ -138,43 +145,40 @@ export default function MapComponent() {
                     {isLoading && <Loader2 className="h-4 w-4 animate-spin" />}
                   </Button>
                   <QuestionModal 
+                    lat={clickedCoords ? clickedCoords[0] : 0}
+                    lon={clickedCoords ? clickedCoords[1] : 0}
                     properties={locationInfo} 
                     selectedCity={selectedCity}
                     disabled={!isInfoLoaded}
                   />
                 </div>
-              </div>
-            </div>
+              </CardContent>
+            </Card>
           </div>
-          <div>
-            {isLoading && (
-              <div className="flex items-center justify-center w-full h-[200px] bg-white rounded-lg shadow-md">
-                <Loader2 className="animate-spin" />
-              </div>
-            )}
-            {!isLoading && locationInfo && (
-              <div
-              className="bg-white p-6 rounded-lg shadow-md max-h-[400px] overflow-auto"
-            >
-                <h2 className="text-lg font-semibold mb-2">Informação da Localização:</h2>
-                <Accordion type="single" collapsible className="w-full">
-                  {Object.values(locationInfo).flat().map((item, index) => (
-                    <AccordionItem key={index} value={`item-${index}`}>
-                      <AccordionTrigger>
-                      {/* @ts-expect-error need better research on types */}
-                      {item.nome?.startsWith("PDM") ? <strong>{item.nome}</strong> : item.nome || `Item ${index + 1}`}
-                      </AccordionTrigger> 
-                      <AccordionContent>
-                        <ul className="list-disc pl-5">
-                          {renderItemContent(item)}
-                        </ul>
-                      </AccordionContent>
-                    </AccordionItem>
-                  ))}
-                </Accordion>
-              </div>
-            )}
-          </div>
+          {!isLoading && isInfoLoaded && locationInfo && (
+            <Card>
+              <CardContent className='p-0'>
+                <div className="p-4 bg-white rounded-lg shadow-md max-h-[400px] overflow-auto">
+                  <h2 className="text-lg font-semibold mb-2">Informação da Localização:</h2>
+                  <Accordion type="single" collapsible className="w-full">
+                    {Object.values(locationInfo).flat().map((item, index) => (
+                      <AccordionItem key={index} value={`item-${index}`}>
+                        <AccordionTrigger>
+                        {/* @ts-expect-error need better research on types */}
+                        {item.nome?.startsWith("PDM") ? <strong>{item.nome}</strong> : item.nome || `Item ${index + 1}`}
+                        </AccordionTrigger> 
+                        <AccordionContent>
+                          <ul className="list-disc pl-5">
+                            {renderItemContent(item)}
+                          </ul>
+                        </AccordionContent>
+                      </AccordionItem>
+                    ))}
+                  </Accordion>
+                </div>
+              </CardContent>
+            </Card>
+          )}
         </div>
       </main>
       <Footer />

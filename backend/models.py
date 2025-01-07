@@ -1,4 +1,5 @@
-from sqlalchemy import Column, Integer, String, Text, create_engine
+from sqlalchemy import Column, Integer, String, Text, Float, create_engine
+from sqlalchemy.dialects.postgresql import ARRAY
 from sqlalchemy.ext.declarative import declarative_base
 from sqlalchemy.orm import sessionmaker
 import os
@@ -16,6 +17,9 @@ class Response(Base):
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user = Column(String, nullable=False)
+    coordinates = Column(ARRAY(Float), nullable=False)
+    municipality = Column(String, nullable=False)
+    question = Column(Text, nullable=False)
     articles = Column(Text, nullable=False)
     answer = Column(Text, nullable=False)
 

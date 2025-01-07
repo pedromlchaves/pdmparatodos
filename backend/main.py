@@ -65,13 +65,6 @@ app.add_middleware(JWTMiddleware)
 DEFAULT_MARGIN = 0.001
 
 
-class Coordinates(BaseModel):
-    lat: float
-    lon: float
-    margin: float = DEFAULT_MARGIN
-    municipality: str = "Porto"
-
-
 api_key = os.getenv("MISTRAL_API_KEY")
 
 vectorizer = TextVectorizer(api_key=api_key)
@@ -83,9 +76,17 @@ enriched_articles = open("data/enriched_articles.txt").read().split("\n\n")
 generator = Generator(api_key=api_key, model="mistral-large-latest")
 
 
+class Coordinates(BaseModel):
+    lat: float
+    lon: float
+    margin: float
+    municipality: str
+
+
 class QuestionRequest(BaseModel):
     question: str
     properties: dict
+    coords: Coordinates
 
 
 def parse_properties_for_model(properties):
@@ -143,26 +144,55 @@ async def ask_question(
 
     relevant_chunks = get_all_relevant_chunks(parsed_properties)
 
+    logger.info("Generating prompt...")
+
     prompt = generator.generate_prompt(
         layers_formatted, relevant_chunks, question_request.question
     )
 
-    logger.info(f"Generated prompt: {prompt}")
-
     articles = [x.splitlines()[2] for x in relevant_chunks]
 
+    logger.info("Generating response...")
     response = generator.generate(prompt)
 
-    logger.info(f"Generated response: {response}")
-
     logger.info("Saving response to database...")
-    db_response = Response(user=user, articles="\n".join(articles), answer=response)
+    db_response = Response(
+        user=user["id"],
+        question=question_request.question,
+        coordinates=[
+            question_request.coords.lat,
+            question_request.coords.lon,
+        ],
+        municipality=question_request.coords.municipality,
+        articles="\n".join(articles),
+        answer=response,
+    )
 
     db.add(db_response)
     db.commit()
     db.refresh(db_response)
 
     return {"articles": articles, "answer": response}
+
+
+@app.get("/responses/")
+async def get_responses(request: Request, db: Session = Depends(get_db)):
+    """
+    Retrieve responses from the Response table based on the user ID extracted from the token.
+
+    Returns:
+        List[Response]: A list of responses for the authenticated user.
+    """
+
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+    user_id = user["id"]
+    responses = db.query(Response).filter(Response.user == user_id).all()
+
+    return responses
 
 
 @app.get("/layers/{municipality}")

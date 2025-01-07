@@ -11,6 +11,7 @@ import remarkGfm from 'remark-gfm'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import PDFViewer from './PDFViewer'
 import { getSession } from 'next-auth/react'
+import { SelectItemText } from '@radix-ui/react-select'
 
 const LOCAL_PDF_URL = '/pdm.pdf';
 
@@ -32,12 +33,14 @@ interface LocationProperties {
 }
 
 interface QuestionModalProps {
+  lat: number;
+  lon: number;
   properties: LocationProperties;
   selectedCity: string;
   disabled: boolean;
 }
 
-export function QuestionModal({ properties, selectedCity, disabled }: QuestionModalProps) {
+export function QuestionModal({ lat, lon, properties, selectedCity, disabled }: QuestionModalProps) {
   const [question, setQuestion] = useState('')
   const [questionResponse, setQuestionResponse] = useState<QuestionResponse | null>(null)
   const [isQuestionLoading, setIsQuestionLoading] = useState(false)
@@ -72,7 +75,7 @@ export function QuestionModal({ properties, selectedCity, disabled }: QuestionMo
         return;
       }
       const token = session.user.access_token
-      const response = await askQuestion(question, properties, token)
+      const response = await askQuestion(lat, lon, selectedCity, question, properties, token)
       setQuestionResponse(response)
     } catch (error) {
       console.error("Error submitting question:", error)

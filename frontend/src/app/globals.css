@@ -64,3 +64,6 @@
     @apply bg-background text-foreground;
   }
 }
+.z-index-high {
+  z-index: 9999 !important;
+}
