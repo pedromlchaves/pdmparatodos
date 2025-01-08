@@ -1,9 +1,11 @@
 "use client"
+import dynamic from "next/dynamic"
 import { useState, useEffect } from "react"
 import { getSession } from "next-auth/react"
 import { getResponses } from "@/app/actions"
 import { QuestionResponse } from "@/types" // Ensure this is the correct import
-import { SimpleInteractionHistory } from "@/components/HistoryComponent"
+const SimpleInteractionHistory = dynamic(() => import("@/components/HistoryComponent").then(mod => mod.SimpleInteractionHistory), { ssr: false })
+
 
 export default function HistoryPage() {
   const [history, setQuestionHistory] = useState<QuestionResponse[]>([])
