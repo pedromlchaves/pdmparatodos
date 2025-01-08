@@ -14,6 +14,8 @@ import { Header } from './Header'
 import { getSession } from "next-auth/react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FloatingAlert } from './FloatingAlert'
+import { Input } from "@/components/ui/input"
+import { getGeocodingInfo } from '../app/actions'
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -38,6 +40,7 @@ export default function MapComponent() {
   const [disableQuestion, setDisableQuestion] = useState(Boolean)
   const [showAlert, setShowAlert] = useState(false)
   const [alertMessage, setAlertMessage] = useState(String)
+  const [address, setAddress] = useState<string>("")
 
   useEffect(() => {
     const fetchResponseCount = async () => {
@@ -123,6 +126,25 @@ export default function MapComponent() {
     setShowAlert(false)
   }
 
+  const handleAddressChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setAddress(event.target.value)
+    console.log(address)
+  }
+
+  const handleAddressKeyPress = async (event: React.KeyboardEvent<HTMLInputElement>) => {
+    if (event.key === 'Enter') {
+      event.preventDefault()
+      // Handle address submission logic here
+      console.log(address)
+      // Example: Fetch coordinates based on the address
+      const geodata = await getGeocodingInfo(address)
+      const coords = [geodata.results[0].geometry.location['lat'], geodata.results[0].geometry.location['lng']] as Coordinates
+      console.log(geodata.results[0].geometry.location)
+      console.log(coords)
+      setClickedCoords(coords)
+    }
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
@@ -172,7 +194,7 @@ export default function MapComponent() {
               <CardContent className="bg-white p-4 rounded-lg shadow-md h-[400px] flex flex-col">
                 <div className="flex-grow">
                   <h2 className="text-lg font-semibold mb-2">
-                    {clickedCoords ? "Coordenadas seleccionadas:" : "Seleccione coordenadas"}
+                    {clickedCoords ? "Local seleccionado:" : "Seleccione um local"}
                   </h2>
                   {clickedCoords ? (
                     <>
@@ -182,6 +204,19 @@ export default function MapComponent() {
                   ) : (
                     <p className="text-gray-500">Clique no mapa para seleccionar coordenadas</p>
                   )}
+                  <div className="mt-4">
+                    <Label htmlFor="address-input" className="text-sm font-medium">
+                      Ou introduza a morada:
+                    </Label>
+                    <Input 
+                      id="address-input"
+                      value={address}
+                      onChange={handleAddressChange}
+                      onKeyPress={handleAddressKeyPress}
+                      placeholder="e.g. Rua de Ceuta, Porto"
+                      className="mt-2"
+                    />
+                  </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <Button 
