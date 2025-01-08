@@ -31,6 +31,7 @@ const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
 // We only define this inside docker, outside we go for default
 const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000';
+const MAPS_API_KEY = process.env.MAPS_API_KEY as string;
 
 export async function getLocationInfo(lat: number, lon: number, municipality: string, access_token: string, layer_name?: string) {
   
@@ -140,7 +141,7 @@ export async function getResponseCount(access_token: string): Promise<{ question
     }
 
     const data = await response.json();
-    console.log(data)
+    
     return data;
 
   } catch (error) {
@@ -163,7 +164,7 @@ export async function getGeocodingInfo(address: string) {
     }
 
     const data = await response.json();
-    console.log(data)
+    
     return data;
 
   } catch (error) {

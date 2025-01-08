@@ -128,19 +128,16 @@ export default function MapComponent() {
 
   const handleAddressChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setAddress(event.target.value)
-    console.log(address)
+    
   }
 
   const handleAddressKeyPress = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       event.preventDefault()
-      // Handle address submission logic here
-      console.log(address)
+
       // Example: Fetch coordinates based on the address
       const geodata = await getGeocodingInfo(address)
       const coords = [geodata.results[0].geometry.location['lat'], geodata.results[0].geometry.location['lng']] as Coordinates
-      console.log(geodata.results[0].geometry.location)
-      console.log(coords)
       setClickedCoords(coords)
     }
   }
