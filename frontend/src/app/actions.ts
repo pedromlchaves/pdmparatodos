@@ -1,4 +1,5 @@
 'use server'
+import { QuestionResponse } from "@/types" // Ensure this is the correct import
 
 interface Coordinates {
   lat: number;
@@ -7,14 +8,10 @@ interface Coordinates {
   municipality: string;
 }
 
-interface QuestionResponse {
-  articles: string[];
-  answer: string;
-}
-
 interface QuestionRequest {
   question: string;
   properties: LocationProperties;
+  coords: Coordinates;
 }
 
 interface LocationItem {
@@ -68,10 +65,18 @@ export async function getLocationInfo(lat: number, lon: number, municipality: st
   }
 }
 
-export async function askQuestion(question: string, properties: LocationProperties, access_token: string): Promise<QuestionResponse> {
+export async function askQuestion(lat: number, lon: number, municipality: string, question: string, properties: LocationProperties, access_token: string): Promise<QuestionResponse> {
+  const coords: Coordinates = {
+    lat,
+    lon,
+    margin: DEFAULT_MARGIN,
+    municipality
+  };
+
   const q: QuestionRequest = {
    question,
-   properties
+   properties,
+   coords
   };
 
   try {
@@ -93,6 +98,29 @@ export async function askQuestion(question: string, properties: LocationProperti
 
   } catch (error) {
     console.error("Error in askQuestion:", error);
+    throw error; // Re-throw the error to be handled by the client
+  }
+}
+
+export async function getResponses(access_token: string): Promise<QuestionResponse[]> {
+  try {
+    const response = await fetch(`${BACKEND_URL}/responses`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${access_token}`
+      }
+    });
+    
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data: QuestionResponse[] = await response.json();
+    return data;
+
+  } catch (error) {
+    console.error("Error in getResponses:", error);
     throw error; // Re-throw the error to be handled by the client
   }
 }
