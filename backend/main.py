@@ -180,7 +180,8 @@ async def get_responses(request: Request, db: Session = Depends(get_db)):
     Returns:
         List[Response]: A list of responses for the authenticated user.
     """
-
+    logging.info("Request authentication info:")
+    logging.info(request.scope.get("user"))
     user = request.scope.get("user")
 
     if not user:
