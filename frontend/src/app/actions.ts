@@ -124,3 +124,27 @@ export async function getResponses(access_token: string): Promise<QuestionRespon
     throw error; // Re-throw the error to be handled by the client
   }
 }
+
+export async function getResponseCount(access_token: string): Promise<{ questions_asked: number; limit: number, last_reset: string }> { 
+  try {
+    const response = await fetch(`${BACKEND_URL}/request_count/`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json',
+        'Authorization': `Bearer ${access_token}`
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data)
+    return data;
+
+  } catch (error) {
+    console.error("Error in getRequestCount:", error);
+    throw error; // Re-throw the error to be handled by the client
+  }
+}

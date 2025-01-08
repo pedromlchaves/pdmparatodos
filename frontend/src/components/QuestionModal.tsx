@@ -11,7 +11,6 @@ import remarkGfm from 'remark-gfm'
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip"
 import PDFViewer from './PDFViewer'
 import { getSession } from 'next-auth/react'
-import { SelectItemText } from '@radix-ui/react-select'
 
 const LOCAL_PDF_URL = '/pdm.pdf';
 
@@ -38,9 +37,10 @@ interface QuestionModalProps {
   properties: LocationProperties;
   selectedCity: string;
   disabled: boolean;
+  tooltip: string;
 }
 
-export function QuestionModal({ lat, lon, properties, selectedCity, disabled }: QuestionModalProps) {
+export function QuestionModal({ lat, lon, properties, selectedCity, disabled, tooltip }: QuestionModalProps) {
   const [question, setQuestion] = useState('')
   const [questionResponse, setQuestionResponse] = useState<QuestionResponse | null>(null)
   const [isQuestionLoading, setIsQuestionLoading] = useState(false)
@@ -125,7 +125,10 @@ export function QuestionModal({ lat, lon, properties, selectedCity, disabled }: 
   // }}
 >
   <DialogTrigger asChild>
-    <Button variant="outline" disabled={disabled}>
+    <Button 
+    variant="outline" 
+    disabled={disabled}
+    >
       <Wand2 className="w-4 h-4 mr-2" />
       Faça uma Pergunta
     </Button>
