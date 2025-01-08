@@ -16,6 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FloatingAlert } from './FloatingAlert'
 import { Input } from "@/components/ui/input"
 import { getGeocodingInfo } from '../app/actions'
+import { MapPin } from 'lucide-react'
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -134,12 +135,18 @@ export default function MapComponent() {
   const handleAddressKeyPress = async (event: React.KeyboardEvent<HTMLInputElement>) => {
     if (event.key === 'Enter') {
       event.preventDefault()
-
+      
       // Example: Fetch coordinates based on the address
       const geodata = await getGeocodingInfo(address)
       const coords = [geodata.results[0].geometry.location['lat'], geodata.results[0].geometry.location['lng']] as Coordinates
       setClickedCoords(coords)
     }
+  }
+
+  const onIconClick = async () => {
+    const geodata = await getGeocodingInfo(address)
+    const coords = [geodata.results[0].geometry.location['lat'], geodata.results[0].geometry.location['lng']] as Coordinates
+    setClickedCoords(coords)
   }
 
   return (
@@ -201,19 +208,32 @@ export default function MapComponent() {
                   ) : (
                     <p className="text-gray-500">Clique no mapa para seleccionar coordenadas</p>
                   )}
-                  <div className="mt-4">
-                    <Label htmlFor="address-input" className="text-sm font-medium">
-                      Ou introduza a morada:
-                    </Label>
-                    <Input 
-                      id="address-input"
-                      value={address}
-                      onChange={handleAddressChange}
-                      onKeyPress={handleAddressKeyPress}
-                      placeholder="e.g. Rua de Ceuta, Porto"
-                      className="mt-2"
-                    />
+                  
+
+                  <div className="mt-4 relative">
+                  <Label htmlFor="address" className="mt-4 text-sm font-medium">
+                    Ou introduza um endereço
+                  </Label>
+                  <div className="relative flex items-center">
+                  <Input
+                    type="text"
+                    placeholder="e.g. Rua de Ceuta, Porto"
+                    className="pr-10"
+                    onKeyPress={handleAddressKeyPress}
+                    onChange={handleAddressChange}
+                  />
+                  <Button
+                    type="button"
+                    variant="ghost"
+                    size="icon"
+                    className="absolute right-0 top-0 h-full"
+                    onClick={onIconClick}
+                    aria-label="Use current location"
+                  >
+                    <MapPin className="h-2 w-2" />
+                  </Button>
                   </div>
+                </div>
                 </div>
                 <div className="flex flex-col gap-2">
                   <Button 

@@ -152,13 +152,16 @@ export async function getResponseCount(access_token: string): Promise<{ question
 
 export async function getGeocodingInfo(address: string) {
   try {
+    console.log(MAPS_API_KEY)
     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${encodeURIComponent(MAPS_API_KEY)}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
     });
+    console.log('Request URL:', response.url);
 
+    console.log(response);
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
