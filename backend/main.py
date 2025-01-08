@@ -111,10 +111,7 @@ def parse_properties_for_model(properties):
 def get_all_relevant_chunks(layers_formatted):
     all_relevant_chunks = []
 
-    for layer in layers_formatted:
-        relevant_chunks = retriever.retrieve(layer, enriched_articles, k=5)
-        all_relevant_chunks.extend(relevant_chunks)
-        time.sleep(2)
+    all_relevant_chunks = retriever.retrieve(layers_formatted, enriched_articles, k=5)
 
     return all_relevant_chunks
 

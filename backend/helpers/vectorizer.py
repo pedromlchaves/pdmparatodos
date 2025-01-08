@@ -16,7 +16,7 @@ class TextVectorizer:
             model="mistral-embed", inputs=input
         )
 
-        return embeddings_batch_response.data[0].embedding
+        return [x.embedding for x in embeddings_batch_response.data]
 
     def get_embeddings(self, chunks):
         return np.array([self.get_text_embedding(chunk) for chunk in chunks])
