@@ -7,10 +7,10 @@ from helpers.generator import Generator
 from helpers.retriever import Retriever
 from helpers.vectorizer import TextVectorizer
 from helpers.wms import WMService
-import time
+from datetime import datetime
 from dotenv import load_dotenv
 from jose import jwt, JWTError
-from models import Response, SessionLocal, Base, engine
+from models import Response, UserRequestCount, SessionLocal, Base, engine
 from sqlalchemy.orm import Session
 
 load_dotenv()
@@ -170,7 +170,66 @@ async def ask_question(
     db.commit()
     db.refresh(db_response)
 
+    # Update the user's request count logic
+    user_id = user["id"]  # user["id"] should correspond to Prisma's user ID
+
+    # Fetch or create UserRequestCount for this user
+    user_request_count = (
+        db.query(UserRequestCount).filter(UserRequestCount.user_id == user_id).first()
+    )
+
+    if not user_request_count:
+        # If the user doesn't have an entry, create one
+        user_request_count = UserRequestCount(
+            user_id=user_id, questions_asked=0, last_reset=datetime.utcnow()
+        )
+        db.add(user_request_count)
+        db.commit()
+
+    # Reset the count if the month has changed
+    user_request_count.reset_count_if_needed()
+
+    # Check if the user has exceeded the question limit
+
+    if user_request_count.questions_asked >= user_request_count.limit:
+        raise HTTPException(
+            status_code=403,
+            detail="You have reached the maximum number of questions for this month. Please try again next month.",
+        )
+
+    # Increment the number of questions asked
+    user_request_count.questions_asked += 1
+    db.commit()
+
     return {"articles": articles, "answer": response}
+
+
+@app.get("/request_count/")
+async def get_request_count(request: Request, db: Session = Depends(get_db)):
+    """
+    Get the request count for the authenticated user.
+
+    Returns:
+        dict: The request count and limit for the user.
+    """
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+
+    user_id = user["id"]
+    user_request_count = (
+        db.query(UserRequestCount).filter(UserRequestCount.user_id == user_id).first()
+    )
+
+    if not user_request_count:
+        raise HTTPException(status_code=404, detail="Request count not found for user")
+
+    return {
+        "questions_asked": user_request_count.questions_asked,
+        "limit": user_request_count.limit,
+        "last_reset": user_request_count.last_reset,
+    }
 
 
 @app.get("/responses/")

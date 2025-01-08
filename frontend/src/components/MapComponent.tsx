@@ -1,11 +1,11 @@
 "use client"
 
-import { useState, useCallback } from 'react'
+import { useState, useCallback, useEffect } from 'react'
 import dynamic from 'next/dynamic'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
-import { getLocationInfo } from '../app/actions'
+import { getLocationInfo, getResponseCount } from '../app/actions'
 import { Loader2 } from 'lucide-react'
 import { QuestionModal } from './QuestionModal'
 import { Label } from "@/components/ui/label"
@@ -13,6 +13,7 @@ import { Footer } from './Footer'
 import { Header } from './Header'
 import { getSession } from "next-auth/react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
+import { FloatingAlert } from './FloatingAlert'
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -32,6 +33,38 @@ export default function MapComponent() {
   const [locationInfo, setLocationInfo] = useState<any | null>(null)
   const [isLoading, setIsLoading] = useState(false)
   const [isInfoLoaded, setIsInfoLoaded] = useState(false)
+  const [responseCount, setResponseCount] = useState<number | null>(null)
+  const [responselimit, setResponseLimit] = useState<number | null>(null)
+  const [disableQuestion, setDisableQuestion] = useState(Boolean)
+  const [showAlert, setShowAlert] = useState(false)
+  const [alertMessage, setAlertMessage] = useState(String)
+
+  useEffect(() => {
+    const fetchResponseCount = async () => {
+      try {
+        const session = await getSession()
+        const token = session?.user?.access_token
+        if (!token) {
+          throw new Error("No access token found");
+        }
+        const { questions_asked, limit } = await getResponseCount(token)
+        console.log(questions_asked)
+        console.log(limit)
+        if (questions_asked > limit) {
+          setDisableQuestion(true)
+          setAlertMessage("Excedeu o limite mensal de perguntas.")
+          setShowAlert(true)
+        } else { 
+          setDisableQuestion(false)
+        }
+        console.log(disableQuestion)
+      } catch (error) {
+        console.error("Error fetching response count:", error)
+      }
+    }
+
+    fetchResponseCount()
+  }, [])
 
   const handleMapClick = useCallback((lat: number, lng: number) => {
     setClickedCoords([lat, lng])
@@ -82,9 +115,24 @@ export default function MapComponent() {
   }).filter(Boolean)
 }
 
+  const handleShowAlert = () => {
+    setShowAlert(true)
+  }
+
+  const handleCloseAlert = () => {
+    setShowAlert(false)
+  }
+
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
       <Header />
+      <FloatingAlert
+        title="Atenção"
+        description={alertMessage}
+        show={showAlert}
+        onClose={handleCloseAlert}
+        variant="red"
+      />
       <main className="flex-grow p-4">
         <div className="container mx-auto w-full max-w-[75%]">
           <Card className="mb-4">
@@ -149,7 +197,8 @@ export default function MapComponent() {
                     lon={clickedCoords ? clickedCoords[1] : 0}
                     properties={locationInfo} 
                     selectedCity={selectedCity}
-                    disabled={!isInfoLoaded}
+                    disabled={!isInfoLoaded || disableQuestion}
+                    tooltip={disableQuestion ? "You have exceeded your monthly question limit." : ""}
                   />
                 </div>
               </CardContent>
