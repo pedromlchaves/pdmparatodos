@@ -42,7 +42,8 @@ class JWTMiddleware:
         if scope["type"] == "http":
             request = Request(scope, receive)
             auth_header = request.headers.get("Authorization")
-
+            logging.info("Auth header:")
+            logging.info(auth_header)
             if auth_header:
                 try:
                     # Extract the token from the "Bearer" scheme

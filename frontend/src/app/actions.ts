@@ -104,7 +104,7 @@ export async function askQuestion(lat: number, lon: number, municipality: string
 
 export async function getResponses(access_token: string): Promise<QuestionResponse[]> {
   try {
-    const response = await fetch(`${BACKEND_URL}/responses`, {
+    const response = await fetch(`${BACKEND_URL}/responses/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',

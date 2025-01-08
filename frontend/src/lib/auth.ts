@@ -123,12 +123,6 @@ export const authOptions: NextAuthOptions = {
       session.user.access_token = token.access_token as string;
       return session;
     },
-    async redirect({ url, baseUrl }) {
-      if (url.startsWith('https://www.pdmx.app')) {
-        return 'https://pdmx.app' + url.slice('https://www.pdmx.app'.length);
-      }
-      return url; // Return the original URL if no changes are needed
-    },
   },
 }
 

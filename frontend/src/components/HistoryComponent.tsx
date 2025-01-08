@@ -36,6 +36,7 @@ export function SimpleInteractionHistory({ responses }: SimpleInteractionHistory
     const fetchArticlesPages = async () => {
       const response = await fetch('/api/articles-pages');
       const data = await response.json();
+      console.log(data)
       setArticlesPages(data);
     };
 
@@ -43,6 +44,10 @@ export function SimpleInteractionHistory({ responses }: SimpleInteractionHistory
   }, []);
 
   const addLinksToMarkdown = (selectedCity: string, text: string) => {
+    if (!articlesPages || !articlesPages[selectedCity]) {
+      return text;  // Return the original text if the articlesPages are not loaded yet
+    }
+    
     return text.replace(/(Artigo\s+\d+(?:\.\º)?)/g, (artigo) => {
       const municipality_pages = articlesPages[selectedCity]
       const page = municipality_pages[artigo];
