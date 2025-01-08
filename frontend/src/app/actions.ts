@@ -148,3 +148,26 @@ export async function getResponseCount(access_token: string): Promise<{ question
     throw error; // Re-throw the error to be handled by the client
   }
 }
+
+export async function getGeocodingInfo(address: string) {
+  try {
+    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=AIzaSyBalzosHbFqbbgwnK7ExTN4j8vR59aIDvA`, {
+      method: 'GET',
+      headers: {
+        'Content-Type': 'application/json'
+      }
+    });
+
+    if (!response.ok) {
+      throw new Error(`HTTP error! status: ${response.status}`);
+    }
+
+    const data = await response.json();
+    console.log(data)
+    return data;
+
+  } catch (error) {
+    console.error("Error in getGeocodingInfo:", error);
+    throw error; // Re-throw the error to be handled by the client
+  }
+}
