@@ -32,8 +32,8 @@ interface LocationProperties {
 const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
 // We only define this inside docker, outside we go for default
-const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000';
-const MAPS_API_KEY = process.env.MAPS_API_KEY as string;
+const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
+const MAPS_API_KEY = process.env.NEXT_PUBLIC_MAPS_API_KEY as string;
 
 
 async function fetchWithAuth(url: string, options: RequestInit): Promise<Response> {
