@@ -104,7 +104,7 @@ export const authOptions: NextAuthOptions = {
         const customToken = sign(
           { id: user.id, email: user.email },
           secret,
-          { expiresIn: "10s" }
+          { expiresIn: "1h" }
         );
   
         token.access_token = customToken
