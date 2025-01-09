@@ -28,17 +28,13 @@ interface LocationProperties {
 }
 
 
-
 const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
 // We only define this inside docker, outside we go for default
 const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
-const MAPS_API_KEY = process.env.NEXT_PUBLIC_MAPS_API_KEY as string;
-
 
 async function fetchWithAuth(url: string, options: RequestInit): Promise<Response> {
   const session = await getSession(); // Retrieve the session, including access_token
-  console.log(session);
   
   if (!session?.user?.access_token) {
     // No token available, redirect to login
@@ -70,7 +66,6 @@ async function fetchWithAuth(url: string, options: RequestInit): Promise<Respons
   };
 
   try {
-    console.log("Fetching:", url);
     const response = await fetch(url, authOptions);
     
     if (response.status === 401) {
@@ -195,24 +190,17 @@ export async function getResponseCount(): Promise<{ questions_asked: number; lim
 }
 
 export async function getGeocodingInfo(address: string) {
-  try {
-    const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${encodeURIComponent(MAPS_API_KEY)}`, {
-      method: 'GET',
-      headers: {
-        'Content-Type': 'application/json'
-      }
-    });
-    
-    if (!response.ok) {
-      throw new Error(`HTTP error! status: ${response.status}`);
-    }
+  const response = await fetchWithAuth(`/api/geocoding?address=${encodeURIComponent(address)}`, {
+    method: 'GET',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
-    const data = await response.json();
-    
-    return data;
-
-  } catch (error) {
-    console.error("Error in getGeocodingInfo:", error);
-    throw error; // Re-throw the error to be handled by the client
+  if (!response.ok) {
+    throw new Error(`HTTP error! status: ${response.status}`);
   }
+
+  const data = await response.json();
+  return data;
 }
