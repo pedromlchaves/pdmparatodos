@@ -70,6 +70,7 @@ async function fetchWithAuth(url: string, options: RequestInit): Promise<Respons
   };
 
   try {
+    console.log("Fetching:", url);
     const response = await fetch(url, authOptions);
     
     if (response.status === 401) {
