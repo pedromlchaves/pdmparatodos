@@ -12,6 +12,7 @@ from dotenv import load_dotenv
 from jose import jwt, JWTError
 from models import Response, UserRequestCount, SessionLocal, Base, engine
 from sqlalchemy.orm import Session
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
@@ -48,20 +49,47 @@ class JWTMiddleware:
                 try:
                     # Extract the token from the "Bearer" scheme
                     token = auth_header.split(" ")[1]
+                    logging.info(token)
                     payload = jwt.decode(token, SECRET_KEY, algorithms=[ALGORITHM])
+                    logging.info(payload)
                     scope["user"] = payload  # Add decoded user info to the scope
-                except JWTError:
-                    return JSONResponse(
-                        status_code=401, content={"detail": "Invalid or missing token"}
+
+                except Exception as e:
+                    # Respond with an HTTP 401 error
+                    response = JSONResponse(
+                        status_code=401, content={"detail": "Invalid or expired token"}
                     )
+                    await response(scope, receive, send)
+                    return
             else:
-                scope["user"] = None  # No token provided
+                # Respond with an HTTP 401 error
+                response = JSONResponse(
+                    status_code=401, content={"detail": "Authorization header missing"}
+                )
+                await response(scope, receive, send)
+                return
 
         await self.app(scope, receive, send)
 
 
 app = FastAPI()
+
 app.add_middleware(JWTMiddleware)
+
+# Configure CORS
+origins = [
+    "*",
+    # Add other origins as needed
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 
 DEFAULT_MARGIN = 0.001
 
@@ -213,15 +241,17 @@ async def get_request_count(request: Request, db: Session = Depends(get_db)):
         dict: The request count and limit for the user.
     """
     user = request.scope.get("user")
-
+    logging.info(user)
     if not user:
         raise HTTPException(status_code=401, detail="Unauthorized")
 
     user_id = user["id"]
+    logging.info(user_id)
     user_request_count = (
         db.query(UserRequestCount).filter(UserRequestCount.user_id == user_id).first()
     )
 
+    logging.info(user_request_count)
     if not user_request_count:
         raise HTTPException(status_code=404, detail="Request count not found for user")
 

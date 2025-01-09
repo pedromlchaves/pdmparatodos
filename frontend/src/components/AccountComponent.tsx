@@ -30,12 +30,7 @@ export default function Account() {
 
         const fetchResponseCount = async () => {
             try {
-                const session = await getSession()
-                const token = session?.user?.access_token
-                if (!token) {
-                    throw new Error("No access token found");
-                }
-                const { questions_asked, limit, last_reset } = await getResponseCount(token)
+                const { questions_asked, limit, last_reset } = await getResponseCount()
                 setResponseCount(questions_asked)
                 setResponseLimit(limit)
                 setLastReset(last_reset)

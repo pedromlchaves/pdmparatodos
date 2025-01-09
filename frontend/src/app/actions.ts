@@ -1,5 +1,7 @@
-'use server'
 import { QuestionResponse } from "@/types" // Ensure this is the correct import
+import { getSession } from "next-auth/react";
+import { signIn } from "next-auth/react";
+import jwt from 'jsonwebtoken';
 
 interface Coordinates {
   lat: number;
@@ -33,21 +35,69 @@ const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 const BACKEND_URL = process.env.BACKEND_URL || 'http://127.0.0.1:8000';
 const MAPS_API_KEY = process.env.MAPS_API_KEY as string;
 
-export async function getLocationInfo(lat: number, lon: number, municipality: string, access_token: string, layer_name?: string) {
+
+async function fetchWithAuth(url: string, options: RequestInit): Promise<Response> {
+  const session = await getSession(); // Retrieve the session, including access_token
+  console.log(session);
   
+  if (!session?.user?.access_token) {
+    // No token available, redirect to login
+    signIn(); // Re-authenticate
+    return Promise.reject(new Error("No access token available"));
+  }
+  
+  // Check if the token is expired
+  const token = session.user.access_token;
+  try {
+    const decoded: any = jwt.decode(token); // Decode without verification to get the expiration
+    if (decoded?.exp && Date.now() >= decoded.exp * 1000) {
+      signIn(); // Re-authenticate
+      return Promise.reject(new Error("Token expired"));
+    }
+  } catch (error) {
+    console.error("Failed to decode JWT:", error);
+    signIn(); // Re-authenticate
+    return Promise.reject(new Error("Invalid token"));
+  }
+
+  // Add the access token to the headers
+  const authOptions = {
+    ...options,
+    headers: {
+      ...options.headers,
+      Authorization: `Bearer ${session.user.access_token}`,
+    },
+  };
+
+  try {
+    const response = await fetch(url, authOptions);
+    
+    if (response.status === 401) {
+      // Unauthorized, redirect to login
+      signIn(); // Re-authenticate
+      return Promise.reject(new Error("Unauthorized"));
+    }
+
+    return response;
+  } catch (error) {
+    console.error("Error in fetchWithAuth:", error);
+    throw error;
+  }
+}
+
+export async function getLocationInfo(lat: number, lon: number, municipality: string, layer_name?: string) {
   const coords: Coordinates = {
     lat,
     lon,
     margin: DEFAULT_MARGIN,
-    municipality
+    municipality,
   };
 
   try {
-    const response = await fetch(`${BACKEND_URL}/get_properties/`, {
+    const response = await fetchWithAuth(`${BACKEND_URL}/get_properties/`, {
       method: 'POST',
       headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${access_token}`
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(coords),
     });
@@ -56,36 +106,34 @@ export async function getLocationInfo(lat: number, lon: number, municipality: st
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
-
-  const data: LocationProperties = await response.json();
-
-  return data;
+    const data: LocationProperties = await response.json();
+    return data;
   } catch (error) {
     console.error('Error fetching location info:', error);
     return { error: 'Failed to fetch location information' };
   }
 }
 
-export async function askQuestion(lat: number, lon: number, municipality: string, question: string, properties: LocationProperties, access_token: string): Promise<QuestionResponse> {
+
+export async function askQuestion(lat: number, lon: number, municipality: string, question: string, properties: LocationProperties): Promise<QuestionResponse> {
   const coords: Coordinates = {
     lat,
     lon,
     margin: DEFAULT_MARGIN,
-    municipality
+    municipality,
   };
 
   const q: QuestionRequest = {
-   question,
-   properties,
-   coords
+    question,
+    properties,
+    coords,
   };
 
   try {
-    const response = await fetch(`${BACKEND_URL}/ask_question/`, {
+    const response = await fetchWithAuth(`${BACKEND_URL}/ask_question/`, {
       method: 'POST',
       headers: {
-      'Content-Type': 'application/json',
-      'Authorization': `Bearer ${access_token}`
+        'Content-Type': 'application/json',
       },
       body: JSON.stringify(q),
     });
@@ -96,44 +144,41 @@ export async function askQuestion(lat: number, lon: number, municipality: string
 
     const data: QuestionResponse = await response.json();
     return data;
-
   } catch (error) {
     console.error("Error in askQuestion:", error);
-    throw error; // Re-throw the error to be handled by the client
+    throw error;
   }
 }
 
-export async function getResponses(access_token: string): Promise<QuestionResponse[]> {
+export async function getResponses(): Promise<QuestionResponse[]> {
   try {
-    const response = await fetch(`${BACKEND_URL}/responses/`, {
+    const response = await fetchWithAuth(`${BACKEND_URL}/responses/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${access_token}`
-      }
+      },
     });
-    
+
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
 
     const data: QuestionResponse[] = await response.json();
     return data;
-
   } catch (error) {
     console.error("Error in getResponses:", error);
-    throw error; // Re-throw the error to be handled by the client
+    throw error;
   }
 }
 
-export async function getResponseCount(access_token: string): Promise<{ questions_asked: number; limit: number, last_reset: string }> { 
+
+export async function getResponseCount(): Promise<{ questions_asked: number; limit: number; last_reset: string }> {
   try {
-    const response = await fetch(`${BACKEND_URL}/request_count/`, {
+    const response = await fetchWithAuth(`${BACKEND_URL}/request_count/`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json',
-        'Authorization': `Bearer ${access_token}`
-      }
+      },
     });
 
     if (!response.ok) {
@@ -141,27 +186,22 @@ export async function getResponseCount(access_token: string): Promise<{ question
     }
 
     const data = await response.json();
-    
     return data;
-
   } catch (error) {
-    console.error("Error in getRequestCount:", error);
-    throw error; // Re-throw the error to be handled by the client
+    console.error("Error in getResponseCount:", error);
+    throw error;
   }
 }
 
 export async function getGeocodingInfo(address: string) {
   try {
-    console.log(MAPS_API_KEY)
     const response = await fetch(`https://maps.googleapis.com/maps/api/geocode/json?address=${encodeURIComponent(address)}&key=${encodeURIComponent(MAPS_API_KEY)}`, {
       method: 'GET',
       headers: {
         'Content-Type': 'application/json'
       }
     });
-    console.log('Request URL:', response.url);
-
-    console.log(response);
+    
     if (!response.ok) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }

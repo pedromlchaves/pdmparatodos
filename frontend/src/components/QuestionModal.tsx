@@ -68,14 +68,7 @@ export function QuestionModal({ lat, lon, properties, selectedCity, disabled, to
     setIsQuestionLoading(true)
     setHasError(false)
     try {
-      const session = await getSession()
-      if (!session || !session.user.access_token) {
-        setHasError(true);
-        setIsQuestionLoading(false);
-        return;
-      }
-      const token = session.user.access_token
-      const response = await askQuestion(lat, lon, selectedCity, question, properties, token)
+      const response = await askQuestion(lat, lon, selectedCity, question, properties)
       setQuestionResponse(response)
     } catch (error) {
       console.error("Error submitting question:", error)

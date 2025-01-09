@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useCallback, useEffect } from 'react'
+import { useState, useCallback, useEffect, useRef } from 'react'
 import dynamic from 'next/dynamic'
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select"
 import { Button } from "@/components/ui/button"
@@ -16,7 +16,7 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
 import { FloatingAlert } from './FloatingAlert'
 import { Input } from "@/components/ui/input"
 import { getGeocodingInfo } from '../app/actions'
-import { MapPin } from 'lucide-react'
+import { MapPin, X } from 'lucide-react'
 
 const Map = dynamic(() => import('./Map'), {
   loading: () => <p>Loading map...</p>,
@@ -46,12 +46,7 @@ export default function MapComponent() {
   useEffect(() => {
     const fetchResponseCount = async () => {
       try {
-        const session = await getSession()
-        const token = session?.user?.access_token
-        if (!token) {
-          throw new Error("No access token found");
-        }
-        const { questions_asked, limit } = await getResponseCount(token)
+        const { questions_asked, limit } = await getResponseCount()
         console.log(questions_asked)
         console.log(limit)
         if (questions_asked > limit) {
@@ -74,6 +69,7 @@ export default function MapComponent() {
     setClickedCoords([lat, lng])
     setLocationInfo(null)
     setIsInfoLoaded(false)
+    
   }, [])
 
   const handleCityChange = (value: City) => {
@@ -86,12 +82,7 @@ export default function MapComponent() {
     if (clickedCoords) {
       setIsLoading(true)
       try {
-        const session = await getSession()
-        const token = session?.user?.access_token
-        if (!token) {
-          throw new Error("No access token found");
-        }
-        const properties = await getLocationInfo(clickedCoords[0], clickedCoords[1], selectedCity, token)
+        const properties = await getLocationInfo(clickedCoords[0], clickedCoords[1], selectedCity)
         console.log(selectedCity)
         setLocationInfo(properties)
       } catch (error) {
@@ -145,9 +136,18 @@ export default function MapComponent() {
 
   const onIconClick = async () => {
     const geodata = await getGeocodingInfo(address)
-    const coords = [geodata.results[0].geometry.location['lat'], geodata.results[0].geometry.location['lng']] as Coordinates
-    setClickedCoords(coords)
-  }
+
+    if (geodata.results.length == 0) {
+      setLocationInfo(null)
+      setAlertMessage("Endereço inválido - tente ser mais específico.")
+      setShowAlert(true)
+    } else 
+    {
+      const coords = [geodata.results[0].geometry.location['lat'], geodata.results[0].geometry.location['lng']] as Coordinates
+      setClickedCoords(coords)
+    }
+    }   
+    
 
   return (
     <div className="flex flex-col min-h-screen bg-gray-100">
