@@ -32,9 +32,10 @@ const DEFAULT_MARGIN = 0.001; // You can adjust this value as needed
 
 // We only define this inside docker, outside we go for default
 // const BACKEND_URL = process.env.NEXT_PUBLIC_BACKEND_URL || 'http://127.0.0.1:8000';
-const BACKEND_URL = "https://pdmx-backend-50261330501.europe-southwest1.run.app"
+// const BACKEND_URL = "https://pdmx-backend-50261330501.europe-southwest1.run.app"
 
-async function fetchWithAuth(url: string, options: RequestInit): Promise<Response> {
+
+export async function fetchWithAuth(url: string, options: RequestInit): Promise<Response> {
   const session = await getSession(); // Retrieve the session, including access_token
   
   if (!session?.user?.access_token) {
@@ -89,7 +90,9 @@ export async function getLocationInfo(lat: number, lon: number, municipality: st
     margin: DEFAULT_MARGIN,
     municipality,
   };
-
+  const config_response = await fetch(`/api/config/`);
+  const config_data = await config_response.json();
+  const { BACKEND_URL } = config_data;
   try {
     const response = await fetchWithAuth(`${BACKEND_URL}/get_properties/`, {
       method: 'POST',
@@ -125,7 +128,9 @@ export async function askQuestion(lat: number, lon: number, municipality: string
     properties,
     coords,
   };
-
+  const config_response = await fetch(`/api/config/`);
+  const config_data = await config_response.json();
+  const { BACKEND_URL } = config_data;
   try {
     const response = await fetchWithAuth(`${BACKEND_URL}/ask_question/`, {
       method: 'POST',
@@ -149,6 +154,9 @@ export async function askQuestion(lat: number, lon: number, municipality: string
 
 export async function getResponses(): Promise<QuestionResponse[]> {
   try {
+    const config_response = await fetch(`/api/config/`);
+    const config_data = await config_response.json();
+    const { BACKEND_URL } = config_data;
     const response = await fetchWithAuth(`${BACKEND_URL}/responses/`, {
       method: 'GET',
       headers: {
@@ -171,6 +179,9 @@ export async function getResponses(): Promise<QuestionResponse[]> {
 
 export async function getResponseCount(): Promise<{ questions_asked: number; limit: number; last_reset: string }> {
   try {
+    const config_response = await fetch(`/api/config/`);
+    const config_data = await config_response.json();
+    const { BACKEND_URL } = config_data;
     const response = await fetchWithAuth(`${BACKEND_URL}/request_count/`, {
       method: 'GET',
       headers: {
