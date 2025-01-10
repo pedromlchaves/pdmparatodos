@@ -36,7 +36,6 @@ export function SimpleInteractionHistory({ responses }: SimpleInteractionHistory
     const fetchArticlesPages = async () => {
       const response = await fetch('/api/articles-pages');
       const data = await response.json();
-      console.log(data)
       setArticlesPages(data);
     };
 

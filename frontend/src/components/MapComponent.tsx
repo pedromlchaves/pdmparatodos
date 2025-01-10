@@ -110,10 +110,6 @@ export default function MapComponent() {
   }).filter(Boolean)
 }
 
-  const handleShowAlert = () => {
-    setShowAlert(true)
-  }
-
   const handleCloseAlert = () => {
     setShowAlert(false)
   }
