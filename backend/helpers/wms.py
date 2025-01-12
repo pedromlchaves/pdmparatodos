@@ -1,6 +1,7 @@
 from owslib.wms import WebMapService
 import requests
 import json
+from concurrent.futures import ThreadPoolExecutor
 
 municipalities = json.load(open("data/municipalities_configs.json"))
 
@@ -33,56 +34,52 @@ class WMService:
         # Determine which layers to query
         layers_to_query = [layer_name] if layer_name else self.wms.contents.keys()
 
-        # Iterate through each layer in the service
-        for layer_name in layers_to_query:
+        def fetch_layer_properties(layer_name):
             layer_metadata = self.wms.contents[layer_name]
-
-            # Retrieve the bounding box for each layer
             bounding_box = layer_metadata.boundingBoxWGS84
-
             min_lon, min_lat, max_lon, max_lat = bounding_box
 
-            # Check if the point is within the bounding box
             if not (
                 min_lon <= coords.lon <= max_lon and min_lat <= coords.lat <= max_lat
             ):
-                continue
+                return None
 
-            # Use this bounding box in your WMS GetFeatureInfo request
             params = {
                 "service": "WMS",
                 "version": self.wms_version,
                 "request": "GetFeatureInfo",
-                "layers": layer_name,  # Use the current layer name
+                "layers": layer_name,
                 "query_layers": layer_name,
                 "bbox": bbox_parameter,
-                "width": self.image_width,  # Pixel width matching the new bounding box aspect ratio
-                "height": self.image_height,  # Pixel height matching the new bounding box aspect ratio
+                "width": self.image_width,
+                "height": self.image_height,
                 "srs": "EPSG:4326",
-                "x": self.image_width // 2,  # X coordinate in the middle of the image
-                "y": self.image_height // 2,  # Y coordinate in the middle of the image
+                "x": self.image_width // 2,
+                "y": self.image_height // 2,
                 "info_format": self.info_format,
             }
 
-            # Send the request and handle the response
             response = requests.get(self.wms_url, params=params)
-
             try:
                 response_data = response.json()
-
-                if layer_name not in all_properties:
-                    all_properties[layer_name] = []
-
-                # Iterate through features and collect properties
+                properties = []
                 for feature in response_data.get("features", []):
                     feature["properties"]["nome"] = self.wms.contents[layer_name].title
                     feature["properties"]["abstract"] = self.wms.contents[
                         layer_name
                     ].abstract
-                    all_properties[layer_name].append(feature["properties"])
-
+                    properties.append(feature["properties"])
+                return layer_name, properties
             except:
-                continue
+                return None
+
+        with ThreadPoolExecutor(max_workers=len(layers_to_query)) as executor:
+            results = executor.map(fetch_layer_properties, layers_to_query)
+
+        for result in results:
+            if result:
+                layer_name, properties = result
+                all_properties[layer_name] = properties
 
         return all_properties
 
