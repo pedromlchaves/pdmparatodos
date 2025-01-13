@@ -118,6 +118,10 @@ class QuestionRequest(BaseModel):
     coords: Coordinates
 
 
+class ChatRequest(BaseModel):
+    messages: list
+
+
 def parse_properties_for_model(properties):
     property_values = [x[0] for x in list(properties.values()) if x != []]
 
@@ -230,6 +234,38 @@ async def ask_question(
     db.commit()
 
     return {"articles": articles, "answer": response}
+
+
+@app.post("/chat_streaming/")
+async def chat_streaming(
+    request: Request, chat_request: ChatRequest, db: Session = Depends(get_db)
+):
+    """
+    Answer a question based on the given coordinates and context using streaming.
+
+    Args:
+        message (ChatRequest): The message sent by the user.
+
+    Returns:
+        dict: The generated response.
+    """
+    logging.info(chat_request)
+    user = request.scope.get("user")
+
+    if not user:
+        raise HTTPException(status_code=401, detail="Unauthorized")
+    message = "Quais as condicionantes de edificabilidade para frente urbano de tipo I?"
+    relevant_chunks = get_all_relevant_chunks(message)
+
+    logger.info("Generating prompt...")
+
+    prompt = generator.generate_chat_prompt(relevant_chunks, message)
+
+    logger.info("Generating response...")
+
+    response = generator.generate_chat_streaming(prompt)
+
+    return response
 
 
 @app.get("/request_count/")

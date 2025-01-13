@@ -21,6 +21,9 @@ export function Header() {
         <Link href="/" className="text-black-500 mx-4">
         Mapa
         </Link>
+        <Link href="/chat" className="text-black-500 mx-4">
+        Fala com o PDM
+        </Link>
         <Link href="/history" className="text-black-500 mx-4">
         Histórico
         </Link>
