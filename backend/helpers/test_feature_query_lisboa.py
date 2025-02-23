@@ -162,7 +162,7 @@ def main():
                 try:
                     results = future.result()
 
-                    if len(results.features) > 1:
+                    if len(results.features) > 0:
                         print(f"Found results in layer {layer['name']}:")
 
                         for feature in results.features:
