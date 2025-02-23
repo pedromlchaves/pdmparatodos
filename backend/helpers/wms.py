@@ -2,6 +2,10 @@ from owslib.wms import WebMapService
 import requests
 import json
 from concurrent.futures import ThreadPoolExecutor
+import urllib3
+
+# Disable SSL warnings
+urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 municipalities = json.load(open("data/municipalities_configs.json"))
 
@@ -59,7 +63,7 @@ class WMService:
                 "info_format": self.info_format,
             }
 
-            response = requests.get(self.wms_url, params=params)
+            response = requests.get(self.wms_url, params=params, verify=False)
             try:
                 response_data = response.json()
                 properties = []

@@ -1,5 +1,6 @@
-{"Porto": {"wms_url": "https://geopdm.cm-porto.pt/services/pdm/wms", 
+{"Porto": {"type": "wms", "wms_url": "https://geopdm.cm-porto.pt/services/pdm/wms", 
 "wms_version": "1.1.1",
  "image_width": 800, 
  "image_height": 600, 
- "info_format": "application/json"}}
+ "info_format": "application/json"},
+"Lisboa": {"type": "arcgis", "urls": ["https://websig.cm-lisboa.pt/MuniSIG/REST/sites/LxInterativa/map/mapservices/40"]}}
