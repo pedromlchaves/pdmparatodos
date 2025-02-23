@@ -251,18 +251,19 @@ async def chat_streaming(
     """
     logging.info(chat_request)
     user = request.scope.get("user")
-
+    message = chat_request.messages[-1]
     if not user:
         raise HTTPException(status_code=401, detail="Unauthorized")
-    message = "Quais as condicionantes de edificabilidade para frente urbano de tipo I?"
-    relevant_chunks = get_all_relevant_chunks(message)
+
+    # message = "Quais as condicionantes de edificabilidade para frente urbano de tipo I?"
+    relevant_chunks = get_all_relevant_chunks(message["content"])
 
     logger.info("Generating prompt...")
 
-    prompt = generator.generate_chat_prompt(relevant_chunks, message)
+    prompt = generator.generate_chat_prompt(relevant_chunks, message["content"])
 
     logger.info("Generating response...")
-
+    print(prompt)
     response = generator.generate_chat_streaming(prompt)
 
     return response
