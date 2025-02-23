@@ -1,0 +1,278 @@
+No results found in layer Polaridade Urbana
+No results found in layer Unidade Operativa de Planeamento e Gestão
+No results found in layer Niveis Arqueológicos
+No results found in layer Paragens de Comboio Existentes
+No results found in layer Estações de Metro
+No results found in layer Hierarquia Rede Viária-1º e 2º Niveis
+No results found in layer Ocorrências Hidrominerais de Alfama
+No results found in layer Área de Proteção
+No results found in layer Geomonumentos
+No results found in layer Área de Protecção dos Geomonumentos
+
+Results from layer: Imóveis Classificados (ID: 216)
+{'OBJECTID': 517, 'ID': 0, 'MORADA': 'Praça do Comércio', 'NOME': 'Praça do Comércio / Antigo Terreiro do Paço', 'COD_CML': '6', 'CATEGORIA': 'Monumento Nacional', 'ZEP': ' ', 'LEGISLACAO': 'Decreto de 16-06-1910, DG, nº 136, de 23-06-1910', 'COD_SIG': '3337', 'IDTIPO': '6003', 'ACTIVO': 'S', 'ENTIDADE': 'DGPC - Direção Geral do Património Cultural', 'CONDICIONA': 'Imóveis Classificados - Monumento Nacional', 'ART_RPDM': 'Artigos 7º, 8º, 26º e Anexos II, III', 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 574, 'ID': 0, 'MORADA': 'Lisboa, freguesias da Encarnação, Madalena, Mártires, Sacramento, Sta. Catarina, Sta. Justa, S. José, S. Nicolau e S. Paulo', 'NOME': 'Lisboa Pombalina', 'COD_CML': ' ', 'CATEGORIA': 'Conjunto de Interesse Público', 'ZEP': ' ', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto nº 95/78, DR, 1ª série, nº 210, de 12-09-1978 (classificou a Baixa Pombali', 'COD_SIG': '73640', 'IDTIPO': '6003', 'ACTIVO': 'S', 'ENTIDADE': 'DGPC - Direção Geral do Património Cultural', 'CONDICIONA': 'Imóveis Classificados - Conjunto de Interesse Público', 'ART_RPDM': 'Artigos 7º, 8º, 26º e Anexos II, III', 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Imóveis em Vias de Classificação
+No results found in layer Objetos Singulares e Lojas de Referência Histórica e ou Artística
+No results found in layer Conjuntos Arquitetónicos
+No results found in layer Logradouros
+No results found in layer Imóveis
+No results found in layer Património Paisagístico
+No results found in layer Qualificação Espaço
+No results found in layer Logradouros Verdes Permeáveis a Preservar
+No results found in layer Limite do Município - Zonamento Acústico - Zona Mista
+No results found in layer Polaridade Urbana
+No results found in layer Unidade Operativa de Planeamento e Gestão
+No results found in layer Niveis Arqueológicos
+No results found in layer Paragens de Comboio Existentes
+No results found in layer Estações de Metro
+No results found in layer Hierarquia Rede Viária-1º e 2º Niveis
+No results found in layer Hierarquia Rede Viária-1º e 2º Niveis
+No results found in layer Hierarquia Rede Viária-1º e 2º Niveis
+No results found in layer Ocorrências Hidrominerais de Alfama
+No results found in layer Área de Proteção
+No results found in layer Geomonumentos
+No results found in layer Área de Protecção dos Geomonumentos
+
+Results from layer: Imóveis Classificados (ID: 216)
+{'OBJECTID': 517, 'ID': 0, 'MORADA': 'Praça do Comércio', 'NOME': 'Praça do Comércio / Antigo Terreiro do Paço', 'COD_CML': '6', 'CATEGORIA': 'Monumento Nacional', 'ZEP': ' ', 'LEGISLACAO': 'Decreto de 16-06-1910, DG, nº 136, de 23-06-1910', 'COD_SIG': '3337', 'IDTIPO': '6003', 'ACTIVO': 'S', 'ENTIDADE': 'DGPC - Direção Geral do Património Cultural', 'CONDICIONA': 'Imóveis Classificados - Monumento Nacional', 'ART_RPDM': 'Artigos 7º, 8º, 26º e Anexos II, III', 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 574, 'ID': 0, 'MORADA': 'Lisboa, freguesias da Encarnação, Madalena, Mártires, Sacramento, Sta. Catarina, Sta. Justa, S. José, S. Nicolau e S. Paulo', 'NOME': 'Lisboa Pombalina', 'COD_CML': ' ', 'CATEGORIA': 'Conjunto de Interesse Público', 'ZEP': ' ', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto nº 95/78, DR, 1ª série, nº 210, de 12-09-1978 (classificou a Baixa Pombali', 'COD_SIG': '73640', 'IDTIPO': '6003', 'ACTIVO': 'S', 'ENTIDADE': 'DGPC - Direção Geral do Património Cultural', 'CONDICIONA': 'Imóveis Classificados - Conjunto de Interesse Público', 'ART_RPDM': 'Artigos 7º, 8º, 26º e Anexos II, III', 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Imóveis em Vias de Classificação
+No results found in layer Objetos Singulares e Lojas de Referência Histórica e ou Artística
+No results found in layer Conjuntos Arquitetónicos
+No results found in layer Logradouros
+No results found in layer Imóveis
+No results found in layer Património Paisagístico
+No results found in layer Qualificação Espaço
+No results found in layer Logradouros Verdes Permeáveis a Preservar
+No results found in layer Limite do Município - Zonamento Acústico - Zona Mista
+No results found in layer Sistema Corredores Estruturantes
+No results found in layer Sistema Húmido
+No results found in layer Sistema Transição Fluvial-Estuarino
+No results found in layer Espaços Verdes
+No results found in layer Espaços Verdes de Enquadramento a Áreas Edificadas
+No results found in layer Logradouros Verdes Permeáveis a Preservar
+No results found in layer Eixos Arborizados
+No results found in layer Bacias de Retenção-Infiltração Pluvial
+No results found in layer Sistema Corredores Estruturantes
+No results found in layer Sistema Húmido
+No results found in layer Sistema Transição Fluvial-Estuarino
+No results found in layer Sistema Corredores Estruturantes
+No results found in layer Sistema Húmido
+No results found in layer Sistema Transição Fluvial-Estuarino
+No results found in layer Espaços Verdes
+No results found in layer Espaços Verdes de Enquadramento a Áreas Edificadas
+No results found in layer Logradouros Verdes Permeáveis a Preservar
+No results found in layer Espaços Verdes
+No results found in layer Espaços Verdes de Enquadramento a Áreas Edificadas
+No results found in layer Logradouros Verdes Permeáveis a Preservar
+No results found in layer Eixos Arborizados
+No results found in layer Bacias de Retenção-Infiltração Pluvial
+No results found in layer Subsistema de pontos dominantes
+No results found in layer Subsistema de ângulos de visão
+No results found in layer Subsistema de cumeadas principais
+No results found in layer Sub-Sistema de Frente Ribeirinha-Sector Ocidental
+No results found in layer Sub-Sistema de Frente Ribeirinha-Sector Oriental
+No results found in layer Sub-Sistema de Vales
+No results found in layer Subsistema de pontos dominantes
+No results found in layer Subsistema de ângulos de visão
+No results found in layer Subsistema de cumeadas principais
+No results found in layer Sub-Sistema de Frente Ribeirinha-Sector Ocidental
+No results found in layer Sub-Sistema de Frente Ribeirinha-Sector Oriental
+No results found in layer Sub-Sistema de Vales
+No results found in layer Ponto de Máxima Acumulação
+No results found in layer Suscetibilidade de Ocorrência de Movimentos de Massa em Vertentes
+No results found in layer Suscetibilidade ao Efeito de Maré Directo
+No results found in layer Vulnerabilidade às Inundações
+No results found in layer Grupo de Operações Conjuntas
+No results found in layer Ponto de Máxima Acumulação
+No results found in layer Suscetibilidade de Ocorrência de Movimentos de Massa em Vertentes
+No results found in layer Suscetibilidade ao Efeito de Maré Directo
+No results found in layer Vulnerabilidade às Inundações
+No results found in layer Grupo de Operações Conjuntas
+No results found in layer Vulnerabilidade Sísmica dos Solos
+No results found in layer Vulnerabilidade Sísmica dos Solos
+No results found in layer Sistema de Drenagem-Rede Principal
+No results found in layer Sistema Interceptor
+No results found in layer Reservatório Proposto
+No results found in layer Trincheira de Infiltração
+No results found in layer Bacias de Retenção-Infiltração Pluvial
+No results found in layer ETAR's
+No results found in layer Caneiro de Alcântara (Traçado Provável)
+No results found in layer Estações de Metro (Existentes)
+No results found in layer Estações de Metro (Em Estudo)
+No results found in layer Parque do Metro
+No results found in layer Zona de Protecção do Metro (Linhas Existentes e em Construção)
+No results found in layer Zona de Protecção do Metro (Linhas em Estudo)
+No results found in layer Rede Ferroviária de Alta Velocidade (Área Sujeita a Medidas Preventivas)
+No results found in layer Linhas de Metro
+No results found in layer Sistema de Drenagem-Rede Principal
+No results found in layer Sistema Interceptor
+No results found in layer Reservatório Proposto
+No results found in layer Trincheira de Infiltração
+No results found in layer Bacias de Retenção-Infiltração Pluvial
+No results found in layer ETAR's
+No results found in layer Caneiro de Alcântara (Traçado Provável)
+No results found in layer Sistema de Drenagem-Rede Principal
+No results found in layer Sistema Interceptor
+No results found in layer Reservatório Proposto
+No results found in layer Trincheira de Infiltração
+No results found in layer Bacias de Retenção-Infiltração Pluvial
+No results found in layer ETAR's
+No results found in layer Caneiro de Alcântara (Traçado Provável)
+No results found in layer Estações de Metro (Existentes)
+No results found in layer Estações de Metro (Em Estudo)
+No results found in layer Parque do Metro
+No results found in layer Zona de Protecção do Metro (Linhas Existentes e em Construção)
+No results found in layer Zona de Protecção do Metro (Linhas em Estudo)
+No results found in layer Rede Ferroviária de Alta Velocidade (Área Sujeita a Medidas Preventivas)
+No results found in layer Linhas de Metro
+No results found in layer Hierarquia Rede Viária
+No results found in layer Interfaces
+No results found in layer Rede viária - Intersecções a estudar
+No results found in layer Zonas Estacionamento
+No results found in layer Estacionamento
+No results found in layer Paragens de Comboio existentes
+No results found in layer Estações de Metro
+No results found in layer Hierarquia Rede Viária
+No results found in layer Interfaces
+No results found in layer Rede viária - Intersecções a estudar
+No results found in layer Zonas Estacionamento
+No results found in layer Estacionamento
+No results found in layer Paragens de Comboio existentes
+No results found in layer Estações de Metro
+No results found in layer Paragens de Comboio existentes
+No results found in layer Estações de Metro
+No results found in layer Administração do Porto de Lisboa
+No results found in layer Áreas Desafectadas (Decreto-Lei nº75, 31 de Março de 2009)
+No results found in layer Aeroporto Humberto Delgado
+No results found in layer Sistemas de Infraestruturas de Abastecimento de Água
+No results found in layer Zona de Proteção - Sistemas de Infraestruturas de Abastecimento de Água
+No results found in layer Cemitérios
+No results found in layer Zona de Proteção de Cemitérios (Zona não Edificandi - 10m)
+No results found in layer Zona de Proteção de Cemitérios (40m)
+No results found in layer Corredores de Alta Tensão
+No results found in layer Zona de Protecção dos Corredores de Alta Tensão
+No results found in layer SubEstação Elétrica - Alta e Muito Alta Tensão
+No results found in layer Traçado Indicativo da Margem
+No results found in layer Linhas de Água Naturalizadas
+No results found in layer Domínio Hídrico 
+No results found in layer Estabelecimentos Tutelares de Menores
+No results found in layer Estabelecimentos Prisionais
+No results found in layer Feixes Hertzianos
+No results found in layer Zona de Protecção dos Feixes Hertzianos
+No results found in layer Feixes Hertzianos Militares
+No results found in layer Centro Radioeléctrico - Estação Emissora de Alfragide
+No results found in layer Gasoduto
+No results found in layer Faixa de Servidão do Gasoduto
+No results found in layer Imóveis Militares
+No results found in layer Servidões Militares
+No results found in layer Exemplares Isolados 
+No results found in layer Zona Geral de Proteção
+No results found in layer Conjunto Arbóreo
+No results found in layer Exemplar de Interesse Municipal
+No results found in layer Área de Proteção
+No results found in layer Regime Florestal
+No results found in layer Rede Ferroviária
+No results found in layer REN
+No results found in layer Áreas Excluídas C1e C2
+No results found in layer RNN-Concessões
+No results found in layer Rodovias
+No results found in layer Marcos Geodésicos (Vértices Geodésicos)
+No results found in layer Zona de Proteção de Vértices Geodésicos
+No results found in layer Zona de Protecção de Hospitais
+No results found in layer Administração do Porto de Lisboa
+No results found in layer Áreas Desafectadas (Decreto-Lei nº75, 31 de Março de 2009)
+No results found in layer Aeroporto Humberto Delgado
+No results found in layer Sistemas de Infraestruturas de Abastecimento de Água
+No results found in layer Zona de Proteção - Sistemas de Infraestruturas de Abastecimento de Água
+No results found in layer Cemitérios
+No results found in layer Zona de Proteção de Cemitérios (Zona não Edificandi - 10m)
+No results found in layer Zona de Proteção de Cemitérios (40m)
+No results found in layer Corredores de Alta Tensão
+No results found in layer Zona de Protecção dos Corredores de Alta Tensão
+No results found in layer SubEstação Elétrica - Alta e Muito Alta Tensão
+No results found in layer Traçado Indicativo da Margem
+No results found in layer Linhas de Água Naturalizadas
+No results found in layer Domínio Hídrico 
+No results found in layer Traçado Indicativo da Margem
+No results found in layer Linhas de Água Naturalizadas
+No results found in layer Domínio Hídrico 
+No results found in layer Linhas de Água Naturalizadas
+No results found in layer Domínio Hídrico 
+No results found in layer Estabelecimentos Tutelares de Menores
+No results found in layer Estabelecimentos Prisionais
+No results found in layer Feixes Hertzianos
+No results found in layer Zona de Protecção dos Feixes Hertzianos
+No results found in layer Feixes Hertzianos Militares
+No results found in layer Centro Radioeléctrico - Estação Emissora de Alfragide
+No results found in layer Gasoduto
+No results found in layer Faixa de Servidão do Gasoduto
+No results found in layer Imóveis Militares
+No results found in layer Servidões Militares
+No results found in layer Exemplares Isolados 
+No results found in layer Zona Geral de Proteção
+No results found in layer Conjunto Arbóreo
+No results found in layer Exemplares Isolados 
+No results found in layer Zona Geral de Proteção
+No results found in layer Conjunto Arbóreo
+No results found in layer Exemplar de Interesse Municipal
+No results found in layer Área de Proteção
+No results found in layer Exemplar de Interesse Municipal
+No results found in layer Área de Proteção
+No results found in layer Regime Florestal
+No results found in layer Rede Ferroviária
+No results found in layer REN
+No results found in layer Áreas Excluídas C1e C2
+No results found in layer REN
+No results found in layer Áreas Excluídas C1e C2
+No results found in layer RNN-Concessões
+No results found in layer Rodovias
+No results found in layer Marcos Geodésicos (Vértices Geodésicos)
+No results found in layer Zona de Proteção de Vértices Geodésicos
+No results found in layer Zona de Protecção de Hospitais
+No results found in layer Património Mundial
+
+Results from layer: Património Classificado (ID: 91)
+{'OBJECTID': 3524, 'COD_CML': ' ', 'MORADA': 'Lisboa, freguesias da Encarnação, Madalena, Mártires, Sacramento, Sta. Catarina, Sta. Justa, S. José, S. Nicolau e S. Paulo', 'NOME': 'Lisboa Pombalina', 'ACTIVO': 'S', 'CATEGORIA': 'Conjunto de Interesse Público', 'INFOPDM': 'Conjunto de Interesse Público', 'ZEP': ' ', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto nº 95/78, DR, 1ª série, nº 210, de 12-09-1978 (classif. a Baixa Pombalina)', 'COD_SIG': '73640', 'ENTIDADE': 'CCDRLVT IP (Cultura) e Património Cultural IP', 'CONDICIONA': 'Imóveis Classificados - Conjunto de Interesse Público', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 1119, 'COD_CML': '6', 'MORADA': 'Praça do Comércio', 'NOME': 'Praça do Comércio / Antigo Terreiro do Paço', 'ACTIVO': 'S', 'CATEGORIA': 'Monumento Nacional', 'INFOPDM': 'Monumento Nacional', 'ZEP': ' ', 'LEGISLACAO': 'Decreto de 16-06-1910, DG, nº 136, de 23-06-1910', 'COD_SIG': '3337', 'ENTIDADE': 'CCDRLVT IP (Cultura) e Património Cultural IP', 'CONDICIONA': 'Imóveis Classificados - Monumento Nacional', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Imóveis em Vias de Classificação
+No results found in layer Zona de Protecção dos Imóveis
+No results found in layer Zona Especial de Protecção
+
+Results from layer: Restrições -DGPC (ID: 95)
+{'OBJECTID': 329, 'COD_SIG': '73640', 'NOME': 'Restrições Arquitetónicas e Urbanísticas - Área I da Lisboa Pombalina', 'ACTIVO': 'S', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto n.º 95/78, DR, I Série, n.º 210, de 12-09-1978 (classificou a Baixa Pombalina)', 'INFOPDM': 'Restrições Arquitetónicas e Urbanísticas', 'ENTIDADE': 'CCDRLVT IP (Cultura)', 'CONDICIONA': 'Restrições Arquitetónicas e Urbanísticas', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 337, 'COD_SIG': '99914', 'NOME': 'Área de Sensibilidade Arqueológica - Área I da Lisboa Pombalina', 'ACTIVO': 'S', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto n.º 95/78, DR, I Série, n.º 210, de 12-09-1978 (classificou a Baixa Pombalina)', 'INFOPDM': 'Área de Sensibilidade Arqueológica', 'ENTIDADE': 'CCDRLVT IP (Cultura)', 'CONDICIONA': 'Área de Sensibilidade Arqueológica', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Património Classificado Municipal
+No results found in layer Imóveis em Vias para Interesse Municipal
+No results found in layer Zona de Protecção de Imóveis em Vias para Interesse Municipal
+No results found in layer Património Mundial
+No results found in layer Património Mundial
+
+Results from layer: Património Classificado (ID: 91)
+{'OBJECTID': 3524, 'COD_CML': ' ', 'MORADA': 'Lisboa, freguesias da Encarnação, Madalena, Mártires, Sacramento, Sta. Catarina, Sta. Justa, S. José, S. Nicolau e S. Paulo', 'NOME': 'Lisboa Pombalina', 'ACTIVO': 'S', 'CATEGORIA': 'Conjunto de Interesse Público', 'INFOPDM': 'Conjunto de Interesse Público', 'ZEP': ' ', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto nº 95/78, DR, 1ª série, nº 210, de 12-09-1978 (classif. a Baixa Pombalina)', 'COD_SIG': '73640', 'ENTIDADE': 'CCDRLVT IP (Cultura) e Património Cultural IP', 'CONDICIONA': 'Imóveis Classificados - Conjunto de Interesse Público', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 1119, 'COD_CML': '6', 'MORADA': 'Praça do Comércio', 'NOME': 'Praça do Comércio / Antigo Terreiro do Paço', 'ACTIVO': 'S', 'CATEGORIA': 'Monumento Nacional', 'INFOPDM': 'Monumento Nacional', 'ZEP': ' ', 'LEGISLACAO': 'Decreto de 16-06-1910, DG, nº 136, de 23-06-1910', 'COD_SIG': '3337', 'ENTIDADE': 'CCDRLVT IP (Cultura) e Património Cultural IP', 'CONDICIONA': 'Imóveis Classificados - Monumento Nacional', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Imóveis em Vias de Classificação
+No results found in layer Zona de Protecção dos Imóveis
+No results found in layer Zona Especial de Protecção
+
+Results from layer: Restrições -DGPC (ID: 95)
+{'OBJECTID': 329, 'COD_SIG': '73640', 'NOME': 'Restrições Arquitetónicas e Urbanísticas - Área I da Lisboa Pombalina', 'ACTIVO': 'S', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto n.º 95/78, DR, I Série, n.º 210, de 12-09-1978 (classificou a Baixa Pombalina)', 'INFOPDM': 'Restrições Arquitetónicas e Urbanísticas', 'ENTIDADE': 'CCDRLVT IP (Cultura)', 'CONDICIONA': 'Restrições Arquitetónicas e Urbanísticas', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 337, 'COD_SIG': '99914', 'NOME': 'Área de Sensibilidade Arqueológica - Área I da Lisboa Pombalina', 'ACTIVO': 'S', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto n.º 95/78, DR, I Série, n.º 210, de 12-09-1978 (classificou a Baixa Pombalina)', 'INFOPDM': 'Área de Sensibilidade Arqueológica', 'ENTIDADE': 'CCDRLVT IP (Cultura)', 'CONDICIONA': 'Área de Sensibilidade Arqueológica', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+
+Results from layer: Património Classificado (ID: 91)
+{'OBJECTID': 3524, 'COD_CML': ' ', 'MORADA': 'Lisboa, freguesias da Encarnação, Madalena, Mártires, Sacramento, Sta. Catarina, Sta. Justa, S. José, S. Nicolau e S. Paulo', 'NOME': 'Lisboa Pombalina', 'ACTIVO': 'S', 'CATEGORIA': 'Conjunto de Interesse Público', 'INFOPDM': 'Conjunto de Interesse Público', 'ZEP': ' ', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto nº 95/78, DR, 1ª série, nº 210, de 12-09-1978 (classif. a Baixa Pombalina)', 'COD_SIG': '73640', 'ENTIDADE': 'CCDRLVT IP (Cultura) e Património Cultural IP', 'CONDICIONA': 'Imóveis Classificados - Conjunto de Interesse Público', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 1119, 'COD_CML': '6', 'MORADA': 'Praça do Comércio', 'NOME': 'Praça do Comércio / Antigo Terreiro do Paço', 'ACTIVO': 'S', 'CATEGORIA': 'Monumento Nacional', 'INFOPDM': 'Monumento Nacional', 'ZEP': ' ', 'LEGISLACAO': 'Decreto de 16-06-1910, DG, nº 136, de 23-06-1910', 'COD_SIG': '3337', 'ENTIDADE': 'CCDRLVT IP (Cultura) e Património Cultural IP', 'CONDICIONA': 'Imóveis Classificados - Monumento Nacional', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Imóveis em Vias de Classificação
+No results found in layer Zona de Protecção dos Imóveis
+No results found in layer Zona Especial de Protecção
+
+Results from layer: Restrições -DGPC (ID: 95)
+{'OBJECTID': 329, 'COD_SIG': '73640', 'NOME': 'Restrições Arquitetónicas e Urbanísticas - Área I da Lisboa Pombalina', 'ACTIVO': 'S', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto n.º 95/78, DR, I Série, n.º 210, de 12-09-1978 (classificou a Baixa Pombalina)', 'INFOPDM': 'Restrições Arquitetónicas e Urbanísticas', 'ENTIDADE': 'CCDRLVT IP (Cultura)', 'CONDICIONA': 'Restrições Arquitetónicas e Urbanísticas', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+{'OBJECTID': 337, 'COD_SIG': '99914', 'NOME': 'Área de Sensibilidade Arqueológica - Área I da Lisboa Pombalina', 'ACTIVO': 'S', 'LEGISLACAO': 'Portaria nº 740-DV/2012, DR, 2ª série, nº 248, Suplemento, de 24-12-2012 (ampliou classif.,alterou desig. para Lisboa Pombalina e categoria classif. para CIP); Decreto n.º 95/78, DR, I Série, n.º 210, de 12-09-1978 (classificou a Baixa Pombalina)', 'INFOPDM': 'Área de Sensibilidade Arqueológica', 'ENTIDADE': 'CCDRLVT IP (Cultura)', 'CONDICIONA': 'Área de Sensibilidade Arqueológica', 'ART_RPDM': None, 'SE_ANNO_CAD_DATA': None, 'SHAPE.AREA': 0, 'SHAPE.LEN': 0}
+No results found in layer Património Classificado Municipal
+No results found in layer Imóveis em Vias para Interesse Municipal
+No results found in layer Zona de Protecção de Imóveis em Vias para Interesse Municipal
+No results found in layer Património Classificado Municipal
+No results found in layer Imóveis em Vias para Interesse Municipal
+No results found in layer Zona de Protecção de Imóveis em Vias para Interesse Municipal
